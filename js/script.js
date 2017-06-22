@@ -1,22 +1,23 @@
-$(document).ready(function () {
-
-  // Mobile Navigation Toggle button
-  $('.nav-toggle').on('click', function () {
-    $('.main-nav').slideToggle();
-    var icon = $(this).children('i');
-    if (icon.hasClass('fa-bars')) {
-      icon.addClass('fa-chevron-up').removeClass('fa-bars');
-    } else {
-      icon.addClass('fa-bars').removeClass('fa-chevron-up');
-    }
-  });
-
-  // Overlay animation for project containers on homepage
-  $('.image-block').on('mouseover', function () {
-    $(this.closest('.project-container')).find('.overlay-block').addClass('button-hover');
-  });
-  $('.overlay-block').on('mouseleave', function () {
-    $(this).removeClass('button-hover');
-  });
-
-});
+(function () {
+  "use strict";
+  var navToggle = document.querySelector('.nav-toggle'),
+      imageBlocks = document.querySelectorAll('.image-block'),
+      mainNav = document.querySelector('.main-nav');
+  function toggleNavClass (e) {
+    e.preventDefault();
+    mainNav.classList.toggle('open');
+  }
+  function addOverlay (e) {
+    e.preventDefault();
+    e.target.children[1].classList.add('show');
+  }
+  function removeOverlay (e) {
+    e.preventDefault();
+    e.target.children[1].classList.remove('show');
+  }
+  navToggle.addEventListener('click', toggleNavClass);
+  for (var i = 0; i < imageBlocks.length; i += 1) {
+    imageBlocks[i].addEventListener('mouseenter', addOverlay);
+    imageBlocks[i].addEventListener('mouseleave', removeOverlay);
+  }
+})();
