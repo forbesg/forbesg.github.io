@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>http://forbesg.github.io/404.html</loc> </url>
 <url> <loc>http://forbesg.github.io/</loc> </url>
@@ -17,20 +16,4 @@
 <url> <loc>http://forbesg.github.io/portfolio/web/fnbg-ltd/</loc> </url>
 <url> <loc>http://forbesg.github.io/portfolio/web/moffat-museum-trust/</loc> </url>
 <url> <loc>http://forbesg.github.io/portfolio/web/the-star-at-cotton/</loc> </url>
-=======
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url> <loc>http://forbesg.github.io/404.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/about/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/contact/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/blackberry/love-is/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/blackberry/my-lists/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/blackberry/star-wars-db/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/webapps/recipe-manager/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/webapps/world-cup-wallchart/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/web/beauty-edinburgh-website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/web/fnbg-website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://forbesg.github.io/portfolio/web/moffat-museum-website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
->>>>>>> 9007836be65072d0f7eb07e54202d1832b7d11b0
 </urlset>
