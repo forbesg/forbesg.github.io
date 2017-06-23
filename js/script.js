@@ -5,6 +5,7 @@
       mainNav = document.querySelector('.main-nav');
   function toggleNavClass (e) {
     e.preventDefault();
+    navToggle.classList.toggle('open');
     mainNav.classList.toggle('open');
   }
   function addOverlay (e) {
