@@ -3,7 +3,8 @@
   var navToggle = document.querySelector('.nav-toggle'),
       imageBlocks = document.querySelectorAll('.image-block'),
       mainNav = document.querySelector('.main-nav'),
-      menuItems = mainNav.getElementsByTagName('li');
+      menuItems = mainNav.getElementsByTagName('li'),
+      deferredAddToHomescreenPrompt;
   function toggleNavClass (e) {
     e.preventDefault();
     function addListItemClass (el, num) {
@@ -45,4 +46,11 @@
     imageBlocks[i].addEventListener('mouseenter', addOverlay);
     imageBlocks[i].addEventListener('mouseleave', removeOverlay);
   }
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredAddToHomescreenPrompt = e;
+  })
 })();
