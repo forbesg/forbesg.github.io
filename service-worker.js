@@ -1,7 +1,6 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js');
 
 if (workbox) {
-  console.log('Yay! Workbox is loaded 🎉');
   workbox.routing.registerRoute(
     // Cache CSS files.
     /\.css$/,
@@ -237,7 +236,7 @@ if (workbox) {
   },
   {
     "url": "service-worker.min.js",
-    "revision": "e645862e5a3d729b8021d54ca82912b6"
+    "revision": "d4991a7de0fb3875614318e32dcc4cc4"
   },
   {
     "url": "watch.png",
