@@ -109,7 +109,7 @@ if (workbox) {
   },
   {
     "url": "404.html",
-    "revision": "d22f40bd4131f2e0d106c367145e4201"
+    "revision": "bf6f170a38268c67c5fae98c17e9df93"
   },
   {
     "url": "50.png",
@@ -153,19 +153,19 @@ if (workbox) {
   },
   {
     "url": "about/index.html",
-    "revision": "0727c9e7fe5e9d180836789ebfac74d2"
+    "revision": "e0a37f4de253c3d13baff98cc17c9059"
   },
   {
     "url": "contact/index.html",
-    "revision": "65d1eb2fbcf3a385f48dbc0e2d43456f"
+    "revision": "28c8ba16caeddb4cb3466a02ffb01e86"
   },
   {
     "url": "css/styles.css",
-    "revision": "1b0547ac87fa34e6d81a09fe2506e1e7"
+    "revision": "4439b3f7067c82efc2afe05e415000f4"
   },
   {
     "url": "index.html",
-    "revision": "fe6f265a628ea5442df3fda5c40482f8"
+    "revision": "839714877829f1eba421587008ff399a"
   },
   {
     "url": "js/script.js",
@@ -177,63 +177,63 @@ if (workbox) {
   },
   {
     "url": "portfolio/blackberry/love-is/index.html",
-    "revision": "53c52d64c1ac796225f8c59e7f2c49e3"
+    "revision": "ccf3902c098979a0d33495d22a0e4868"
   },
   {
     "url": "portfolio/blackberry/my-lists/index.html",
-    "revision": "40664b6115162ef3028811a85a7b7f3e"
+    "revision": "4a6e8dd73cb6dc5df209742cb9c42bf0"
   },
   {
     "url": "portfolio/blackberry/star-wars-db/index.html",
-    "revision": "cedb90a0e904190960d0c6b73e785682"
+    "revision": "db2b41f3edb24cb1fc103306a431d4c1"
   },
   {
     "url": "portfolio/index.html",
-    "revision": "82630899338edf367b009eb32fa967f0"
+    "revision": "694b09b0abe64e5a11da69dfdcff26d2"
   },
   {
     "url": "portfolio/web/beauty-edinburgh/index.html",
-    "revision": "6b45991d91a496d40a5606b68fac497b"
+    "revision": "4c5426bb834e6a8c672b1c5d9c4af293"
   },
   {
     "url": "portfolio/web/fnbg-ltd/index.html",
-    "revision": "4663edb12f01246608076a61054c9c08"
+    "revision": "e9d07abba9d34cdffda430f46ad892a9"
   },
   {
     "url": "portfolio/web/moffat-museum-trust/index.html",
-    "revision": "2a9ecaeb1a0a14c7dc6786ddd88eb350"
+    "revision": "1475c93f24c5b943c2c095c1a0986bf8"
   },
   {
     "url": "portfolio/web/the-star-at-cotton/index.html",
-    "revision": "3e08cad37ef7314404731e99d6bc99ca"
+    "revision": "929a230df9826d8cf22ec740a8669cbb"
   },
   {
     "url": "portfolio/webapps/cobble-garden-market/index.html",
-    "revision": "2dd5fe993b7bac2f480523f95de62e37"
+    "revision": "5ea4e87c46e79fbca22fb4b0c7bbef3f"
   },
   {
     "url": "portfolio/webapps/duns-oral-history-project/index.html",
-    "revision": "1a877a29e05818a2666949987152754b"
+    "revision": "269c8b9864442c4d16c50a5c17b3c217"
   },
   {
     "url": "portfolio/webapps/euro-2016-wallchart/index.html",
-    "revision": "4c138a3a2d81f726ab74b2e4159662b7"
+    "revision": "43fcf3c702817015e9178db8e71d3771"
   },
   {
     "url": "portfolio/webapps/recipe-manager-react/index.html",
-    "revision": "aadd67c594624d48d4f08bfd899da7e3"
+    "revision": "236fae8fff922753107f85aa91d4c241"
   },
   {
     "url": "portfolio/webapps/recipe-manager/index.html",
-    "revision": "80f83fa6493466d24f69bd9cea524212"
+    "revision": "7034bfdc5c5c5a0ac245f7e46ad7da98"
   },
   {
     "url": "portfolio/webapps/uk-telephone-codes/index.html",
-    "revision": "3b6e8ec0a94cd24edcf0a8360ed0761e"
+    "revision": "2c19648d9d93ae0c0bc31d87c5a8005a"
   },
   {
     "url": "portfolio/webapps/world-cup-wallchart-2014/index.html",
-    "revision": "05b37ebdd2dd4b728831a210979b828e"
+    "revision": "ffb17f03b9db96d1ec5cfa2fa49054fe"
   },
   {
     "url": "service-worker.min.js",
