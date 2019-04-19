@@ -160,11 +160,11 @@ if (workbox) {
   },
   {
     "url": "css/styles.css",
-    "revision": "edbdc8583f83861949a46135b634c857"
+    "revision": "5e93ea35e303e6911b13b60152e3b09c"
   },
   {
     "url": "index.html",
-    "revision": "a74ba8fc915dff8e923fc250bd3b3da6"
+    "revision": "25ef2e361720b4d9e01408882c1ec695"
   },
   {
     "url": "js/script.js",
