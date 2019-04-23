@@ -4,19 +4,31 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "404.html",
-    "revision": "3b5774b6b7ca534ab6d5d195f0a2d362"
+    "revision": "37fd8030fa661924a2e6ce4cb4d73921"
   },
   {
     "url": "about/index.html",
-    "revision": "35158253ca860f24825c432fb34837c6"
+    "revision": "c8f779a79e26e882ba84246320ee1459"
   },
   {
     "url": "contact/index.html",
-    "revision": "425dd5e55da2e691aabf00f213979634"
+    "revision": "1e54e730fbc5955edab0df4153ce5f08"
   },
   {
     "url": "css/styles.css",
-    "revision": "0979cbe03d20487dce15981be6dae262"
+    "revision": "0a10cd9fcfae9f8bfa316435e2857250"
+  },
+  {
+    "url": "fonts/lato-v15-latin/lato-v15-latin-300.svg",
+    "revision": "54d3cfe0cec734925a21cebfe378a12e"
+  },
+  {
+    "url": "fonts/lato-v15-latin/lato-v15-latin-regular.svg",
+    "revision": "9087e4a6aceecc9b2914823044951a3a"
+  },
+  {
+    "url": "fonts/quattrocento-v10-latin/quattrocento-v10-latin-regular.svg",
+    "revision": "5e9a52097e90c7c92818913fbe09e328"
   },
   {
     "url": "images/drawing.svg",
@@ -28,7 +40,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "1f28224adc40e170488aaaa4c2ae8374"
+    "revision": "824809d6cfeaddce988ef3c963d3bcca"
   },
   {
     "url": "js/script.js",
@@ -40,67 +52,67 @@ if (workbox) {
   },
   {
     "url": "portfolio/blackberry/love-is/index.html",
-    "revision": "69671e0588be222c33a20dfeab1c456a"
+    "revision": "25daecead9956a6e95ff3d8387749534"
   },
   {
     "url": "portfolio/blackberry/my-lists/index.html",
-    "revision": "c78d7fe94388d5c36425e0ed1352f69e"
+    "revision": "6b0d5ab93f6f838e5cbdd3fb4dece966"
   },
   {
     "url": "portfolio/blackberry/star-wars-db/index.html",
-    "revision": "8b370da7a8be8f4142e51fe326fb4d81"
+    "revision": "1680734bb8d0838a23e2d42cb8b2a3ab"
   },
   {
     "url": "portfolio/index.html",
-    "revision": "ddf9fa2b00e501c21d463509c7335ac3"
+    "revision": "c8ef39abb1ccf43cd30366282b04b7d7"
   },
   {
     "url": "portfolio/web/beauty-edinburgh/index.html",
-    "revision": "00c4c289d620058eb426780a72d4c201"
+    "revision": "7f786f69c81a95383ad5a87ab3d2f452"
   },
   {
     "url": "portfolio/web/fnbg-ltd/index.html",
-    "revision": "50af5f99b01327178beffe2e1e9f3bb5"
+    "revision": "558798a9d7ab7c63a2045008c69adb19"
   },
   {
     "url": "portfolio/web/moffat-museum-trust/index.html",
-    "revision": "80093731e751a7a4580bcb08b4f61111"
+    "revision": "1c2223c4367bb8bd1c8f4e772408bdfe"
   },
   {
     "url": "portfolio/web/the-star-at-cotton/index.html",
-    "revision": "d316a3e262e997af701ea95b75210650"
+    "revision": "2f1811839b16de710c8b2f37eb96d5d3"
   },
   {
     "url": "portfolio/webapps/cobble-garden-market/index.html",
-    "revision": "9feeb36bee1749e9c4af3b7c8a4ff558"
+    "revision": "df94fd3c18b0c6aeb2264b1f3043bcff"
   },
   {
     "url": "portfolio/webapps/duns-oral-history-project/index.html",
-    "revision": "43a8d2383bc8a1f8c4e70d710c49e05d"
+    "revision": "a88fbaa414c2e7f684ddfb7ca5add196"
   },
   {
     "url": "portfolio/webapps/euro-2016-wallchart/index.html",
-    "revision": "379d450007db87cd77578238fa5c747d"
+    "revision": "74914799a45fa9ee2a80d6b46303851b"
   },
   {
     "url": "portfolio/webapps/recipe-manager-react/index.html",
-    "revision": "d8a30d5f88ab519f84ca1ed687adfbad"
+    "revision": "f85bc29f71fd4815a54acccd91bbe92d"
   },
   {
     "url": "portfolio/webapps/recipe-manager/index.html",
-    "revision": "28c3888cf3ac606fa780d1938edc9316"
+    "revision": "d16d364cf2de4c4aa97c08ac34a2d338"
   },
   {
     "url": "portfolio/webapps/uk-telephone-codes/index.html",
-    "revision": "5deced4cae6781045ecb4fd61a3089f7"
+    "revision": "6829f38c6c9a6ee86a8f1c66c31b62b2"
   },
   {
     "url": "portfolio/webapps/world-cup-wallchart-2014/index.html",
-    "revision": "63d17b8a96c6429e8ee255425d21d5f8"
+    "revision": "c9f52db080fa5fde514e0fa9873cddc8"
   },
   {
     "url": "service-worker.min.js",
-    "revision": "0a7c489fc4f9ef199b2280e469d9de6f"
+    "revision": "7e6a926cc15ee0fadf65ba4db6a90a21"
   }
 ])
   // workbox.routing.registerRoute(
@@ -130,6 +142,23 @@ if (workbox) {
   //     cacheName: 'html-cache',
   //   })
   // )
+  workbox.routing.registerRoute(
+    // Cache image files.
+    /\.(?:eot|svg|ttf|woff|woff2)$/,
+    // Use the cache if it's available.
+    new workbox.strategies.CacheFirst({
+      // Use a custom cache name.
+      cacheName: 'font-cache',
+      plugins: [
+        new workbox.expiration.Plugin({
+          // Cache only 20 images.
+          maxEntries: 15,
+          // Cache for a maximum of a week.
+          maxAgeSeconds: 7 * 24 * 60 * 60,
+        })
+      ],
+    })
+  )
   workbox.routing.registerRoute(
     // Cache image files.
     /\.(?:png|jpg|jpeg|svg|gif)$/,
