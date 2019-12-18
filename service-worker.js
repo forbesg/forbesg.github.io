@@ -16,7 +16,7 @@ if (workbox) {
   },
   {
     "url": "css/styles.css",
-    "revision": "0a10cd9fcfae9f8bfa316435e2857250"
+    "revision": "839a7bebb9fd3560537faf496c01e68b"
   },
   {
     "url": "fonts/lato-v15-latin/lato-v15-latin-300.svg",
@@ -40,7 +40,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "824809d6cfeaddce988ef3c963d3bcca"
+    "revision": "94ccad871219da29c04254fac27ecc7f"
   },
   {
     "url": "js/script.js",
@@ -64,7 +64,7 @@ if (workbox) {
   },
   {
     "url": "portfolio/index.html",
-    "revision": "c8ef39abb1ccf43cd30366282b04b7d7"
+    "revision": "d2cea710d9715171f34ff16c32783b5c"
   },
   {
     "url": "portfolio/web/beauty-edinburgh/index.html",
@@ -95,6 +95,10 @@ if (workbox) {
     "revision": "74914799a45fa9ee2a80d6b46303851b"
   },
   {
+    "url": "portfolio/webapps/little-city-treat/index.html",
+    "revision": "0c28f88435227e89e31c163ea8a7063e"
+  },
+  {
     "url": "portfolio/webapps/recipe-manager-react/index.html",
     "revision": "f85bc29f71fd4815a54acccd91bbe92d"
   },
@@ -115,45 +119,16 @@ if (workbox) {
     "revision": "7e6a926cc15ee0fadf65ba4db6a90a21"
   }
 ])
-  // workbox.routing.registerRoute(
-  //   // Cache CSS files.
-  //   /\.css$/,
-  //   // Use cache but update in the background.
-  //   new workbox.strategies.StaleWhileRevalidate({
-  //     // Use a custom cache name.
-  //     cacheName: 'css-cache',
-  //   })
-  // )
-  // workbox.routing.registerRoute(
-  //   // Cache CSS files.
-  //   /\.js$/,
-  //   // Use cache but update in the background.
-  //   new workbox.strategies.StaleWhileRevalidate({
-  //     // Use a custom cache name.
-  //     cacheName: 'js-cache',
-  //   })
-  // )
-  // workbox.routing.registerRoute(
-  //   // Cache CSS files.
-  //   /\.html$/,
-  //   // Use cache but update in the background.
-  //   new workbox.strategies.StaleWhileRevalidate({
-  //     // Use a custom cache name.
-  //     cacheName: 'html-cache',
-  //   })
-  // )
+
   workbox.routing.registerRoute(
-    // Cache image files.
+    // Cache font files.
     /\.(?:eot|svg|ttf|woff|woff2)$/,
     // Use the cache if it's available.
     new workbox.strategies.CacheFirst({
-      // Use a custom cache name.
       cacheName: 'font-cache',
       plugins: [
         new workbox.expiration.Plugin({
-          // Cache only 20 images.
           maxEntries: 15,
-          // Cache for a maximum of a week.
           maxAgeSeconds: 7 * 24 * 60 * 60,
         })
       ],
@@ -164,13 +139,10 @@ if (workbox) {
     /\.(?:png|jpg|jpeg|svg|gif)$/,
     // Use the cache if it's available.
     new workbox.strategies.CacheFirst({
-      // Use a custom cache name.
       cacheName: 'image-cache',
       plugins: [
         new workbox.expiration.Plugin({
-          // Cache only 20 images.
           maxEntries: 20,
-          // Cache for a maximum of a week.
           maxAgeSeconds: 7 * 24 * 60 * 60,
         })
       ],
