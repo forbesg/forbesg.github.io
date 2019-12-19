@@ -16,7 +16,7 @@ if (workbox) {
   },
   {
     "url": "css/styles.css",
-    "revision": "839a7bebb9fd3560537faf496c01e68b"
+    "revision": "458c92e8a112dc1cc8c0c4100843bbc6"
   },
   {
     "url": "fonts/lato-v15-latin/lato-v15-latin-300.svg",
@@ -96,7 +96,7 @@ if (workbox) {
   },
   {
     "url": "portfolio/webapps/little-city-treat/index.html",
-    "revision": "0c28f88435227e89e31c163ea8a7063e"
+    "revision": "e4cbc9250c927b405860e1b286c00fb4"
   },
   {
     "url": "portfolio/webapps/recipe-manager-react/index.html",
