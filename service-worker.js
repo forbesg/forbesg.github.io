@@ -16,7 +16,7 @@ if (workbox) {
   },
   {
     "url": "css/styles.css",
-    "revision": "c2ea4dbbd826128301b458b33270ddf2"
+    "revision": "05d3550777c976ac1d70faebdff80d1b"
   },
   {
     "url": "fonts/lato-v15-latin/lato-v15-latin-300.svg",
@@ -40,7 +40,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "5f6b40f24c284945f8eeccbf50ba8803"
+    "revision": "72cfb4a059b479a507238e2c8d937061"
   },
   {
     "url": "js/script.js",
