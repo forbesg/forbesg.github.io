@@ -12,7 +12,7 @@ if (workbox) {
   },
   {
     "url": "contact/index.html",
-    "revision": "b3e83cc53c91417864c15fefe63d03ad"
+    "revision": "158e82d2aa8251bb8ed365d6ef98efce"
   },
   {
     "url": "css/styles.css",
