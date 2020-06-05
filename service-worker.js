@@ -40,7 +40,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "299b1ba439982e434c342d5f9f4b011d"
+    "revision": "a4d7fa7efadb4a35ac17b53611234bf7"
   },
   {
     "url": "js/script.js",
@@ -64,7 +64,7 @@ if (workbox) {
   },
   {
     "url": "portfolio/index.html",
-    "revision": "70969ff1e927a0e938b5a6784a26f6ce"
+    "revision": "2aae5153f95b7fbc34f638691bc4722f"
   },
   {
     "url": "portfolio/web/beauty-edinburgh/index.html",
@@ -87,16 +87,16 @@ if (workbox) {
     "revision": "bc61298444b9761641e012037512e62a"
   },
   {
-    "url": "portfolio/webapps/cobble-garden-market/index.html",
-    "revision": "541bf8536808819b2a751a6b88a6d9a5"
-  },
-  {
     "url": "portfolio/webapps/duns-oral-history-project/index.html",
     "revision": "2e5d04e6d1fe891189c4b364f1f1c27c"
   },
   {
     "url": "portfolio/webapps/euro-2016-wallchart/index.html",
     "revision": "a48f98601dc45a3af03a2f50a91245a6"
+  },
+  {
+    "url": "portfolio/webapps/granite-setts-direct/index.html",
+    "revision": "4446746f2e66bed995cfebaa1656eced"
   },
   {
     "url": "portfolio/webapps/little-city-treat/index.html",
