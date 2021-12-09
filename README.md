@@ -1,3 +1,3 @@
-Add static files here. Files in this directory will be copied directly to `dist` folder during build. For example, /static/robots.txt will be located at https://yoursite.com/robots.txt.
+# Forbes Gray | Website Developer Edinburgh
 
-This file should be deleted.
+My personal website created using [Gridsome](https://gridsome.org/)
