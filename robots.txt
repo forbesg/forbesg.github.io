@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /Euro-2016-WallChart/
 
 Sitemap: https://forbesg.github.io/sitemap.xml
