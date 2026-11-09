@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Placeholder tokens carried over from the Gridsome site; the redesign replaces these. */
+@theme {
+  --font-sans: 'Catamaran', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #edf8fd;
+  --color-brand-300: #7cceef;
+  --color-brand-400: #4ebde9;
+  --color-brand-500: #178cbb;
+  --color-brand-600: #147ba4;
+  --color-brand-700: #0d5a77;
+  --color-brand-900: #083749;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
