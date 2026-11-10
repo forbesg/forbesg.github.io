@@ -3,6 +3,7 @@ title: FNBG Ltd
 description: A Nuxt JS, Tailwind and DatoCMS website designed and developed for FNBG Business Telecoms in Edinburgh.
 subhead: A Fast, CMS-Driven Business Website
 image: /images/projects/web/fnbg.jpg
+mockup: /images/projects/web/fnbg-mockup.png
 imageAlt: FNBG Ltd - Business Telecoms Website
 url: https://www.fnbg.co.uk
 features:
@@ -12,7 +13,7 @@ features:
   - DatoCMS
   - Responsive Design
 category: website
-displayOrder: 3
+displayOrder: 2
 featured: false
 ---
 

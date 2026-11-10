@@ -16,7 +16,7 @@ features:
 - Responsive Design
 category: website
 featured: false
-displayOrder: 4
+displayOrder: 6
 ---
 
 The Beauty Edinburgh Website is a something that has evolved over time.

@@ -15,7 +15,7 @@ features:
 - bootstrap
 - responsive design
 category: website
-displayOrder: 5
+displayOrder: 3
 featured: false
 ---
 

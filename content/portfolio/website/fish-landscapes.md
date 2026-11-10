@@ -15,7 +15,7 @@ features:
 - CSS Grid
 - Responsive design
 category: website
-displayOrder: 2
+displayOrder: 5
 fullImage:
   src: /images/projects/web/fish-landscapes-pagespeed-test.jpg
   alt: Fish Landscapes Website pagespeed test results
