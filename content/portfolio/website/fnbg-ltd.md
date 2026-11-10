@@ -1,28 +1,22 @@
 ---
 title: FNBG Ltd
-description: A static website designed and developed for FNBG Business Cost Consultants in Edinburgh.
-subhead: A Fast Static Business Website
+description: A Nuxt JS, Tailwind and DatoCMS website designed and developed for FNBG Business Telecoms in Edinburgh.
+subhead: A Fast, CMS-Driven Business Website
 image: /images/projects/web/fnbg.jpg
-imageAlt: FNBG Ltd - Telecoms Business Website
-url: https://fnbg.co.uk
+imageAlt: FNBG Ltd - Business Telecoms Website
+url: https://www.fnbg.co.uk
 features:
-- html
-- css
-- php
-- javascript
-- bootstrap
-- responsive design
-- ajax
-- scss
-- flexbox
-- metalsmith
-- progressive web app
+  - Nuxt JS
+  - Vue JS
+  - Tailwind CSS
+  - DatoCMS
+  - Responsive Design
 category: website
 displayOrder: 3
 featured: false
 ---
 
-This is a website for my Business, <a href="https://fnbg.co.uk" rel="noopener" target="_blank">FNBG Business Cost Consultants</a>,
+This is a website for my Business, <a href="https://www.fnbg.co.uk" rel="noopener" target="_blank">FNBG Business Telecoms</a>,
 and was what led me to my interest in web development.
 
 As part of starting the business there are all sorts of things that you need to
@@ -40,15 +34,19 @@ includes for ease of management / maintenance, as well as a little _AJAX_ for
 requesting additional content while keeping the initial page size low and
 requesting content from my (shamefully out-of-date) Blogger Site.
 
-The most recent version of the site was written using a static site generator called
-<a href="https://metalsmith.io/" rel="noopener">Metalsmith</a> allowing me to
-create dynamically generated website pages and use build tools such as SCSS,
-whilst getting the speed and security benefits of a static website.
+A later version of the site was built with a static site generator called
+<a href="https://metalsmith.io/" rel="noopener">Metalsmith</a>, allowing me to
+create dynamically generated pages and use build tools such as SCSS, whilst getting
+the speed and security benefits of a static website. I removed Bootstrap, wrote all
+the CSS using flexbox and took my first steps into Progressive Web Apps (PWA).
 
-I removed Bootstrap and wrote all the css using flexbox to create a responsive
-layout which reduced the size of the resources required on page load in my
-search for fast load times.
+#### The Current Site
 
-I also took a step onto Progressive Web Apps (PWA) which enabled even faster page load
-times as well as the ability to work offline (probably a little over the top for a
-site like this but good to try out).
+The site has now been rebuilt with <a href="https://nuxt.com/" rel="noopener" target="_blank">Nuxt JS</a>,
+styled with <a href="https://tailwindcss.com/" rel="noopener" target="_blank">Tailwind CSS</a>
+and powered by <a href="https://www.datocms.com/" rel="noopener" target="_blank">DatoCMS</a>.
+
+Moving the content into a headless CMS means pages can be updated without touching
+the code, while Nuxt keeps the site fast and search-engine friendly. Tailwind
+replaces the hand-written stylesheets with a utility-first approach that keeps the
+CSS small and the design consistent across every page.

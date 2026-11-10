@@ -36,7 +36,7 @@ technology you like. The website (or App...or both) then makes API calls to the 
 to display to the user and facilitate the sales.
 
 The headless e-commerce space has become very busy very quickly with frameworks
-like Elasticpath, Vendure and Open Source Sylius whilst the likes of Magento, BigCommerce
+like ElasticPath, Vendure and Open Source Sylius whilst the likes of Magento, BigCommerce
 and Shopify have created Headless versions of their frameworks.
 
 ### Omnichannel Sales

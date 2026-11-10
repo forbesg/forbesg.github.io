@@ -7,14 +7,14 @@ mockup: /images/projects/web-application/granite-setts-direct-mockup.png
 imageAlt: Granite Setts Direct - Headless Ecommerce Website
 url: https://www.granitesettsdirect.co.uk
 features:
-- HTML5
-- SCSS
-- Vue JS
-- Nuxt JS
-- Moltin
-- Babel
-- Webpack
-- Ecommerce
+  - HTML5
+  - Tailwind CSS
+  - Vue JS
+  - Nuxt JS
+  - ElasticPath
+  - Netlify
+  - Prismic CMS
+  - Ecommerce
 category: web-application
 displayOrder: 2
 featured: true
@@ -33,7 +33,7 @@ fast and straight forward and uncluttered user experience.
 After our initial discussions with the client we agreed that we would use Vue to create
 the UI and the [Nuxt JS](https://nuxtjs.org/) framework to take advantage of server-side rendering. In order to
 integrate the e-commerce functionality without the weight of a full blown E-Commerce
-framework, we integrated the [Moltin](https://moltin.com/) headless E-Commerce API which made the overall site very
+framework, we integrated the [ElasticPath](https://www.elasticpath.com/) headless E-Commerce API which made the overall site very
 light-weight, fast and responsive. This also allowed us to take full control of the
 flow of the buying process.
 
