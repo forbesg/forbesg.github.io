@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Editorial card for projects, articles, services and team members:
 // image, then serif title with a small mono label on the right.
-defineProps<{
+withDefaults(defineProps<{
   to: string
   title: string
   image?: string
@@ -11,7 +11,9 @@ defineProps<{
   aspect?: 'video' | 'square'
   /** Transparent mockups: no border, never cropped */
   frameless?: boolean
-}>()
+  /** Title heading level: 3 under an h2 section, 2 when the cards sit directly under the page h1 */
+  headingLevel?: 2 | 3
+}>(), { headingLevel: 3 })
 </script>
 
 <template>
@@ -33,12 +35,12 @@ defineProps<{
       />
     </div>
     <div class="mt-4 flex items-baseline justify-between gap-4">
-      <h3 class="text-[1.875rem] leading-[1.1]">
+      <component :is="`h${headingLevel}`" class="text-[1.875rem] leading-[1.1]">
         <NuxtLink
           :to="to"
           class="after:absolute after:inset-0 after:content-[''] group-hover:text-accent focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-accent"
         >{{ title }}</NuxtLink>
-      </h3>
+      </component>
       <span v-if="label" class="max-w-[45%] text-right font-mono text-xs tracking-[0.08em] text-muted uppercase">{{ label }}</span>
     </div>
     <p v-if="description" class="mt-2 text-muted">{{ description }}</p>
