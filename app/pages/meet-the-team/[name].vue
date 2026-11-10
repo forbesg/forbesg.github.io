@@ -48,6 +48,7 @@ useSchemaOrg([
         sizes="100vw md:50vw"
         class="aspect-square w-full border border-line object-cover"
         preload
+        fetchpriority="high"
       />
       <div>
         <p class="eyebrow mb-4">{{ member.position }}</p>

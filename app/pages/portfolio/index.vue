@@ -51,8 +51,9 @@ usePageSeo({
         <p v-if="category.note" class="-mt-6 mb-12 max-w-2xl text-muted">{{ category.note }}</p>
         <div class="grid gap-x-8 gap-y-12 md:grid-cols-2">
           <ContentCard
-            v-for="project in category.projects.slice(0, PER_SECTION)"
+            v-for="(project, j) in category.projects.slice(0, PER_SECTION)"
             :key="project.path"
+            :eager="i === 0 && j < 2"
             :to="withSlash(project.path)"
             :title="project.title"
             :label="project.subhead"

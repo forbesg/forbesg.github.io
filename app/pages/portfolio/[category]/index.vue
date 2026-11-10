@@ -33,8 +33,9 @@ usePageSeo({
     <section class="mx-auto grid max-w-6xl gap-x-8 gap-y-14 px-6 py-20 md:grid-cols-2">
       <ContentCard
         :heading-level="2"
-        v-for="project in projects"
+        v-for="(project, j) in projects"
         :key="project.path"
+        :eager="j < 2"
         :to="withSlash(project.path)"
         :title="project.title"
         :label="project.subhead"

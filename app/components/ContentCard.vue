@@ -13,7 +13,9 @@ withDefaults(defineProps<{
   frameless?: boolean
   /** Title heading level: 3 under an h2 section, 2 when the cards sit directly under the page h1 */
   headingLevel?: 2 | 3
-}>(), { headingLevel: 3 })
+  /** Card is visible on first load: load its image straight away at high priority instead of lazily */
+  eager?: boolean
+}>(), { headingLevel: 3, eager: false })
 </script>
 
 <template>
@@ -29,7 +31,8 @@ withDefaults(defineProps<{
         :src="image"
         :alt="imageAlt ?? ''"
         sizes="100vw sm:50vw lg:560px"
-        loading="lazy"
+        :loading="eager ? 'eager' : 'lazy'"
+        :fetchpriority="eager ? 'high' : undefined"
         :class="[aspect === 'square' ? 'aspect-square' : 'aspect-video', frameless ? 'object-contain' : 'object-cover']"
         class="w-full transition-transform duration-500 group-hover:scale-[1.02]"
       />

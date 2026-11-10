@@ -74,7 +74,8 @@ usePageSeo({
             :src="service.example.mockup ?? service.example.image"
             :alt="service.example.imageAlt"
             sizes="100vw md:50vw lg:560px"
-            loading="lazy"
+            :loading="i === 0 ? 'eager' : 'lazy'"
+            :fetchpriority="i === 0 ? 'high' : undefined"
             :class="service.example.mockup ? 'object-contain' : 'border border-line object-cover'"
             class="aspect-video w-full transition-transform duration-500 group-hover:scale-[1.02]"
           />

@@ -18,8 +18,9 @@ usePageSeo({
     <section class="mx-auto grid max-w-6xl gap-x-8 gap-y-14 px-6 py-20 md:grid-cols-2">
       <ContentCard
         :heading-level="2"
-        v-for="member in team"
+        v-for="(member, j) in team"
         :key="member.path"
+        :eager="j < 2"
         :to="withSlash(member.path)"
         :title="member.name"
         :label="member.position"
