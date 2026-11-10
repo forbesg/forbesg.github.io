@@ -12,6 +12,7 @@ features:
 - Vue JS
 - Gridsome
 - DatoCMS
+- MapBox
 - Progressive Web App
 carousel:
 - src: /images/projects/web-application/town-trail/trail-view.png
