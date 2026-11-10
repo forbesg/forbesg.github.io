@@ -61,12 +61,21 @@ export default defineNuxtConfig({
     },
   },
 
+  // Moved pages. GitHub Pages can't send real redirects, so each of these is
+  // prerendered (see nitro.prerender.routes) as a tiny page that forwards
+  // instantly with a meta refresh. Add new moves to both lists.
+  routeRules: {
+    '/portfolio/web-application/granite-setts-direct/': {
+      redirect: { to: '/portfolio/ecommerce/granite-setts-direct/', statusCode: 301 },
+    },
+  },
+
   nitro: {
     prerender: {
       // nuxt generate crawls every link from the home page; these make sure
       // pages that are only linked from the sitemap still get built
       crawlLinks: true,
-      routes: ['/', '/blog/tags/'],
+      routes: ['/', '/blog/tags/', '/portfolio/web-application/granite-setts-direct/'],
     },
   },
 })

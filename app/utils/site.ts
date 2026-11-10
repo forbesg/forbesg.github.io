@@ -8,10 +8,11 @@ interface PortfolioCategoryInfo {
   note?: string
 }
 
-export type PortfolioCategory = 'website' | 'web-application' | 'blackberry'
+export type PortfolioCategory = 'website' | 'ecommerce' | 'web-application' | 'blackberry'
 
 export const PORTFOLIO_CATEGORIES: Record<PortfolioCategory, PortfolioCategoryInfo> = {
   'website': { title: 'Websites', single: 'Website' },
+  'ecommerce': { title: 'Ecommerce', single: 'Ecommerce Website' },
   'web-application': { title: 'Web Applications', single: 'Web Application' },
   'blackberry': {
     title: 'BlackBerry Apps',

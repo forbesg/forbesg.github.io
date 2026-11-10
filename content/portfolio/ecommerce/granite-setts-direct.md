@@ -15,8 +15,8 @@ features:
   - Netlify
   - Prismic CMS
   - Ecommerce
-category: web-application
-displayOrder: 2
+category: ecommerce
+displayOrder: 1
 featured: true
 ---
 
@@ -36,6 +36,10 @@ integrate the e-commerce functionality without the weight of a full blown E-Comm
 framework, we integrated the [ElasticPath](https://www.elasticpath.com/) headless E-Commerce API which made the overall site very
 light-weight, fast and responsive. This also allowed us to take full control of the
 flow of the buying process.
+
+Alongside the shop, the site's pages and blog are managed in
+[Prismic](https://prismic.io/), a headless CMS, so the team can keep content up to
+date and publish new articles without needing a developer.
 
 To design the site I worked closely with the client to create a clean, uncomplicated
 visual experience to allow to customer to focus on the product itself.

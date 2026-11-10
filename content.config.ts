@@ -36,7 +36,7 @@ export default defineContentConfig({
       source: 'portfolio/**/*.md',
       schema: z.object({
         subhead: z.string(),
-        category: z.enum(['website', 'web-application', 'blackberry']),
+        category: z.enum(['website', 'ecommerce', 'web-application', 'blackberry']),
         image: z.string(),
         imageAlt: z.string(),
         // Optional transparent-background version of `image` for device mockups
