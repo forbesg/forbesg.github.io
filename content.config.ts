@@ -39,6 +39,8 @@ export default defineContentConfig({
         category: z.enum(['website', 'web-application', 'blackberry']),
         image: z.string(),
         imageAlt: z.string(),
+        // Optional transparent-background version of `image` for device mockups
+        mockup: z.string().optional(),
         url: z.string().optional(),
         repo: z.string().optional(),
         features: z.array(z.string()).default([]),

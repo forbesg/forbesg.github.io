@@ -11,7 +11,7 @@ const info = PORTFOLIO_CATEGORIES[category]
 const { data: projects } = await useAsyncData(`portfolio-${category}`, () =>
   queryCollection('projects')
     .where('category', '=', category)
-    .select('path', 'title', 'subhead', 'description', 'image', 'imageAlt', 'displayOrder')
+    .select('path', 'title', 'subhead', 'description', 'image', 'mockup', 'imageAlt', 'displayOrder')
     .order('displayOrder', 'ASC')
     .all(),
 )
@@ -37,8 +37,9 @@ usePageSeo({
         :title="project.title"
         :label="project.subhead"
         :description="project.description"
-        :image="project.image"
+        :image="project.mockup ?? project.image"
         :image-alt="project.imageAlt"
+        :frameless="!!project.mockup"
       />
     </section>
     <GetInTouch />

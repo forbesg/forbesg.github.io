@@ -9,19 +9,28 @@ defineProps<{
   label?: string
   description?: string
   aspect?: 'video' | 'square'
+  /** Transparent mockups: no border, never cropped */
+  frameless?: boolean
 }>()
 </script>
 
 <template>
   <article class="group flex flex-col">
-    <NuxtLink v-if="image" :to="to" tabindex="-1" aria-hidden="true" class="block overflow-hidden border border-line">
+    <NuxtLink
+      v-if="image"
+      :to="to"
+      tabindex="-1"
+      aria-hidden="true"
+      :class="frameless ? '' : 'border border-line'"
+      class="block overflow-hidden"
+    >
       <NuxtImg
         :src="image"
         :alt="imageAlt ?? ''"
         sizes="100vw sm:50vw lg:560px"
         loading="lazy"
-        :class="aspect === 'square' ? 'aspect-square' : 'aspect-video'"
-        class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        :class="[aspect === 'square' ? 'aspect-square' : 'aspect-video', frameless ? 'object-contain' : 'object-cover']"
+        class="w-full transition-transform duration-500 group-hover:scale-[1.02]"
       />
     </NuxtLink>
     <div class="mt-4 flex items-baseline justify-between gap-4">

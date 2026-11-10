@@ -121,8 +121,9 @@ useHead({
             :to="withSlash(project.path)"
             :title="project.title"
             :label="PORTFOLIO_CATEGORIES[project.category].single"
-            :image="project.image"
+            :image="project.mockup ?? project.image"
             :image-alt="project.imageAlt"
+            :frameless="!!project.mockup"
           />
         </div>
         <NuxtLink to="/portfolio/" class="link-mono mt-12 inline-block">All projects →</NuxtLink>

@@ -26,8 +26,9 @@ usePageSeo({
       :title="project.title"
       :eyebrow="project.subhead"
       :subhead="project.description"
-      :image="project.image"
+      :image="project.mockup ?? project.image"
       :image-alt="project.imageAlt"
+      :image-frameless="!!project.mockup"
       :breadcrumbs="[
         { label: 'Work', to: '/portfolio/' },
         { label: category.title, to: `/portfolio/${project.category}/` },

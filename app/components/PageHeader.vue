@@ -8,6 +8,8 @@ defineProps<{
   breadcrumbs?: Crumb[]
   image?: string
   imageAlt?: string
+  /** Transparent mockups: no border, shown whole */
+  imageFrameless?: boolean
 }>()
 </script>
 
@@ -25,7 +27,7 @@ defineProps<{
         :src="image"
         :alt="imageAlt ?? ''"
         sizes="100vw lg:1104px"
-        class="aspect-[21/9] w-full border border-line object-cover"
+        :class="imageFrameless ? 'mx-auto max-h-[36rem] w-auto' : 'aspect-[21/9] w-full border border-line object-cover'"
         preload
       />
     </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { data: projects } = await useAsyncData('portfolio', () =>
   queryCollection('projects')
-    .select('path', 'title', 'subhead', 'image', 'imageAlt', 'category', 'displayOrder')
+    .select('path', 'title', 'subhead', 'image', 'mockup', 'imageAlt', 'category', 'displayOrder')
     .order('displayOrder', 'ASC')
     .all(),
 )
@@ -46,8 +46,9 @@ usePageSeo({
             :to="withSlash(project.path)"
             :title="project.title"
             :label="project.subhead"
-            :image="project.image"
+            :image="project.mockup ?? project.image"
             :image-alt="project.imageAlt"
+            :frameless="!!project.mockup"
           />
         </div>
       </div>
