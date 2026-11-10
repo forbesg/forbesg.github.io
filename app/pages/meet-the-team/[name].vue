@@ -52,12 +52,12 @@ usePageSeo({
           </section>
         </div>
         <a
-          v-if="member.twitter"
-          :href="`https://twitter.com/${member.twitter.replace('@', '')}`"
+          v-if="member.x"
+          :href="`https://x.com/${member.x.replace('@', '')}`"
           target="_blank"
           rel="noopener"
           class="link-mono mt-10 inline-block"
-        >{{ member.twitter }} ↗</a>
+        >{{ member.x }} on X ↗</a>
       </div>
     </div>
   </div>

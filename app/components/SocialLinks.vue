@@ -1,10 +1,9 @@
 <script setup lang="ts">
-// Twitter link kept as on the old site; review during the content refresh.
 const links = [
   { href: 'https://github.com/forbesg', label: 'GitHub' },
   { href: 'https://uk.linkedin.com/in/forbesgray', label: 'LinkedIn' },
   { href: 'https://www.instagram.com/4beeeez', label: 'Instagram' },
-  { href: 'https://twitter.com/4beez', label: 'Twitter' },
+  { href: 'https://x.com/4beez', label: 'X' },
 ]
 </script>
 

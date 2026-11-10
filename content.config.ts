@@ -120,7 +120,7 @@ export default defineContentConfig({
         position: z.string(),
         image: z.string(),
         imageAlt: z.string(),
-        twitter: z.string().optional(),
+        x: z.string().optional(),
         links: z.array(z.string()).default([]),
         favoriteFoods: z.array(z.string()).default([]),
         interests: z.array(z.string()).default([]),
