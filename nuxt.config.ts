@@ -15,7 +15,30 @@ export default defineNuxtConfig({
   ],
 
   css: ["~/assets/css/main.css"],
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+    // Bundle the site's own pages, layouts and components into one client
+    // chunk. Split per page they were ~30 files under 1 KB, each a separate
+    // round trip on GitHub Pages, which slowed first visits to each page.
+    $client: {
+      build: {
+        rolldownOptions: {
+          output: {
+            codeSplitting: {
+              groups: [
+                {
+                  name: 'site',
+                  // our pages/layouts/components, plus Nuxt Content's prose components
+                  // (one tiny file per markdown element type otherwise)
+                  test: /[\\/]app[\\/](pages|layouts|components)[\\/]|[\\/]components[\\/]prose[\\/]/,
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+  },
 
   runtimeConfig: {
     public: {
