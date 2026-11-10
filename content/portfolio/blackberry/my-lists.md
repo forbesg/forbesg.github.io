@@ -33,4 +33,4 @@ manage and share their lists using BlackBerry's native messaging and social
 applications.
 
 I have used users feedback to implement new features, modify design and
-fix some errors in behavior.
+fix some errors in behaviour.
