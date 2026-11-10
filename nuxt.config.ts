@@ -70,11 +70,15 @@ export default defineNuxtConfig({
   image: {
     quality: 80,
     ipx: {
+      // Keep the default /_ipx path: Nuxt Image's static prerender only picks
+      // up image URLs containing "/_ipx/", so a custom baseURL breaks images.
       modifiers: { format: 'webp' },
     },
   },
 
   app: {
+    // Where the hashed JS/CSS bundles are served from (default /_nuxt/)
+    buildAssetsDir: '/_forbes/',
     head: {
       htmlAttrs: { lang: 'en-GB' },
       titleTemplate: '%s | Forbes Gray',
