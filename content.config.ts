@@ -91,6 +91,25 @@ export default defineContentConfig({
       }),
     }),
 
+    // content/toolbox.yml: the tools list on the About page
+    toolbox: defineCollection({
+      type: 'data',
+      source: 'toolbox.yml',
+      schema: z.object({
+        title: z.string(),
+        intro: z.string(),
+        groups: z.array(
+          z.object({
+            name: z.string(),
+            tagline: z.string(),
+            icon: z.enum(['layout', 'database', 'cart', 'rocket', 'archive']),
+            retired: z.boolean().default(false),
+            tools: z.array(z.string()),
+          }),
+        ),
+      }),
+    }),
+
     team: defineCollection({
       type: 'page',
       source: 'meet-the-team/*.md',

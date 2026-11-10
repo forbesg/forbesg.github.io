@@ -24,13 +24,17 @@ usePageSeo({
           class="aspect-square w-full max-w-72 border border-line object-cover"
         />
         <p class="mt-4 font-mono text-[0.8125rem] text-muted">Forbes Gray · Leith, Edinburgh</p>
-        <NuxtLink to="/meet-the-team/" class="link-mono mt-4 inline-block">Meet the team →</NuxtLink>
+        <div class="mt-4 flex flex-col items-start gap-2">
+          <a href="#toolbox" class="link-mono">My toolbox ↓</a>
+          <NuxtLink to="/meet-the-team/" class="link-mono">Meet the team →</NuxtLink>
+        </div>
       </aside>
       <article class="min-w-0 max-w-3xl">
         <ContentRenderer :value="page" class="prose prose-site max-w-none" />
         <NuxtLink to="/portfolio/" class="link-mono mt-10 inline-block">See my work →</NuxtLink>
       </article>
     </div>
+    <ToolboxSection />
     <GetInTouch />
   </div>
 </template>

@@ -1,0 +1,73 @@
+# The toolbox section on the About page (/about/#toolbox).
+# Edit freely: groups show in this order; `icon` is one of
+# layout | database | cart | rocket | archive.
+
+title: The toolbox
+intro: >-
+  The tools I reach for most. I pick whatever suits the job and your budget,
+  not whatever's fashionable, and I'm always happy to explain why.
+
+groups:
+  - name: Front end
+    tagline: What your visitors see and click
+    icon: layout
+    tools:
+      - HTML & CSS
+      - SCSS
+      - Tailwind CSS
+      - JavaScript
+      - Vue
+      - Nuxt
+      - React
+      - Gridsome
+      - Gatsby
+      - Progressive Web Apps
+
+  - name: Content & data
+    tagline: Where your words, pages and bookings live
+    icon: database
+    tools:
+      - DatoCMS
+      - WordPress
+      - Drupal
+      - Joomla
+      - MODX
+      - Grav
+      - Firebase
+      - GraphQL
+      - MySQL
+      - MongoDB
+
+  - name: Shops & payments
+    tagline: Selling online and taking money
+    icon: cart
+    tools:
+      - Shopify
+      - WooCommerce
+      - Stripe
+      - Moltin (Elastic Path)
+
+  - name: Build, host & measure
+    tagline: Getting it live and keeping it fast
+    icon: rocket
+    tools:
+      - Node.js
+      - Netlify
+      - GitHub
+      - Firebase Hosting
+      - Webpack
+      - Lighthouse
+      - Google Analytics
+      - Figma
+      - Sketch
+
+  - name: Retired with honours
+    tagline: Where it all started
+    icon: archive
+    retired: true
+    tools:
+      - BlackBerry WebWorks
+      - Apache Cordova
+      - AngularJS
+      - Bootstrap
+      - PHP
