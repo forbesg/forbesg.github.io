@@ -4,16 +4,15 @@ description: A Nuxt JS generated static website for Fish Landscapes, a landscapi
 subhead: A Fast Static Business Website
 image: /images/projects/web/fish-landscapes.jpg
 imageAlt: Fish Landscapes - Landscaping Business Website
-url: https://www.fishlandscapes.co.uk
 features:
-- HTML5
-- SCSS
-- JavaScript
-- Vue JS
-- Nuxt JS
-- Flexbox
-- CSS Grid
-- Responsive design
+  - HTML5
+  - SCSS
+  - JavaScript
+  - Vue JS
+  - Nuxt JS
+  - Flexbox
+  - CSS Grid
+  - Responsive design
 category: website
 displayOrder: 5
 fullImage:
