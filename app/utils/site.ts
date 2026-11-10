@@ -33,6 +33,8 @@ export const BLOG_TAGS: Record<string, string> = {
   'jam-stack': 'JAMStack',
   'static-sites': 'Static Sites',
   'ecommerce-sites': 'Ecommerce Websites',
+  'nuxt': 'Nuxt',
+  'netlify': 'Netlify',
 }
 
 /** The live site's URLs all end in a slash; keep links consistent with that. */
