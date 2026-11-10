@@ -7,26 +7,27 @@ mockup: /images/projects/web-application/duns-town-trail-mockup.png
 imageAlt: Duns Town Trail - Progressive Web App
 url: https://town-trail.aheartforduns.org/
 features:
-- HTML
-- SCSS
-- Vue JS
-- Gridsome
-- DatoCMS
-- MapBox
-- Progressive Web App
+  - HTML
+  - SCSS
+  - Vue JS
+  - Gridsome
+  - DatoCMS
+  - MapBox
+  - Netlify
+  - Progressive Web App
 carousel:
-- src: /images/projects/web-application/town-trail/trail-view.png
-  alt: Town Trail
-  width: 360
-  height: 720
-- src: /images/projects/web-application/town-trail/trail-map.png
-  alt: Town Trail Map View
-  width: 360
-  height: 720
-- src: /images/projects/web-application/town-trail/wojtek-trail-view.png
-  alt: Wojtek Trail View
-  width: 360
-  height: 720
+  - src: /images/projects/web-application/town-trail/trail-view.png
+    alt: Town Trail
+    width: 360
+    height: 720
+  - src: /images/projects/web-application/town-trail/trail-map.png
+    alt: Town Trail Map View
+    width: 360
+    height: 720
+  - src: /images/projects/web-application/town-trail/wojtek-trail-view.png
+    alt: Wojtek Trail View
+    width: 360
+    height: 720
 category: web-application
 displayOrder: 3
 featured: true

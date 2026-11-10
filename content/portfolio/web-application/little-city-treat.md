@@ -7,17 +7,15 @@ mockup: /images/projects/web-application/little-city-treat-mockup.png
 imageAlt: Little City Treat - Booking System Web Application
 url: https://www.littlecitytreat.com
 features:
-- HTML5
-- SCSS
-- Vue JS
-- Nuxt JS
-- DatoCMS
-- Firebase
-- Babel
-- Webpack
-- Progressive Web App
-- Stripe
-- ECommerce
+  - HTML5
+  - Tailwind CSS
+  - Vue JS
+  - Nuxt JS
+  - DatoCMS
+  - Firebase
+  - Progressive Web App
+  - Stripe
+  - ECommerce
 category: web-application
 displayOrder: 1
 featured: true

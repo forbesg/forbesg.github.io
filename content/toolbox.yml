@@ -19,8 +19,6 @@ groups:
       - Vue
       - Nuxt
       - React
-      - Gridsome
-      - Gatsby
       - Progressive Web Apps
 
   - name: Content & data
@@ -28,11 +26,8 @@ groups:
     icon: database
     tools:
       - DatoCMS
+      - Prismic CMS
       - WordPress
-      - Drupal
-      - Joomla
-      - MODX
-      - Grav
       - Firebase
       - GraphQL
       - MySQL
@@ -44,8 +39,10 @@ groups:
     tools:
       - Shopify
       - WooCommerce
+      - ElasticPath
+      - BigCommerce
+      - Swell JS
       - Stripe
-      - Moltin (Elastic Path)
 
   - name: Build, host & measure
     tagline: Getting it live and keeping it fast
@@ -55,11 +52,9 @@ groups:
       - Netlify
       - GitHub
       - Firebase Hosting
-      - Webpack
       - Lighthouse
-      - Google Analytics
       - Figma
-      - Sketch
+      - Google Analytics
 
   - name: Retired with honours
     tagline: Where it all started
