@@ -2,6 +2,11 @@
 title: E-Commerce Website Design
 shortTitle: Online shops
 summary: Sell your products online with Shopify or a custom checkout, built to load fast on phones.
+highlights:
+  - Shopify, or a custom headless checkout
+  - Fast on phones, where most of your customers shop
+  - Google Analytics and Ads ready from day one
+example: /portfolio/ecommerce/granite-setts-direct
 description: Fast, responsive and SEO friendly ecommerce websites. I design and develop custom ecommerce websites for businesses of all sizes.
 subtitle: Whatever your product, sell it online, fast
 icon:

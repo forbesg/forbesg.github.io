@@ -2,6 +2,11 @@
 title: Brochure Website Design
 shortTitle: Brochure websites
 summary: A fast, simple site to put your business on the map. 5 to 15 pages, free domain and hosting.
+highlights:
+  - Up to 15 pages, designed around your business
+  - Free domain name, hosting and SSL certificate
+  - Built to load fast and rank well on Google
+example: /portfolio/website/sg-autoshade
 description: Fast, responsive and SEO friendly static websites. A low cost option to get your business website online quickly.
 subtitle: Simple, Fast, Beautiful Websites
 icon:

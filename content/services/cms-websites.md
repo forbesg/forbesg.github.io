@@ -2,6 +2,11 @@
 title: Content Management Systems
 shortTitle: Websites you can edit
 summary: Update your own pages, news and menus through an easy content editor, without the WordPress bloat.
+highlights:
+  - Edit your own pages, news and menus
+  - "A headless CMS: no plugins or WordPress updates"
+  - Free static hosting and regular website health reports
+example: /portfolio/website/fnbg-ltd
 description: Fast, responsive and SEO friendly headless content management system websites. Create, manage and grow your business website content.
 subtitle: Content Management Websites Without The Bloat
 icon:

@@ -22,6 +22,14 @@ export default defineContentConfig({
         subhead: z.string().optional(),
         image: z.string().optional(),
         imageAlt: z.string().optional(),
+        // services.md: smaller services shown as tiles under the main three
+        extras: z
+          .object({
+            title: z.string(),
+            intro: z.string().optional(),
+            items: z.array(z.object({ title: z.string(), text: z.string(), icon: z.string() })),
+          })
+          .optional(),
       }),
     }),
 
@@ -66,6 +74,9 @@ export default defineContentConfig({
       schema: z.object({
         shortTitle: z.string(),
         summary: z.string(),
+        // Services index card: key selling points, and a portfolio project path to show as an example
+        highlights: z.array(z.string()).default([]),
+        example: z.string().optional(),
         subtitle: z.string(),
         icon: imageRef,
         bannerImage: imageRef,
