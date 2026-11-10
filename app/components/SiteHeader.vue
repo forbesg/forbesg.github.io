@@ -31,6 +31,10 @@ watch(() => route.path, () => (open.value = false))
                 {{ link.label }}
               </NuxtLink>
             </li>
+            <!-- The header's Hire me button is hidden below sm, so it lives in the menu there -->
+            <li class="mt-2 border-t border-line pt-5 sm:hidden">
+              <NuxtLink to="/contact/" class="btn-primary w-full">Hire me</NuxtLink>
+            </li>
           </ul>
         </nav>
 
