@@ -88,7 +88,7 @@ usePageSeo({
     <section class="bg-soft" aria-labelledby="work-heading">
       <div class="mx-auto max-w-6xl px-6 py-24">
         <h2 id="work-heading" class="mb-12 text-6xl leading-none">Recent work</h2>
-        <div class="grid gap-x-8 gap-y-12 md:grid-cols-2">
+        <div class="grid gap-x-8 gap-y-20 md:grid-cols-2 md:gap-y-12">
           <ContentCard
             v-for="project in data?.projects"
             :key="project.path"
