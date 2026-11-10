@@ -65,8 +65,13 @@ export default defineNuxtConfig({
     ],
   },
 
+  // Every <NuxtImg> is resized by IPX (sharp) at build time; these defaults
+  // also convert it to WebP, keeping transparency on the PNG mockups.
   image: {
-    format: ['avif', 'webp'],
+    quality: 80,
+    ipx: {
+      modifiers: { format: 'webp' },
+    },
   },
 
   app: {
