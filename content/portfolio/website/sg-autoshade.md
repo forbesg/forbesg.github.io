@@ -29,7 +29,7 @@ work on offer, from car body and accident repair to alloy wheel, dent and scratc
 repair, and get in touch for a free quote. Both private and insurance work are
 handled, so the site needed to make that clear up front.
 
-#### A Bold, Fast Static Site
+## A Bold, Fast Static Site
 
 The design leans into the business's own branding, with a dark, full-bleed hero and
 the red, orange and yellow from the SG Autoshade logo carried through the headings

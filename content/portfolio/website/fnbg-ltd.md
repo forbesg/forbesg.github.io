@@ -41,7 +41,7 @@ create dynamically generated pages and use build tools such as SCSS, whilst gett
 the speed and security benefits of a static website. I removed Bootstrap, wrote all
 the CSS using flexbox and took my first steps into Progressive Web Apps (PWA).
 
-#### The Current Site
+## The Current Site
 
 The site has now been rebuilt with <a href="https://nuxt.com/" rel="noopener" target="_blank">Nuxt JS</a>,
 styled with <a href="https://tailwindcss.com/" rel="noopener" target="_blank">Tailwind CSS</a>

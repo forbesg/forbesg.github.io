@@ -20,7 +20,7 @@ displayOrder: 1
 featured: true
 ---
 
-#### Server-side Rendered Headless E-Commerce Application
+## Server-side Rendered Headless E-Commerce Application
 
 I was approached by Granite Setts Direct Ltd to develop an e-commerce website to
 sell [granite setts in the UK](https://www.granitesettsdirect.co.uk).

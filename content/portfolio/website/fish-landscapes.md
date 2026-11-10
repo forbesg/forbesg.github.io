@@ -37,6 +37,6 @@ their other company.
 A simple and uncluttered design taking colour from the images provided by the
 client gave them the look and feel that they felt fitted their business.
 
-#### PageSpeed Test Results
+## PageSpeed Test Results
 
 <img src="/images/projects/web/fish-landscapes-pagespeed-test.jpg" alt="Fish Landscapes Website PageSpeed test results" class="full-width" />

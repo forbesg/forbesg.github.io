@@ -21,7 +21,7 @@ displayOrder: 1
 featured: true
 ---
 
-#### Booking System for Edinburgh Mobile Beauty Therapists
+## Booking System for Edinburgh Mobile Beauty Therapists
 
 I was asked to create a bespoke booking system for a provider of [mobile hairdressing & beauty
 treatments in Edinburgh and Newcastle](https://www.littlecitytreat.com). The company

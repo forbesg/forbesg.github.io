@@ -18,7 +18,7 @@ displayOrder: 2
 featured: false
 ---
 
-#### Clear Agreements, Certain Payments
+## Clear Agreements, Certain Payments
 
 [PledgePay](https://www.pledgepay.net) tackles a problem every tradesperson, freelancer
 and customer will recognise: payment disputes that start with vague agreements and money
@@ -35,7 +35,7 @@ PledgePay puts clarity in place before the work starts:
 If something does go wrong, both sides have a calm, structured way to raise a concern,
 linked to what was originally agreed rather than to who remembers what.
 
-#### How It's Built
+## How It's Built
 
 The platform is made up of two parts: a marketing site at pledgepay.net, and the
 PledgePay app itself, a Progressive Web App that customers and professionals can install

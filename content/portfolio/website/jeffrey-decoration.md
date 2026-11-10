@@ -43,6 +43,6 @@ Management System was also free as it was well within DatoCMS's free tier.
 
 You can view the Lighthouse test results for the website below.
 
-#### Lighthouse PageSpeed Test Results
+## Lighthouse PageSpeed Test Results
 
 <img src="/images/projects/web/jeffrey-decoration-lighthouse-results.jpg" alt="Jeffrey Decoration Website Lighthouse page speed test results" class="full-width" />

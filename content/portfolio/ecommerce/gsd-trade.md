@@ -20,7 +20,7 @@ displayOrder: 2
 featured: false
 ---
 
-#### A Trade-Only Ecommerce Platform
+## A Trade-Only Ecommerce Platform
 
 Following on from the [Granite Setts Direct](/portfolio/ecommerce/granite-setts-direct/)
 retail site, I built [GSD Trade](https://www.gsdtrade.co.uk), a dedicated B2B platform
@@ -32,7 +32,7 @@ Unlike the retail site, GSD Trade is not open to the general public. Customers c
 trade account and log in to shop, so the whole experience is built around the needs of
 professional buyers placing bulk orders rather than one-off retail purchases.
 
-#### How It's Built
+## How It's Built
 
 The site is built with [Nuxt JS](https://nuxt.com/), server-side rendering pages for
 speed and search visibility. Product, cart, account and order functionality come from

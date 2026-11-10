@@ -33,7 +33,7 @@ displayOrder: 3
 featured: true
 ---
 
-#### An Interactive Guided Tour of the town of Duns
+## An Interactive Guided Tour of the town of Duns
 
 I was commissioned by [A Heart for Duns](https://www.aheartforduns.org/) to create
 an App that would allow visitors to the town to follow the Duns Town Trail, highlighting
