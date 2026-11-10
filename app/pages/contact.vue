@@ -231,6 +231,8 @@
           alt="Forbes Gray"
           width="288"
           height="288"
+          fetchpriority="high"
+          preload
           class="aspect-square w-full max-w-72 border border-line object-cover"
         />
         <p class="mt-4 font-display text-3xl">Forbes Gray</p>
