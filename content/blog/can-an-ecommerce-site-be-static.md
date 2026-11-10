@@ -7,6 +7,8 @@ tags:
 - ecommerce-sites
 image: /images/articles/ecommerce-payment.jpg
 imageAlt: Static Website Online Shop
+imageWidth: 1600
+imageHeight: 1066
 date: 2022-02-01T14:30:00
 author: forbes-gray
 ---

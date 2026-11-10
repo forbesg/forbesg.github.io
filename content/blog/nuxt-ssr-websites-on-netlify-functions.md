@@ -8,6 +8,8 @@ tags:
 - ecommerce-sites
 image: /images/projects/web-application/gsd-trade-mockup.png
 imageAlt: The GSD Trade website, a server-rendered Nuxt site running on Netlify
+imageWidth: 1920
+imageHeight: 1080
 date: 2026-11-10T12:00:00
 author: forbes-gray
 ---

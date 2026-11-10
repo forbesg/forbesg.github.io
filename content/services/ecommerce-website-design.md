@@ -10,9 +10,13 @@ icon:
 bannerImage:
   src: /images/services/ecommerce-website-development-in-edinburgh.jpeg
   alt: Static Business Website Development In Edinburgh
+  width: 1200
+  height: 800
 intro:
   video:
     src: /videos/ecommerce-development.mp4
+    width: 720
+    height: 720
   image: null
 pricing:
   title: Ecommerce Website Prices
@@ -71,6 +75,8 @@ featureWide:
   image:
     src: /images/services/ecommerce-web-design.jpg
     alt: Responsive Business Website Design
+    width: 800
+    height: 500
   text:
     title: Let's Discuss Your Online Store
     body: Get in touch to give me a brief outline of your ecommerce project and we can schedule in a chat to discuss what the best, most cost effective option is for you.

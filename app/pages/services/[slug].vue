@@ -62,7 +62,9 @@ useSchemaOrg([
       <video
         v-if="service.intro?.video"
         :src="service.intro.video.src"
-        class="w-full border border-line"
+        :width="service.intro.video.width"
+        :height="service.intro.video.height"
+        class="h-auto w-full border border-line"
         autoplay
         loop
         muted
@@ -74,7 +76,8 @@ useSchemaOrg([
         :src="service.bannerImage.src"
         :alt="service.bannerImage.alt"
         sizes="100vw md:50vw"
-        class="w-full border border-line"
+        :style="aspectStyle(service.bannerImage.width, service.bannerImage.height)"
+        class="w-full border border-line object-cover"
       />
     </section>
 
@@ -118,7 +121,8 @@ useSchemaOrg([
           :alt="service.featureWide.image.alt"
           sizes="100vw md:50vw"
           loading="lazy"
-          class="w-full border border-line"
+          :style="aspectStyle(service.featureWide.image.width, service.featureWide.image.height)"
+          class="w-full border border-line object-cover"
         />
         <div>
           <h2 class="text-5xl leading-[1.05]">{{ service.featureWide.text.title }}</h2>

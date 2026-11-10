@@ -30,7 +30,7 @@ defineProps<{
         :src="image"
         :alt="imageAlt ?? ''"
         sizes="100vw lg:1104px"
-        :class="imageFrameless ? 'mx-auto max-h-[36rem] w-auto' : 'aspect-[21/9] w-full border border-line object-cover'"
+        :class="imageFrameless ? 'mx-auto aspect-video w-full max-w-[64rem] object-contain' : 'aspect-[21/9] w-full border border-line object-cover'"
         preload
       />
     </div>

@@ -37,6 +37,11 @@ export const BLOG_TAGS: Record<string, string> = {
   'netlify': 'Netlify',
 }
 
+/** CSS aspect-ratio from an image's intrinsic size, so its space is reserved before it loads */
+export function aspectStyle(width?: number, height?: number) {
+  return width && height ? { aspectRatio: `${width} / ${height}` } : undefined
+}
+
 /** The live site's URLs all end in a slash; keep links consistent with that. */
 export function withSlash(path: string) {
   return path.endsWith('/') ? path : `${path}/`

@@ -7,6 +7,8 @@ tags:
 - static-sites
 image: /images/articles/html-development.jpg
 imageAlt: Static Website written in HTML
+imageWidth: 1920
+imageHeight: 1278
 date: 2021-11-09T12:00:00
 author: forbes-gray
 ---

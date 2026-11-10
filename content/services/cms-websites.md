@@ -10,9 +10,13 @@ icon:
 bannerImage:
   src: /images/services/content-management-systems.png
   alt: CMS Website Development In Edinburgh
+  width: 1600
+  height: 899
 intro:
   video:
     src: /videos/cms-websites.mp4
+    width: 720
+    height: 720
   image: null
 featureColumns:
 - image:
@@ -74,6 +78,8 @@ featureWide:
   image:
     src: /images/services/responsive-web-design.jpg
     alt: Responsive Business Website Design
+    width: 800
+    height: 500
   text:
     title: Let's Chat About Your Website
     body: Get in touch to give me a brief outline of your project and we can schedule in a chat to discuss what the best, most cost effective option is for you to get your content management system website online.

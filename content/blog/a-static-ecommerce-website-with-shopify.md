@@ -7,6 +7,8 @@ tags:
 - ecommerce-sites
 image: /images/articles/shopify-graphql-jamstack.jpg.png
 imageAlt: Shopify Storefront API, GraphQL, Static Ecommerce Website
+imageWidth: 1600
+imageHeight: 1066
 date: 2022-06-26T10:30:00
 author: forbes-gray
 ---

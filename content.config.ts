@@ -3,7 +3,14 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 // Each Markdown file's path in content/ becomes its URL, so the folder layout
 // mirrors the old Gridsome routes (e.g. content/blog/foo.md -> /blog/foo/).
 
-const imageRef = z.object({ src: z.string(), alt: z.string() })
+// width/height: the file's intrinsic size, used to reserve its space (aspect-ratio)
+// before it loads, so the page doesn't shift
+const imageRef = z.object({
+  src: z.string(),
+  alt: z.string(),
+  width: z.number().optional(),
+  height: z.number().optional(),
+})
 
 export default defineContentConfig({
   collections: {
@@ -25,6 +32,8 @@ export default defineContentConfig({
         subhead: z.string().optional(),
         image: z.string(),
         imageAlt: z.string(),
+        imageWidth: z.number().optional(),
+        imageHeight: z.number().optional(),
         tags: z.array(z.string()).default([]),
         author: z.string(),
         date: z.date(),
@@ -62,7 +71,7 @@ export default defineContentConfig({
         bannerImage: imageRef,
         intro: z
           .object({
-            video: z.object({ src: z.string() }).nullish(),
+            video: z.object({ src: z.string(), width: z.number().optional(), height: z.number().optional() }).nullish(),
             image: z.string().nullish(),
           })
           .optional(),

@@ -10,9 +10,13 @@ icon:
 bannerImage:
   src: /images/website-development-services-in-edinburgh.jpg
   alt: Static Business Website Development In Edinburgh
+  width: 1132
+  height: 750
 intro:
   video:
     src: /videos/website-build.mp4
+    width: 720
+    height: 720
   image: null
 pricing:
   title: Brochure Website Prices
@@ -68,6 +72,8 @@ featureWide:
   image:
     src: /images/services/responsive-web-design.jpg
     alt: Responsive Business Website Design
+    width: 800
+    height: 500
   text:
     title: Let's Chat About Your Website
     body: Get in touch to give me a brief outline of your project and we can schedule in a chat to discuss what the best, most cost effective option is for you.
