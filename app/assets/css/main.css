@@ -180,5 +180,6 @@
 }
 
 .prose-site :where(img) {
+  width: 100%;
   border: 1px solid var(--line);
 }
