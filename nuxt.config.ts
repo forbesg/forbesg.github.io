@@ -20,9 +20,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // Cloudflare Web Analytics (cookie-free, so no consent banner needed).
-      // From Cloudflare dashboard → Analytics & Logs → Web Analytics → the site's JS snippet.
-      // Leave empty to disable. It's public by design: it ships in every page.
-      cfAnalyticsToken: '0467e1d8fabb4e6498f6a79bf1469c66',
+      cfAnalyticsToken: "0467e1d8fabb4e6498f6a79bf1469c66",
     },
   },
 
