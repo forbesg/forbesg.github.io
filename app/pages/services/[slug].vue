@@ -22,6 +22,25 @@ usePageSeo({
   image: service.value.bannerImage.src,
   imageAlt: service.value.bannerImage.alt,
 })
+
+// "£1,495" -> "1495"
+const amount = (price: string) => price.replace(/[^\d.]/g, '')
+
+useSchemaOrg([
+  defineService({
+    name: service.value.title,
+    description: service.value.description,
+    serviceType: service.value.shortTitle,
+    areaServed: ['Edinburgh', 'Scotland', 'United Kingdom'],
+    offers: service.value.packages.map(pkg => ({
+      '@type': 'Offer',
+      'name': pkg.name,
+      'price': amount(pkg.price ?? pkg.priceFrom ?? ''),
+      'priceCurrency': 'GBP',
+      'description': pkg.features.join(', '),
+    })),
+  }),
+])
 </script>
 
 <template>

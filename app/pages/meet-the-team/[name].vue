@@ -16,6 +16,22 @@ usePageSeo({
   image: member.value.image,
   imageAlt: member.value.imageAlt,
 })
+
+// Own @id, otherwise it merges into the site's business identity
+const personId = `${SITE_URL}${withSlash(member.value.path)}#person`
+
+useSchemaOrg([
+  defineWebPage({ '@type': 'ProfilePage', 'mainEntity': { '@id': personId } }),
+  definePerson({
+    '@id': personId,
+    'name': member.value.name,
+    'jobTitle': member.value.position,
+    'image': member.value.image,
+    'url': withSlash(member.value.path),
+    'sameAs': member.value.links,
+    'worksFor': { '@id': `${SITE_URL}/#identity` },
+  }),
+])
 </script>
 
 <template>

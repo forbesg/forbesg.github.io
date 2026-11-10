@@ -5,16 +5,51 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-11-09',
   devtools: { enabled: true },
 
-  modules: ['@nuxt/content', '@nuxt/image', '@nuxt/fonts', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/content', '@nuxt/image', '@nuxt/fonts', '@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-schema-org'],
 
   css: ['~/assets/css/main.css'],
   vite: { plugins: [tailwindcss()] },
 
-  // Used by the sitemap module and for canonical URLs
+  // Shared by the sitemap, robots and schema.org modules, and canonical URLs
   site: {
     url: 'https://forbesg.github.io',
     name: 'Forbes Gray | Website Developer Edinburgh',
+    description: 'Freelance website developer in Edinburgh building fast, SEO friendly websites, online shops and web applications.',
+    defaultLocale: 'en-GB',
     trailingSlash: true,
+  },
+
+  // The business behind the site. Every page's structured data links back to
+  // this, so keep the name and address identical to the Google Business Profile.
+  schemaOrg: {
+    identity: {
+      '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+      'name': 'Forbes Gray',
+      'alternateName': 'Forbes Gray, Freelance Web Developer',
+      'description': 'Freelance website developer in Edinburgh building fast, SEO friendly websites, online shops and web applications.',
+      'url': 'https://forbesg.github.io',
+      'logo': '/logo.png',
+      'image': '/forbes-gray-web-developer.jpg',
+      'address': {
+        addressLocality: 'Edinburgh',
+        addressRegion: 'Scotland',
+        postalCode: 'EH6 4JX',
+        addressCountry: 'GB',
+      },
+      'areaServed': ['Edinburgh', 'Lothians', 'Scotland', 'United Kingdom'],
+      'priceRange': '££',
+      'sameAs': [
+        'https://github.com/forbesg',
+        'https://uk.linkedin.com/in/forbesgray',
+        'https://www.instagram.com/4beeeez',
+        'https://x.com/4beez',
+      ],
+    },
+  },
+
+  robots: {
+    // Old app path from a previous version of the site
+    disallow: ['/Euro-2016-WallChart/'],
   },
 
   content: {

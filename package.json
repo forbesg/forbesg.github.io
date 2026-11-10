@@ -13,8 +13,10 @@
     "@nuxt/content": "^3.16.2",
     "@nuxt/fonts": "^1.2.0",
     "@nuxt/image": "^2.2.1",
+    "@nuxtjs/robots": "^7.0.2",
     "@nuxtjs/sitemap": "^9.1.0",
     "nuxt": "^4.6.2",
+    "nuxt-schema-org": "^7.0.1",
     "vue": "^3.5.0",
     "vue-router": "^5.0.0"
   },

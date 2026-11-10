@@ -5,25 +5,12 @@ const props = defineProps<{ items: Crumb[] }>()
 
 const crumbs = computed<Crumb[]>(() => [{ label: 'Home', to: '/' }, ...props.items])
 
-// Structured data, as the Gridsome site had via microdata
-useHead({
-  script: computed(() => [
-    {
-      type: 'application/ld+json',
-      key: 'breadcrumbs',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': crumbs.value.map((crumb, index) => ({
-          '@type': 'ListItem',
-          'position': index + 1,
-          'name': crumb.label,
-          ...(crumb.to ? { item: SITE_URL + crumb.to } : {}),
-        })),
-      }),
-    },
-  ]),
-})
+// Structured data: relative URLs are resolved against the site URL
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: crumbs.value.map(crumb => ({ name: crumb.label, item: crumb.to })),
+  }),
+])
 </script>
 
 <template>

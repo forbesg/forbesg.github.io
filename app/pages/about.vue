@@ -9,6 +9,8 @@ usePageSeo({
   title: 'About Me | Freelance Web Developer Edinburgh',
   description: page.value.description,
 })
+
+useSchemaOrg([defineWebPage({ '@type': 'AboutPage' })])
 </script>
 
 <template>

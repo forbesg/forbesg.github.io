@@ -35,32 +35,6 @@ usePageSeo({
   title: 'Freelance Web Developer Edinburgh',
   description: data.value?.about?.description,
 })
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      key: 'local-business',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'ProfessionalService',
-        'name': 'Forbes Gray, Freelance Web Developer',
-        'url': SITE_URL,
-        'image': `${SITE_URL}/images/forbes-up-arthurs-seat.jpg`,
-        'address': {
-          '@type': 'PostalAddress',
-          'streetAddress': '5 Park Place',
-          'addressLocality': 'Edinburgh',
-          'postalCode': 'EH6 4LB',
-          'addressCountry': 'GB',
-        },
-        'areaServed': ['Edinburgh', 'Scotland'],
-        'founder': { '@type': 'Person', 'name': 'Forbes Gray' },
-        'sameAs': ['https://github.com/forbesg', 'https://uk.linkedin.com/in/forbesgray'],
-      }),
-    },
-  ],
-})
 </script>
 
 <template>

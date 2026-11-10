@@ -25,30 +25,23 @@ usePageSeo({
   type: 'article',
 })
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      key: 'article',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        'headline': article.value.title,
-        'description': article.value.description,
-        'image': [SITE_URL + article.value.image],
-        'datePublished': new Date(article.value.date).toISOString(),
-        'author': author.value
-          ? [{
-              '@type': 'Person',
-              'name': author.value.name,
-              'url': SITE_URL + withSlash(author.value.path),
-              'sameAs': author.value.links,
-            }]
-          : undefined,
-      }),
-    },
-  ],
-})
+useSchemaOrg([
+  defineArticle({
+    '@type': 'BlogPosting',
+    'headline': article.value.title,
+    'description': article.value.description,
+    'image': article.value.image,
+    'datePublished': new Date(article.value.date).toISOString(),
+    'author': author.value
+      ? definePerson({
+          '@id': `${SITE_URL}${withSlash(author.value.path)}#person`,
+          'name': author.value.name,
+          'url': withSlash(author.value.path),
+          'sameAs': author.value.links,
+        })
+      : undefined,
+  }),
+])
 </script>
 
 <template>
