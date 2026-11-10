@@ -35,10 +35,12 @@ usePageSeo({
       :aria-labelledby="`cat-${category.key}`"
     >
       <div class="mx-auto max-w-6xl px-6 py-20">
+        <p v-if="category.archived" class="eyebrow mb-4">Archive · Where it all started</p>
         <div class="mb-12 flex flex-wrap items-baseline justify-between gap-4">
           <h2 :id="`cat-${category.key}`" class="text-6xl leading-none">{{ category.title }}</h2>
           <NuxtLink :to="`/portfolio/${category.key}/`" class="link-mono">All {{ category.title.toLowerCase() }} →</NuxtLink>
         </div>
+        <p v-if="category.note" class="-mt-6 mb-12 max-w-2xl text-muted">{{ category.note }}</p>
         <div class="grid gap-x-8 gap-y-12 md:grid-cols-2">
           <ContentCard
             v-for="project in category.projects.slice(0, 4)"

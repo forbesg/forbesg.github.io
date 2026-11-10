@@ -37,6 +37,10 @@ usePageSeo({
     />
     <div class="mx-auto grid max-w-6xl gap-16 px-6 py-20 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <article class="min-w-0">
+        <p v-if="category.archived" class="mb-10 border border-dashed border-line px-5 py-4 text-muted">
+          <span class="eyebrow mr-2">Archived</span>
+          An early project kept for the record. {{ category.note }}
+        </p>
         <ContentRenderer :value="project" class="prose prose-site max-w-none" />
         <ImageGallery v-if="project.carousel?.length" :images="project.carousel" class="mt-12" />
       </article>
