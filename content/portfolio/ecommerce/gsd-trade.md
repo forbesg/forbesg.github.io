@@ -7,17 +7,17 @@ mockup: /images/projects/web-application/gsd-trade-mockup.png
 imageAlt: GSD Trade - B2B Wholesale Natural Stone Web Application
 url: https://www.gsdtrade.co.uk
 features:
-- Vue JS
-- Nuxt JS
-- ElasticPath
-- DatoCMS
-- Stripe
-- Netlify
-- Ecommerce
-- B2B
+  - Vue JS
+  - Nuxt JS
+  - ElasticPath
+  - DatoCMS
+  - Stripe
+  - Netlify
+  - Ecommerce
+  - B2B
 category: ecommerce
 displayOrder: 2
-featured: false
+featured: true
 ---
 
 ## A Trade-Only Ecommerce Platform

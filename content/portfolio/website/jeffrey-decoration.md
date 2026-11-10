@@ -21,7 +21,7 @@ displayOrder: 2
 fullImage:
   src: /images/projects/web/jeffrey-decoration-lighthouse-results.jpg
   alt: Jeffrey Decoration Website pagespeed test results
-featured: true
+featured: false
 ---
 
 Jeffrey Decoration is a [painter and decorators in East Lothian](https://www.jeffreydecoration.co.uk) and
