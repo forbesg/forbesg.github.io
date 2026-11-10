@@ -13,7 +13,7 @@ features:
   - DatoCMS
   - Responsive Design
 category: website
-displayOrder: 2
+displayOrder: 1
 featured: false
 ---
 

@@ -7,16 +7,16 @@ mockup: /images/projects/web/sg-autoshade-mockup.png
 imageAlt: SG Autoshade - Vehicle Body Repair Business Website
 url: https://www.sgautoshade.co.uk
 features:
-- Vue JS
-- Nuxt JS
-- Tailwind CSS
-- Nuxt Image
-- Progressive Web App
-- Structured Data
-- Netlify
-- Responsive Design
+  - Vue JS
+  - Nuxt JS
+  - Tailwind CSS
+  - Nuxt Image
+  - Progressive Web App
+  - Structured Data
+  - Netlify
+  - Responsive Design
 category: website
-displayOrder: 4
+displayOrder: 3
 featured: false
 ---
 

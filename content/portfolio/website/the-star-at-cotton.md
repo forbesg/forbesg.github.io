@@ -5,17 +5,17 @@ subhead: A GRAV CMS based Country Pub Website
 image: /images/projects/web/the-star-at-cotton.jpg
 imageAlt: The Star At Cotton - Country Pub Website
 features:
-- html
-- css
-- scss
-- php
-- Twig
-- GRAV CMS
-- javascript
-- bootstrap
-- responsive design
+  - html
+  - css
+  - scss
+  - php
+  - Twig
+  - GRAV CMS
+  - javascript
+  - bootstrap
+  - responsive design
 category: website
-displayOrder: 3
+displayOrder: 6
 featured: false
 ---
 

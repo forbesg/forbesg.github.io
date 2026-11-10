@@ -7,17 +7,17 @@ mockup: /images/projects/web/jeffrey-decoration-mockup.png
 imageAlt: Jeffrey Decoration - Painter & Decorator Business Website
 url: https://www.jeffreydecoration.co.uk
 features:
-- HTML5
-- SCSS
-- JavaScript
-- Vue JS
-- Nuxt JS
-- DatoCMS
-- Flexbox
-- Tailwind
-- Responsive design
+  - HTML5
+  - SCSS
+  - JavaScript
+  - Vue JS
+  - Nuxt JS
+  - DatoCMS
+  - Flexbox
+  - Tailwind
+  - Responsive design
 category: website
-displayOrder: 1
+displayOrder: 2
 fullImage:
   src: /images/projects/web/jeffrey-decoration-lighthouse-results.jpg
   alt: Jeffrey Decoration Website pagespeed test results
