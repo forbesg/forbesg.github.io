@@ -40,3 +40,14 @@ export interface Crumb {
   label: string
   to?: string
 }
+
+/** "from £450": the lowest package price of a service */
+export function fromPrice(packages: { price?: string, priceFrom?: string }[]) {
+  const prices = packages
+    .map(p => p.price ?? p.priceFrom)
+    .filter((p): p is string => !!p)
+    .map(p => ({ label: p, value: Number(p.replace(/[^\d.]/g, '')) }))
+    .filter(p => !Number.isNaN(p.value))
+    .sort((a, b) => a.value - b.value)
+  return prices[0] ? `from ${prices[0].label}` : 'Ask for a quote'
+}

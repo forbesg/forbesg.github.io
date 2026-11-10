@@ -1,5 +1,7 @@
 ---
 title: Content Management Systems
+shortTitle: Websites you can edit
+summary: Update your own pages, news and menus through an easy content editor, without the WordPress bloat.
 description: Fast, responsive and SEO friendly headless content management system websites. Create, manage and grow your business website content.
 subtitle: Content Management Websites Without The Bloat
 icon:

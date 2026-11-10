@@ -13,12 +13,24 @@ usePageSeo({
 
 <template>
   <div v-if="page">
-    <PageHeader :title="page.title" :breadcrumbs="[{ label: 'About' }]" />
-    <article class="mx-auto max-w-3xl px-4 py-12">
-      <ContentRenderer :value="page" class="prose prose-slate max-w-none" />
-      <NuxtLink to="/portfolio/" class="mt-8 inline-block font-semibold text-brand-600 hover:underline">
-        View My Portfolio &rarr;
-      </NuxtLink>
-    </article>
+    <PageHeader :title="page.title" eyebrow="About" :breadcrumbs="[{ label: 'About' }]" />
+    <div class="mx-auto grid max-w-6xl gap-16 px-6 py-20 lg:grid-cols-[18rem_minmax(0,1fr)]">
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <NuxtImg
+          src="/images/forbes-up-arthurs-seat.jpg"
+          alt="Forbes Gray at the top of Arthur's Seat, Edinburgh"
+          width="288"
+          height="288"
+          class="aspect-square w-full max-w-72 border border-line object-cover"
+        />
+        <p class="mt-4 font-mono text-[0.8125rem] text-muted">Forbes Gray · Leith, Edinburgh</p>
+        <NuxtLink to="/meet-the-team/" class="link-mono mt-4 inline-block">Meet the team →</NuxtLink>
+      </aside>
+      <article class="min-w-0 max-w-3xl">
+        <ContentRenderer :value="page" class="prose prose-site max-w-none" />
+        <NuxtLink to="/portfolio/" class="link-mono mt-10 inline-block">See my work →</NuxtLink>
+      </article>
+    </div>
+    <GetInTouch />
   </div>
 </template>

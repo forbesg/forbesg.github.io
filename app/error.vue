@@ -10,17 +10,16 @@ useSeoMeta({ robots: 'noindex' })
 
 <template>
   <NuxtLayout>
-    <div class="mx-auto max-w-2xl px-4 py-16 text-center">
-      <h1 class="text-4xl font-bold text-brand-900">{{ notFound ? 'Page Not Found' : 'Something went wrong' }}</h1>
-      <img v-if="notFound" src="/images/404-error-bro.svg" alt="" class="mx-auto mt-8 max-w-md">
-      <p class="mt-6">
-        <button type="button" class="font-semibold text-brand-600 hover:underline" @click="clearError({ redirect: '/' })">
-          Back to the home page
-        </button>
+    <div class="mx-auto max-w-6xl px-6 py-28">
+      <p class="eyebrow mb-6">Error {{ error.statusCode }}</p>
+      <h1 class="text-7xl leading-none md:text-8xl">{{ notFound ? 'This page has wandered off.' : 'Something went wrong.' }}</h1>
+      <p class="mt-8 max-w-xl text-lg text-muted">
+        {{ notFound ? 'It may have moved when the site was rebuilt.' : 'Please try again in a moment.' }}
       </p>
-      <p v-if="notFound" class="mt-8 text-sm text-slate-500">
-        <a href="https://storyset.com/web">Web illustrations by Storyset</a>
-      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <button type="button" class="btn-primary cursor-pointer" @click="clearError({ redirect: '/' })">Back to the home page</button>
+        <button type="button" class="btn-outline cursor-pointer" @click="clearError({ redirect: '/portfolio/' })">See my work</button>
+      </div>
     </div>
   </NuxtLayout>
 </template>

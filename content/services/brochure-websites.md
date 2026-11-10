@@ -1,5 +1,7 @@
 ---
 title: Brochure Website Design
+shortTitle: Brochure websites
+summary: A fast, simple site to put your business on the map. 5 to 15 pages, free domain and hosting.
 description: Fast, responsive and SEO friendly static websites. A low cost option to get your business website online quickly.
 subtitle: Simple, Fast, Beautiful Websites
 icon:

@@ -23,10 +23,10 @@ export default defineNuxtConfig({
   },
 
   fonts: {
-    // Placeholder: the current site's fonts until the redesign picks new ones
     families: [
-      { name: 'Catamaran', provider: 'google', weights: [400, 700] },
-      { name: 'Montserrat', provider: 'google', weights: [700] },
+      { name: 'Instrument Serif', provider: 'google', weights: [400], styles: ['normal', 'italic'] },
+      { name: 'Inter', provider: 'google', weights: [400, 500, 600] },
+      { name: 'JetBrains Mono', provider: 'google', weights: [400, 500] },
     ],
   },
 
@@ -46,8 +46,17 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
       meta: [
-        { name: 'theme-color', content: '#147ba4' },
+        { name: 'theme-color', content: '#f4f2ee', media: '(prefers-color-scheme: light)' },
+        { name: 'theme-color', content: '#0d1114', media: '(prefers-color-scheme: dark)' },
         { name: 'author', content: 'Forbes Gray' },
+      ],
+      script: [
+        {
+          // Set the colour theme before the page paints, so there's no flash of
+          // the wrong theme: the visitor's saved choice, else their device setting.
+          tagPosition: 'head',
+          innerHTML: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t}catch(e){}})()`,
+        },
       ],
     },
   },

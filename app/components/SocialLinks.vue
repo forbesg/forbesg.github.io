@@ -1,19 +1,17 @@
 <script setup lang="ts">
 // Twitter link kept as on the old site; review during the content refresh.
 const links = [
-  { href: 'https://github.com/forbesg', label: 'GitHub', handle: 'forbesg' },
-  { href: 'https://uk.linkedin.com/in/forbesgray', label: 'LinkedIn', handle: 'forbesgray' },
-  { href: 'https://twitter.com/4beez', label: 'Twitter', handle: '@4beez' },
-  { href: 'https://www.instagram.com/4beeeez', label: 'Instagram', handle: '@4beeeez' },
+  { href: 'https://github.com/forbesg', label: 'GitHub' },
+  { href: 'https://uk.linkedin.com/in/forbesgray', label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/4beeeez', label: 'Instagram' },
+  { href: 'https://twitter.com/4beez', label: 'Twitter' },
 ]
 </script>
 
 <template>
-  <ul class="space-y-1">
+  <ul class="flex flex-wrap gap-x-5 gap-y-2 font-mono text-sm">
     <li v-for="link in links" :key="link.href">
-      <a :href="link.href" target="_blank" rel="noopener" class="hover:underline">
-        {{ link.label }}: {{ link.handle }}
-      </a>
+      <a :href="link.href" target="_blank" rel="noopener" class="hover:text-accent">{{ link.label }}</a>
     </li>
   </ul>
 </template>

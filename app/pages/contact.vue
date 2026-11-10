@@ -60,68 +60,62 @@ async function submit() {
   }
 }
 
-const inputClass = 'mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-300'
+const inputClass = 'mt-2 w-full border border-line bg-surface px-4 py-3 text-ink focus:border-accent focus:outline-none'
 </script>
 
 <template>
   <div>
-    <PageHeader title="Get in touch" :breadcrumbs="[{ label: 'Contact' }]" />
-    <div class="mx-auto grid max-w-6xl gap-12 px-4 py-12 md:grid-cols-[280px_1fr]">
-      <aside>
-        <NuxtImg src="/images/me.jpg" alt="Forbes Gray" width="280" class="w-full rounded-lg" />
-        <h2 class="mt-6 text-lg font-bold text-brand-900">Contact Information</h2>
-        <address class="mt-2 not-italic">
-          Forbes Gray<br>
-          Edinburgh<br>
-          EH6 4LB
-        </address>
-        <div class="mt-4">
-          <SocialLinks />
-        </div>
-      </aside>
-
+    <PageHeader
+      title="Got a project in mind?"
+      eyebrow="Contact"
+      subhead="Tell me what you need and I'll come back with honest advice and a fixed price. No agency fees, no hard sell."
+      :breadcrumbs="[{ label: 'Contact' }]"
+    />
+    <div class="mx-auto grid max-w-6xl gap-16 px-6 py-20 md:grid-cols-[minmax(0,1fr)_18rem]">
       <div>
-        <div v-if="status === 'sent'" role="status" class="rounded-lg bg-brand-50 p-8">
-          <p class="text-2xl font-bold text-brand-900">Thank you</p>
-          <p class="mt-2 text-lg">Your message has been sent.</p>
-          <p class="mt-2">I will be in touch shortly regarding your enquiry.</p>
+        <div v-if="status === 'sent'" role="status" class="border border-line bg-surface p-10">
+          <p class="font-display text-5xl leading-none">Thank you.</p>
+          <p class="mt-4 text-lg">Your message has been sent.</p>
+          <p class="mt-2 text-muted">I'll be in touch shortly about your enquiry.</p>
         </div>
 
-        <form v-else novalidate class="space-y-5" @submit.prevent="submit">
+        <form v-else novalidate class="space-y-6" @submit.prevent="submit">
           <input v-model="form._gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
-          <div>
-            <label for="name" class="font-semibold">Name <span class="text-red-700">*</span></label>
-            <input
-              id="name"
-              v-model="form.name"
-              type="text"
-              name="name"
-              autocomplete="name"
-              required
-              :aria-invalid="touched && missing.name"
-              :class="[inputClass, touched && missing.name && 'border-red-600']"
-            >
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="name" class="font-medium">Name <span class="text-accent" aria-hidden="true">*</span></label>
+              <input
+                id="name"
+                v-model="form.name"
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+                :aria-invalid="touched && missing.name"
+                :class="[inputClass, touched && missing.name && 'border-red-600']"
+              >
+            </div>
+            <div>
+              <label for="email" class="font-medium">Email address <span class="text-accent" aria-hidden="true">*</span></label>
+              <input
+                id="email"
+                v-model="form.email"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                :aria-invalid="touched && missing.email"
+                :class="[inputClass, touched && missing.email && 'border-red-600']"
+              >
+            </div>
           </div>
           <div>
-            <label for="email" class="font-semibold">Email address <span class="text-red-700">*</span></label>
-            <input
-              id="email"
-              v-model="form.email"
-              type="email"
-              name="email"
-              autocomplete="email"
-              required
-              :aria-invalid="touched && missing.email"
-              :class="[inputClass, touched && missing.email && 'border-red-600']"
-            >
-          </div>
-          <div>
-            <label for="phone_number" class="font-semibold">Phone number</label>
+            <label for="phone_number" class="font-medium">Phone number <span class="text-muted">(optional)</span></label>
             <input id="phone_number" v-model="form.phone_number" type="tel" name="phone_number" autocomplete="tel" :class="inputClass">
           </div>
           <div>
-            <label for="message" class="font-semibold">Message <span class="text-red-700">*</span></label>
+            <label for="message" class="font-medium">What do you need? <span class="text-accent" aria-hidden="true">*</span></label>
             <textarea
               id="message"
               v-model="form.message"
@@ -133,22 +127,26 @@ const inputClass = 'mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:
             />
           </div>
 
-          <p v-if="error" role="alert" class="text-red-700">{{ error }}</p>
+          <p v-if="error" role="alert" class="font-medium text-red-700 dark:text-red-400">{{ error }}</p>
 
-          <button
-            type="submit"
-            :disabled="status === 'sending'"
-            class="rounded bg-brand-600 px-6 py-2.5 font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
-          >
-            {{ status === 'sending' ? 'Sending…' : 'Send' }}
+          <button type="submit" :disabled="status === 'sending'" class="btn-primary cursor-pointer disabled:opacity-60">
+            {{ status === 'sending' ? 'Sending…' : 'Send message' }}
           </button>
-          <p class="text-sm text-slate-500">
+          <p class="text-sm text-muted">
             This site is protected by reCAPTCHA and the Google
-            <a href="https://policies.google.com/privacy" class="underline">Privacy Policy</a> and
-            <a href="https://policies.google.com/terms" class="underline">Terms of Service</a> apply.
+            <a href="https://policies.google.com/privacy" class="underline hover:text-accent">Privacy Policy</a> and
+            <a href="https://policies.google.com/terms" class="underline hover:text-accent">Terms of Service</a> apply.
           </p>
         </form>
       </div>
+
+      <aside>
+        <NuxtImg src="/images/me.jpg" alt="Forbes Gray" width="288" height="288" class="aspect-square w-full max-w-72 border border-line object-cover" />
+        <p class="mt-4 font-display text-3xl">Forbes Gray</p>
+        <p class="text-muted">Freelance web developer</p>
+        <address class="mt-6 not-italic text-muted">5 Park Place<br>Edinburgh EH6 4LB</address>
+        <SocialLinks class="mt-6" />
+      </aside>
     </div>
   </div>
 </template>

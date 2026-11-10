@@ -1,7 +1,7 @@
 ---
 title: Duns Town Trail
 description: A Progressive Web Application to help guide visitors around points of interest in the historic market town of Duns.
-subhead: Guided of the Town of Duns
+subhead: Guided Tour of the Town of Duns
 image: /images/projects/web-application/duns-town-trail.jpg
 imageAlt: Duns Town Trail - Progressive Web App
 url: https://town-trail.aheartforduns.org/

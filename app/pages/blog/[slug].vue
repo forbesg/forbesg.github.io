@@ -56,24 +56,23 @@ useHead({
     <PageHeader
       :title="article.title"
       :subhead="article.subhead"
-      :image="article.image"
-      :image-alt="article.imageAlt"
       :breadcrumbs="[{ label: 'Blog', to: '/blog/' }, { label: article.title }]"
-    />
-    <article class="mx-auto max-w-3xl px-4 py-12">
-      <p class="text-sm text-slate-500">
-        <NuxtLink v-if="author" :to="withSlash(author.path)" class="text-brand-600 hover:underline">{{ author.name }}</NuxtLink>
+    >
+      <p class="mt-8 font-mono text-sm text-muted">
+        <NuxtLink v-if="author" :to="withSlash(author.path)" class="text-ink hover:text-accent">{{ author.name }}</NuxtLink>
         <span v-if="author"> &middot; </span>
         <time :datetime="new Date(article.date).toISOString()">{{ formatDate(article.date) }}</time>
       </p>
-      <ContentRenderer :value="article" class="prose prose-slate mt-6 max-w-none" />
-      <ul class="mt-10 flex flex-wrap gap-2">
+    </PageHeader>
+    <article class="mx-auto max-w-3xl px-6 py-16">
+      <NuxtImg :src="article.image" :alt="article.imageAlt" sizes="100vw md:768px" class="mb-12 w-full border border-line" preload />
+      <ContentRenderer :value="article" class="prose prose-site max-w-none" />
+      <ul class="mt-12 flex flex-wrap gap-3 border-t border-line pt-8 font-mono text-sm">
         <li v-for="tag in article.tags" :key="tag">
-          <NuxtLink :to="`/blog/tags/${tag}/`" class="rounded bg-brand-50 px-3 py-1 text-sm text-brand-700 hover:bg-brand-300">
-            {{ BLOG_TAGS[tag] ?? tag }}
-          </NuxtLink>
+          <NuxtLink :to="`/blog/tags/${tag}/`" class="text-accent hover:underline">#{{ BLOG_TAGS[tag] ?? tag }}</NuxtLink>
         </li>
       </ul>
     </article>
+    <GetInTouch />
   </div>
 </template>

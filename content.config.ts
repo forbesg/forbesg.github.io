@@ -53,6 +53,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'services/*.md',
       schema: z.object({
+        shortTitle: z.string(),
+        summary: z.string(),
         subtitle: z.string(),
         icon: imageRef,
         bannerImage: imageRef,

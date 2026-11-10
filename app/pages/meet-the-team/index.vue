@@ -14,17 +14,17 @@ usePageSeo({
 
 <template>
   <div>
-    <PageHeader title="Meet The Team" :breadcrumbs="[{ label: 'Meet The Team' }]" />
-    <section class="mx-auto grid max-w-4xl gap-6 px-4 py-12 sm:grid-cols-2">
+    <PageHeader title="Meet the team (all two of us)" eyebrow="About" :breadcrumbs="[{ label: 'Meet the team' }]" />
+    <section class="mx-auto grid max-w-6xl gap-x-8 gap-y-14 px-6 py-20 md:grid-cols-2">
       <ContentCard
         v-for="member in team"
         :key="member.path"
         :to="withSlash(member.path)"
         :title="member.name"
-        :description="member.position"
+        :label="member.position"
         :image="member.image"
         :image-alt="member.imageAlt"
-        :link-text="`View ${member.name}`"
+        aspect="square"
       />
     </section>
     <GetInTouch />

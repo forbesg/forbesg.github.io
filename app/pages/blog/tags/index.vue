@@ -19,11 +19,12 @@ usePageSeo({
 
 <template>
   <div>
-    <PageHeader title="Tags" :breadcrumbs="[{ label: 'Blog', to: '/blog/' }, { label: 'Tags' }]" />
-    <ul class="mx-auto flex max-w-6xl flex-wrap gap-3 px-4 py-12">
+    <PageHeader title="Topics" eyebrow="Blog" :breadcrumbs="[{ label: 'Blog', to: '/blog/' }, { label: 'Tags' }]" />
+    <ul class="mx-auto max-w-6xl px-6 py-20">
       <li v-for="tag in tags" :key="tag.slug">
-        <NuxtLink :to="`/blog/tags/${tag.slug}/`" class="inline-block rounded bg-brand-50 px-4 py-2 text-brand-700 hover:bg-brand-300">
-          {{ tag.title }} ({{ tag.count }})
+        <NuxtLink :to="`/blog/tags/${tag.slug}/`" class="group flex items-baseline justify-between gap-4 border-b border-line py-6">
+          <span class="font-display text-4xl group-hover:text-accent">{{ tag.title }}</span>
+          <span class="font-mono text-sm text-muted">{{ tag.count }} {{ tag.count === 1 ? 'article' : 'articles' }}</span>
         </NuxtLink>
       </li>
     </ul>

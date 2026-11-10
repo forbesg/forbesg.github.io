@@ -3,6 +3,7 @@ import type { Crumb } from '~/utils/site'
 
 defineProps<{
   title: string
+  eyebrow?: string
   subhead?: string
   breadcrumbs?: Crumb[]
   image?: string
@@ -11,19 +12,22 @@ defineProps<{
 </script>
 
 <template>
-  <header class="bg-brand-50">
-    <div class="mx-auto max-w-6xl px-4 py-10">
-      <AppBreadcrumbs v-if="breadcrumbs" :items="breadcrumbs" class="mb-6" />
-      <h1 class="text-3xl font-bold text-brand-900 sm:text-4xl">{{ title }}</h1>
-      <p v-if="subhead" class="mt-2 text-xl text-brand-700">{{ subhead }}</p>
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pb-20">
+      <AppBreadcrumbs v-if="breadcrumbs" :items="breadcrumbs" class="mb-12 md:mb-16" />
+      <p v-if="eyebrow" class="eyebrow mb-5">{{ eyebrow }}</p>
+      <h1 class="max-w-4xl text-5xl leading-[1.02] tracking-[-0.02em] md:text-7xl">{{ title }}</h1>
+      <p v-if="subhead" class="mt-6 max-w-2xl text-xl text-muted">{{ subhead }}</p>
+      <slot />
     </div>
-    <NuxtImg
-      v-if="image"
-      :src="image"
-      :alt="imageAlt ?? ''"
-      sizes="100vw lg:1152px"
-      class="mx-auto max-h-96 w-full max-w-6xl object-cover"
-      preload
-    />
+    <div v-if="image" class="mx-auto max-w-6xl px-6 pb-16">
+      <NuxtImg
+        :src="image"
+        :alt="imageAlt ?? ''"
+        sizes="100vw lg:1104px"
+        class="aspect-[21/9] w-full border border-line object-cover"
+        preload
+      />
+    </div>
   </header>
 </template>

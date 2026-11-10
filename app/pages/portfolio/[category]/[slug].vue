@@ -24,35 +24,36 @@ usePageSeo({
   <div v-if="project">
     <PageHeader
       :title="project.title"
-      :subhead="project.subhead"
+      :eyebrow="project.subhead"
+      :subhead="project.description"
+      :image="project.image"
+      :image-alt="project.imageAlt"
       :breadcrumbs="[
-        { label: 'Portfolio', to: '/portfolio/' },
+        { label: 'Work', to: '/portfolio/' },
         { label: category.title, to: `/portfolio/${project.category}/` },
         { label: project.title },
       ]"
     />
-    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-[1fr_320px]">
-      <article>
-        <ContentRenderer :value="project" class="prose prose-slate max-w-none" />
-        <ImageGallery v-if="project.carousel?.length" :images="project.carousel" class="mt-10" />
+    <div class="mx-auto grid max-w-6xl gap-16 px-6 py-20 lg:grid-cols-[minmax(0,1fr)_18rem]">
+      <article class="min-w-0">
+        <ContentRenderer :value="project" class="prose prose-site max-w-none" />
+        <ImageGallery v-if="project.carousel?.length" :images="project.carousel" class="mt-12" />
       </article>
-      <aside class="lg:sticky lg:top-6 lg:self-start">
-        <NuxtImg :src="project.image" :alt="project.imageAlt" sizes="100vw lg:320px" class="w-full rounded-lg" />
-        <h2 class="mt-6 text-lg font-bold text-brand-900">Technologies Used</h2>
-        <ul class="mt-3 flex flex-wrap gap-1.5">
-          <li v-for="tech in project.features" :key="tech" class="rounded bg-brand-50 px-2 py-0.5 text-sm text-brand-700">
-            {{ tech }}
-          </li>
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <h2 class="eyebrow mb-4">Built with</h2>
+        <ul class="flex flex-wrap gap-2 font-mono text-[0.8125rem]">
+          <li v-for="tech in project.features" :key="tech" class="border border-line px-2.5 py-1">{{ tech }}</li>
         </ul>
-        <div class="mt-6 flex flex-col gap-2">
-          <a v-if="project.url" :href="project.url" target="_blank" rel="noopener" class="font-semibold text-brand-600 hover:underline">
-            Visit {{ project.title }} &nearr;
+        <div class="mt-8 flex flex-col items-start gap-3">
+          <a v-if="project.url" :href="project.url" target="_blank" rel="noopener" class="link-mono">
+            Visit the site ↗
           </a>
-          <a v-if="project.repo" :href="project.repo" target="_blank" rel="noopener" class="font-semibold text-brand-600 hover:underline">
-            View Git Repo &nearr;
+          <a v-if="project.repo" :href="project.repo" target="_blank" rel="noopener" class="link-mono">
+            View the code ↗
           </a>
         </div>
       </aside>
     </div>
+    <GetInTouch title="Want something like this?" />
   </div>
 </template>

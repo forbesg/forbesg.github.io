@@ -1,17 +1,16 @@
+<script setup lang="ts">
+withDefaults(defineProps<{ title?: string }>(), { title: 'Got a project in mind?' })
+</script>
+
 <template>
-  <section class="bg-brand-900 text-brand-50">
-    <div class="mx-auto max-w-3xl px-4 py-16 text-center">
-      <h2 class="text-3xl font-bold">Have a Website Development Project?</h2>
-      <p class="mt-4">
-        Whether you are looking to update your existing website, have a business idea that needs an
-        online presence, or want to sell something online with an ecommerce website, I would be happy
-        to discuss your project and help you bring your idea to life.
+  <section class="bg-accent text-accent-ink">
+    <div class="mx-auto max-w-6xl px-6 py-24 md:py-28">
+      <h2 class="max-w-4xl text-6xl leading-none md:text-8xl">{{ title }}</h2>
+      <p class="mt-6 max-w-xl text-xl">
+        Tell me what you need and I'll come back with honest advice and a fixed price. No agency fees, no hard sell.
       </p>
-      <p class="mt-3">
-        Whatever your budget, I will use modern web technologies to help give your project legs.
-      </p>
-      <NuxtLink to="/contact/" class="mt-6 inline-block rounded bg-white px-5 py-2.5 font-semibold text-brand-900 hover:bg-brand-50">
-        Get In Touch
+      <NuxtLink to="/contact/" class="btn mt-10 bg-accent-ink text-accent hover:opacity-90">
+        Send a message
       </NuxtLink>
     </div>
   </section>

@@ -1,6 +1,6 @@
 <template>
-  <div class="flex min-h-screen flex-col bg-white font-sans text-slate-800">
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:p-3">Skip to content</a>
+  <div class="flex min-h-screen flex-col bg-bg text-ink transition-colors duration-300">
+    <a href="#main" class="btn-primary sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50">Skip to content</a>
     <SiteHeader />
     <main id="main" class="flex-1">
       <slot />

@@ -1,25 +1,23 @@
 <script setup lang="ts">
 const { data: articles } = await useAsyncData('blog', () =>
   queryCollection('blog')
-    .select('path', 'title', 'description', 'image', 'imageAlt', 'date', 'tags')
+    .select('path', 'title', 'description', 'date', 'tags')
     .order('date', 'DESC')
     .all(),
 )
 
 usePageSeo({
   title: 'Blog | Freelance Web Developer',
-  description: 'Articles on static websites, JAMStack and ecommerce from Forbes Gray, freelance web developer in Edinburgh.',
+  description: 'Articles on fast websites, static sites and ecommerce from Forbes Gray, freelance web developer in Edinburgh.',
 })
 </script>
 
 <template>
   <div>
-    <PageHeader title="Blog" :breadcrumbs="[{ label: 'Blog' }]" />
-    <section class="mx-auto max-w-6xl px-4 py-12">
+    <PageHeader title="Notes on building for the web" eyebrow="Blog" :breadcrumbs="[{ label: 'Blog' }]" />
+    <section class="mx-auto max-w-6xl px-6 py-20">
       <ArticleList :articles="articles ?? []" />
-      <NuxtLink to="/blog/tags/" class="mt-8 inline-block font-semibold text-brand-600 hover:underline">
-        Browse by tag &rarr;
-      </NuxtLink>
+      <NuxtLink to="/blog/tags/" class="link-mono mt-10 inline-block">Browse by tag →</NuxtLink>
     </section>
   </div>
 </template>

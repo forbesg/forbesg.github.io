@@ -1,42 +1,36 @@
 <script setup lang="ts">
-// Shared card for projects, articles, services and team members
+// Editorial card for projects, articles, services and team members:
+// image, then serif title with a small mono label on the right.
 defineProps<{
   to: string
   title: string
   image?: string
   imageAlt?: string
-  subtitle?: string
+  label?: string
   description?: string
-  tags?: string[]
-  linkText?: string
+  aspect?: 'video' | 'square'
 }>()
 </script>
 
 <template>
-  <article class="flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white">
-    <NuxtImg
-      v-if="image"
-      :src="image"
-      :alt="imageAlt ?? ''"
-      sizes="100vw sm:50vw lg:400px"
-      loading="lazy"
-      class="aspect-video w-full object-cover"
-    />
-    <div class="flex flex-1 flex-col gap-3 p-5">
-      <h3 class="text-xl font-bold text-brand-900">
-        <NuxtLink :to="to" class="hover:text-brand-600">{{ title }}</NuxtLink>
+  <article class="group flex flex-col">
+    <NuxtLink v-if="image" :to="to" tabindex="-1" aria-hidden="true" class="block overflow-hidden border border-line">
+      <NuxtImg
+        :src="image"
+        :alt="imageAlt ?? ''"
+        sizes="100vw sm:50vw lg:560px"
+        loading="lazy"
+        :class="aspect === 'square' ? 'aspect-square' : 'aspect-video'"
+        class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+      />
+    </NuxtLink>
+    <div class="mt-4 flex items-baseline justify-between gap-4">
+      <h3 class="text-[1.875rem] leading-[1.1]">
+        <NuxtLink :to="to" class="hover:text-accent">{{ title }}</NuxtLink>
       </h3>
-      <p v-if="subtitle" class="font-semibold text-brand-700">{{ subtitle }}</p>
-      <ul v-if="tags?.length" class="flex flex-wrap gap-1.5">
-        <li v-for="tag in tags" :key="tag" class="rounded bg-brand-50 px-2 py-0.5 text-xs text-brand-700">
-          {{ tag }}
-        </li>
-      </ul>
-      <p v-if="description" class="flex-1">{{ description }}</p>
-      <slot />
-      <NuxtLink v-if="linkText" :to="to" class="font-semibold text-brand-600 hover:underline" aria-hidden="true" tabindex="-1">
-        {{ linkText }} &rarr;
-      </NuxtLink>
+      <span v-if="label" class="max-w-[45%] text-right font-mono text-xs tracking-[0.08em] text-muted uppercase">{{ label }}</span>
     </div>
+    <p v-if="description" class="mt-2 text-muted">{{ description }}</p>
+    <slot />
   </article>
 </template>

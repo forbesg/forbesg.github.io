@@ -11,7 +11,7 @@ const info = PORTFOLIO_CATEGORIES[category]
 const { data: projects } = await useAsyncData(`portfolio-${category}`, () =>
   queryCollection('projects')
     .where('category', '=', category)
-    .select('path', 'title', 'description', 'image', 'imageAlt', 'displayOrder')
+    .select('path', 'title', 'subhead', 'description', 'image', 'imageAlt', 'displayOrder')
     .order('displayOrder', 'ASC')
     .all(),
 )
@@ -26,18 +26,19 @@ usePageSeo({
   <div>
     <PageHeader
       :title="info.title"
-      :breadcrumbs="[{ label: 'Portfolio', to: '/portfolio/' }, { label: info.title }]"
+      eyebrow="Portfolio"
+      :breadcrumbs="[{ label: 'Work', to: '/portfolio/' }, { label: info.title }]"
     />
-    <section class="mx-auto grid max-w-6xl gap-6 px-4 py-12 md:grid-cols-3">
+    <section class="mx-auto grid max-w-6xl gap-x-8 gap-y-14 px-6 py-20 md:grid-cols-2">
       <ContentCard
         v-for="project in projects"
         :key="project.path"
         :to="withSlash(project.path)"
         :title="project.title"
+        :label="project.subhead"
         :description="project.description"
         :image="project.image"
         :image-alt="project.imageAlt"
-        link-text="View"
       />
     </section>
     <GetInTouch />
