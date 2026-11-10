@@ -45,7 +45,7 @@ packages:
   - Search Engine Optimised
   - Search Engine Submission
   - Regular Website Health Report
-  price: £750
+  price: £1,395
 - name: Business Standard Headless CMS Website
   features:
   - Fast Static or Server Rendered Website
@@ -57,7 +57,7 @@ packages:
   - Search Engine Optimised
   - Search Engine Submission
   - Regular Website Health Report
-  price: £1050
+  price: £1,895
 - name: Business Growth Headless CMS Website
   features:
   - Fast Static or SSR Website
@@ -69,7 +69,7 @@ packages:
   - Search Engine Optimised
   - Search Engine Submission
   - Regular Website Health Report
-  price: £1250
+  price: £2,395
 featureWide:
   image:
     src: /images/services/responsive-web-design.jpg

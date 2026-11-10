@@ -44,7 +44,7 @@ packages:
   - Search Engine Submission
   - Google Analytics and Ads Integration
   - Initial Support
-  priceFrom: £750
+  priceFrom: £1,995
 - name: Business Ecommerce Website
   features:
   - Fast Headless Ecommerce Website
@@ -54,7 +54,7 @@ packages:
   - Search Engine Submission
   - Google Analytics and Ads Integration
   - Initial Support
-  priceFrom: £1250
+  priceFrom: £2,750
 - name: Growth Ecommerce Website
   features:
   - Fast Headless Ecommerce Website
@@ -66,7 +66,7 @@ packages:
   - Google Analytics and Ads Integration
   - Regular Performance Reports
   - Initial Support
-  priceFrom: £1500
+  priceFrom: £3,495
 featureWide:
   image:
     src: /images/services/ecommerce-web-design.jpg

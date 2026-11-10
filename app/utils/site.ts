@@ -41,7 +41,7 @@ export interface Crumb {
   to?: string
 }
 
-/** "from £450": the lowest package price of a service */
+/** "from £895": the lowest package price of a service */
 export function fromPrice(packages: { price?: string, priceFrom?: string }[]) {
   const prices = packages
     .map(p => p.price ?? p.priceFrom)

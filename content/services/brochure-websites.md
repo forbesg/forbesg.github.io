@@ -43,7 +43,7 @@ packages:
   - Free SSL Certificate
   - Fully SEO Optimised
   - Search Engine Submission
-  price: £450
+  price: £895
 - name: Business Website
   features:
   - Fast Static Website
@@ -53,7 +53,7 @@ packages:
   - Free SSL Certificate
   - Fully SEO Optimised
   - Search Engine Submission
-  price: £750
+  price: £1,495
 - name: CMS Business Website
   features:
   - Fast Static Website
@@ -63,7 +63,7 @@ packages:
   - Free Domain Name & Hosting
   - Fully SEO Optimised
   - Search Engine Submission
-  price: £950
+  price: £1,795
 featureWide:
   image:
     src: /images/services/responsive-web-design.jpg
