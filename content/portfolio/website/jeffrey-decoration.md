@@ -1,7 +1,7 @@
 ---
 title: Jeffrey Decoration
 description: A statically generated business website developed for Jeffrey Decoration, using Nuxt JS, DatoCMS as a headless CMS and hosted on Netlify.
-subhead: A JAMStack Business Website
+subhead: A Fast Static Business Website
 image: /images/projects/web/jeffrey-decoration-desktop.jpg
 imageAlt: Jeffrey Decoration - Painter & Decorator Business Website
 url: https://www.jeffreydecoration.co.uk

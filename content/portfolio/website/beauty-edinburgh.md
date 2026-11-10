@@ -46,7 +46,7 @@ I found a lot of my headaches went away. The ability to work responsively out of
 the box was a big plus and although there was a fair bit of work 'tweaking' it,
 the end result was much more resilient.
 
-The site evolved yet again and was re-written using a JAMStack architecture. The
-website is now a static site hooked up to DatoCMS and automatically re-built as
+The site evolved yet again and was re-written as a fast static website. It is
+now hooked up to DatoCMS and automatically re-built as
 and when required meaning the site does not require a great deal of resources
 and can be run and hosted for free.

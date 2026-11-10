@@ -44,7 +44,7 @@ of the trail.
 Designed specifically to be used on handheld devices as people walked around the
 town, the site required to be clear, easy to follow and fast to load.
 
-Using Gridsome, a JAMStack framework for VueJS, I was able to produce a performant
+Using Gridsome, a static site generator for VueJS, I was able to produce a performant
 static Progressive Web App which could be installed on the users mobile phone for
 quick and easy access, was secure, and **free to host**.
 
