@@ -25,14 +25,15 @@ watch(() => route.path, () => (open.value = false))
           :class="open ? 'block' : 'hidden'"
           class="absolute inset-x-0 top-full border-b border-line bg-bg px-6 py-4 md:static md:block md:border-0 md:p-0"
         >
-          <ul class="flex flex-col gap-4 text-[0.9375rem] md:flex-row md:items-center md:gap-7">
+          <!-- Mobile menu: larger text and padded rows for ~52px tap targets; desktop unchanged -->
+          <ul class="flex flex-col text-lg md:flex-row md:items-center md:gap-7 md:text-[0.9375rem]">
             <li v-for="link in links" :key="link.to">
-              <NuxtLink :to="link.to" class="hover:text-accent" active-class="text-accent">
+              <NuxtLink :to="link.to" class="block py-3 hover:text-accent md:inline md:py-0" active-class="text-accent">
                 {{ link.label }}
               </NuxtLink>
             </li>
             <!-- The header's Hire me button is hidden below sm, so it lives in the menu there -->
-            <li class="mt-2 border-t border-line pt-5 sm:hidden">
+            <li class="mt-3 border-t border-line pt-5 sm:hidden">
               <NuxtLink to="/contact/" class="btn-primary w-full">Hire me</NuxtLink>
             </li>
           </ul>
