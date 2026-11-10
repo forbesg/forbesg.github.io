@@ -3,6 +3,8 @@ export const SITE_URL = 'https://forbesg.github.io'
 interface PortfolioCategoryInfo {
   title: string
   single: string
+  /** Lower-case plural for running text, e.g. "All 6 websites" */
+  plural: string
   /** Older work kept for the record: labelled as archived wherever it's shown */
   archived?: boolean
   note?: string
@@ -11,12 +13,13 @@ interface PortfolioCategoryInfo {
 export type PortfolioCategory = 'website' | 'ecommerce' | 'web-application' | 'blackberry'
 
 export const PORTFOLIO_CATEGORIES: Record<PortfolioCategory, PortfolioCategoryInfo> = {
-  'website': { title: 'Websites', single: 'Website' },
-  'ecommerce': { title: 'Ecommerce', single: 'Ecommerce Website' },
-  'web-application': { title: 'Web Applications', single: 'Web Application' },
+  'website': { title: 'Websites', single: 'Website', plural: 'websites' },
+  'ecommerce': { title: 'Ecommerce', single: 'Ecommerce Website', plural: 'ecommerce sites' },
+  'web-application': { title: 'Web Applications', single: 'Web Application', plural: 'web applications' },
   'blackberry': {
     title: 'BlackBerry Apps',
     single: 'BlackBerry App',
+    plural: 'BlackBerry apps',
     archived: true,
     note: 'My first apps, built for BlackBerry 10 with WebWorks. The platform has long since been retired, but this is where it all started.',
   },

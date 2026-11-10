@@ -6,6 +6,10 @@ const { data: projects } = await useAsyncData('portfolio', () =>
     .all(),
 )
 
+// Each section shows its first PER_SECTION projects (by displayOrder) as one
+// row of cards; the rest are on the category page.
+const PER_SECTION = 2
+
 const categories = computed(() =>
   (Object.keys(PORTFOLIO_CATEGORIES) as PortfolioCategory[]).map(key => ({
     key,
@@ -38,12 +42,16 @@ usePageSeo({
         <p v-if="category.archived" class="eyebrow mb-4">Archive · Where it all started</p>
         <div class="mb-12 flex flex-wrap items-baseline justify-between gap-4">
           <h2 :id="`cat-${category.key}`" class="text-6xl leading-none">{{ category.title }}</h2>
-          <NuxtLink :to="`/portfolio/${category.key}/`" class="link-mono">All {{ category.title.toLowerCase() }} →</NuxtLink>
+          <NuxtLink
+            v-if="category.projects.length > PER_SECTION"
+            :to="`/portfolio/${category.key}/`"
+            class="link-mono"
+          >All {{ category.projects.length }} {{ category.plural }} →</NuxtLink>
         </div>
         <p v-if="category.note" class="-mt-6 mb-12 max-w-2xl text-muted">{{ category.note }}</p>
         <div class="grid gap-x-8 gap-y-12 md:grid-cols-2">
           <ContentCard
-            v-for="project in category.projects.slice(0, 4)"
+            v-for="project in category.projects.slice(0, PER_SECTION)"
             :key="project.path"
             :to="withSlash(project.path)"
             :title="project.title"
