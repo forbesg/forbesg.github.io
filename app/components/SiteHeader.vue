@@ -1,20 +1,28 @@
 <script setup lang="ts">
-const links = [
-  { to: '/services/', label: 'Services' },
-  { to: '/portfolio/', label: 'Work' },
-  { to: '/about/', label: 'About' },
-  { to: '/blog/', label: 'Blog' },
-]
+  const links = [
+    { to: "/services/", label: "Services" },
+    { to: "/portfolio/", label: "Work" },
+    { to: "/about/", label: "About" },
+    { to: "/blog/", label: "Blog" },
+  ];
 
-const open = ref(false)
-const route = useRoute()
-watch(() => route.path, () => (open.value = false))
+  const open = ref(false);
+  const route = useRoute();
+  watch(
+    () => route.path,
+    () => (open.value = false),
+  );
 </script>
 
 <template>
   <header class="sticky top-0 z-20 border-b border-line bg-bg/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-      <NuxtLink to="/" class="font-display text-[1.75rem] leading-none hover:text-accent">
+    <div
+      class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4"
+    >
+      <NuxtLink
+        to="/"
+        class="font-display text-[1.75rem] leading-none hover:text-accent"
+      >
         Forbes Gray
       </NuxtLink>
 
@@ -26,20 +34,31 @@ watch(() => route.path, () => (open.value = false))
           class="absolute inset-x-0 top-full border-b border-line bg-bg px-6 py-4 md:static md:block md:border-0 md:p-0"
         >
           <!-- Mobile menu: larger text and padded rows for ~52px tap targets; desktop unchanged -->
-          <ul class="flex flex-col text-lg md:flex-row md:items-center md:gap-7 md:text-[0.9375rem]">
+          <ul
+            class="flex flex-col text-base ml-4 md:flex-row md:items-center md:gap-7 md:text-[0.9375rem]"
+          >
             <li v-for="link in links" :key="link.to">
-              <NuxtLink :to="link.to" class="block py-3 hover:text-accent md:inline md:py-0" active-class="text-accent">
+              <NuxtLink
+                :to="link.to"
+                class="block py-3 hover:text-accent md:inline md:py-0"
+                active-class="text-accent"
+              >
                 {{ link.label }}
               </NuxtLink>
             </li>
             <!-- The header's Hire me button is hidden below sm, so it lives in the menu there -->
             <li class="mt-3 border-t border-line pt-5 sm:hidden">
-              <NuxtLink to="/contact/" class="btn-primary w-full">Hire me</NuxtLink>
+              <NuxtLink to="/contact/" class="btn-primary w-full"
+                >Hire me</NuxtLink
+              >
             </li>
           </ul>
         </nav>
 
-        <NuxtLink to="/contact/" class="btn-primary hidden px-5 py-2.5 text-[0.9375rem] sm:inline-flex">
+        <NuxtLink
+          to="/contact/"
+          class="btn-primary hidden px-5 py-2.5 text-[0.9375rem] sm:inline-flex"
+        >
           Hire me
         </NuxtLink>
 
@@ -53,7 +72,16 @@ watch(() => route.path, () => (open.value = false))
           aria-label="Menu"
           @click="open = !open"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
             <path v-if="open" d="M6 6l12 12M18 6 6 18" />
             <path v-else d="M4 7h16M4 12h16M4 17h16" />
           </svg>

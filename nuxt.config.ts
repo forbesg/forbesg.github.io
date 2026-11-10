@@ -27,7 +27,7 @@ export default defineNuxtConfig({
             codeSplitting: {
               groups: [
                 {
-                  name: 'site',
+                  name: "site",
                   // our pages/layouts/components, plus Nuxt Content's prose components
                   // (one tiny file per markdown element type otherwise)
                   test: /[\\/]app[\\/](pages|layouts|components)[\\/]|[\\/]components[\\/]prose[\\/]/,
