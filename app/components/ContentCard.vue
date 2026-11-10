@@ -15,14 +15,13 @@ defineProps<{
 </script>
 
 <template>
-  <article class="group flex flex-col">
-    <NuxtLink
+  <!-- One link per card: the title link stretches over the whole card (after:inset-0),
+       so the image is clickable without a second, hidden duplicate link. -->
+  <article class="group relative flex flex-col">
+    <div
       v-if="image"
-      :to="to"
-      tabindex="-1"
-      aria-hidden="true"
       :class="frameless ? '' : 'border border-line'"
-      class="block overflow-hidden"
+      class="overflow-hidden"
     >
       <NuxtImg
         :src="image"
@@ -32,10 +31,13 @@ defineProps<{
         :class="[aspect === 'square' ? 'aspect-square' : 'aspect-video', frameless ? 'object-contain' : 'object-cover']"
         class="w-full transition-transform duration-500 group-hover:scale-[1.02]"
       />
-    </NuxtLink>
+    </div>
     <div class="mt-4 flex items-baseline justify-between gap-4">
       <h3 class="text-[1.875rem] leading-[1.1]">
-        <NuxtLink :to="to" class="hover:text-accent">{{ title }}</NuxtLink>
+        <NuxtLink
+          :to="to"
+          class="after:absolute after:inset-0 after:content-[''] group-hover:text-accent focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-accent"
+        >{{ title }}</NuxtLink>
       </h3>
       <span v-if="label" class="max-w-[45%] text-right font-mono text-xs tracking-[0.08em] text-muted uppercase">{{ label }}</span>
     </div>
