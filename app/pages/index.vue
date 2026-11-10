@@ -146,7 +146,7 @@
           alt="Forbes Gray at the top of Arthur's Seat, Edinburgh"
           width="440"
           height="440"
-          sizes="100vw md:440px"
+          sizes="440px"
           loading="lazy"
           class="aspect-square w-full max-w-110 flex-[1_1_20rem] object-cover"
         />

@@ -75,7 +75,7 @@ useSchemaOrg([
         v-else
         :src="service.bannerImage.src"
         :alt="service.bannerImage.alt"
-        sizes="100vw md:50vw"
+        sizes="sm:100vw md:50vw lg:528px"
         :style="aspectStyle(service.bannerImage.width, service.bannerImage.height)"
         class="w-full border border-line object-cover"
       />
@@ -119,7 +119,7 @@ useSchemaOrg([
         <NuxtImg
           :src="service.featureWide.image.src"
           :alt="service.featureWide.image.alt"
-          sizes="100vw md:50vw"
+          sizes="sm:100vw md:50vw lg:528px"
           loading="lazy"
           :style="aspectStyle(service.featureWide.image.width, service.featureWide.image.height)"
           class="w-full border border-line object-cover"

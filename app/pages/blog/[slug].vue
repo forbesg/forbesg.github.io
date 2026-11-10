@@ -58,7 +58,7 @@ useSchemaOrg([
       </p>
     </PageHeader>
     <article class="mx-auto max-w-3xl px-6 py-16">
-      <NuxtImg :src="article.image" :alt="article.imageAlt" sizes="100vw md:768px" :style="aspectStyle(article.imageWidth, article.imageHeight)" class="mb-12 w-full border border-line object-cover" preload fetchpriority="high" />
+      <NuxtImg :src="article.image" :alt="article.imageAlt" sizes="sm:100vw md:720px" :style="aspectStyle(article.imageWidth, article.imageHeight)" class="mb-12 w-full border border-line object-cover" preload fetchpriority="high" />
       <ContentRenderer :value="article" class="prose prose-site max-w-none" />
       <ul class="mt-12 flex flex-wrap gap-3 border-t border-line pt-8 font-mono text-sm">
         <li v-for="tag in article.tags" :key="tag">

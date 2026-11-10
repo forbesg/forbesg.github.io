@@ -45,7 +45,7 @@ useSchemaOrg([
         :alt="member.imageAlt"
         width="600"
         height="600"
-        sizes="100vw md:50vw"
+        sizes="sm:100vw md:50vw lg:520px"
         class="aspect-square w-full border border-line object-cover"
         preload
         fetchpriority="high"

@@ -30,7 +30,7 @@ withDefaults(defineProps<{
       <NuxtImg
         :src="image"
         :alt="imageAlt ?? ''"
-        sizes="100vw sm:50vw lg:560px"
+        sizes="sm:100vw md:50vw lg:536px"
         :loading="eager ? 'eager' : 'lazy'"
         :fetchpriority="eager ? 'high' : undefined"
         :class="[aspect === 'square' ? 'aspect-square' : 'aspect-video', frameless ? 'object-contain' : 'object-cover']"

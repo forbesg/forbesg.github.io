@@ -73,7 +73,7 @@ usePageSeo({
           <NuxtImg
             :src="service.example.mockup ?? service.example.image"
             :alt="service.example.imageAlt"
-            sizes="100vw md:50vw lg:560px"
+            sizes="sm:100vw md:672px lg:520px"
             :loading="i === 0 ? 'eager' : 'lazy'"
             :fetchpriority="i === 0 ? 'high' : undefined"
             :class="service.example.mockup ? 'object-contain' : 'border border-line object-cover'"
