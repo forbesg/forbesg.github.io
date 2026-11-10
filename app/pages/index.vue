@@ -66,19 +66,22 @@ useHead({
 <template>
   <div>
     <!-- Hero -->
-    <section class="mx-auto max-w-6xl px-6 pt-24 pb-24 md:pt-32 md:pb-28">
-      <p class="eyebrow mb-8">Freelance web developer · Edinburgh</p>
-      <h1 class="max-w-5xl text-[4rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[7.5rem]">
-        Websites that work as hard as <em class="text-accent">you do.</em>
-      </h1>
-      <p class="mt-10 max-w-2xl text-[1.375rem] leading-normal">
-        Fast, good-looking websites for Scottish businesses,
-        <em class="font-display text-[1.75rem] text-accent">without the agency price tag.</em>
-      </p>
-      <p class="mt-4 max-w-xl text-lg text-muted">Fixed prices from £450, free hosting, and no plugins to keep updating.</p>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <NuxtLink to="/contact/" class="btn-primary">Start a project</NuxtLink>
-        <NuxtLink to="/services/" class="btn-outline">See prices</NuxtLink>
+    <section class="relative isolate overflow-hidden">
+      <div class="dot-grid absolute inset-0 -z-10" aria-hidden="true" />
+      <div class="mx-auto max-w-6xl px-6 pt-24 pb-24 md:pt-32 md:pb-28">
+        <p class="eyebrow mb-8">Freelance web developer · Edinburgh</p>
+        <h1 class="max-w-5xl text-[4rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[7.5rem]">
+          Websites that work as hard as <em class="text-accent">you do.</em>
+        </h1>
+        <p class="mt-10 max-w-2xl text-[1.375rem] leading-normal">
+          Fast, good-looking websites for Scottish businesses,
+          <em class="font-display text-[1.75rem] text-accent">without the agency price tag.</em>
+        </p>
+        <p class="mt-4 max-w-xl text-lg text-muted">Fixed prices from £450, free hosting, and no plugins to keep updating.</p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <NuxtLink to="/contact/" class="btn-primary">Start a project</NuxtLink>
+          <NuxtLink to="/services/" class="btn-outline">See prices</NuxtLink>
+        </div>
       </div>
     </section>
 

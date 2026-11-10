@@ -118,6 +118,24 @@
   @apply border-b border-current font-mono text-sm hover:text-accent;
 }
 
+/* Faint brand-blue dot grid, faded out towards the edges. Put it on an
+   absolutely positioned, aria-hidden layer behind the content (the mask
+   would fade the content too). */
+@utility dot-grid {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) var(--dot-strength, 32%), transparent) 1.25px,
+    transparent 1.75px
+  );
+  background-size: 24px 24px;
+  background-position: center;
+  mask-image: radial-gradient(ellipse 75% 70% at 65% 45%, #000 25%, transparent 80%);
+}
+
+:root[data-theme='dark'] {
+  --dot-strength: 26%;
+}
+
 /* Markdown content: typography plugin, re-coloured with the site tokens */
 .prose-site {
   --tw-prose-body: var(--ink);
