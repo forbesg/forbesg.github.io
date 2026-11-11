@@ -54,8 +54,11 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      // Cloudflare Web Analytics (cookie-free, so no consent banner needed).
-      cfAnalyticsToken: "0467e1d8fabb4e6498f6a79bf1469c66",
+      // Cloudflare Web Analytics (cookie-free, so no consent banner needed),
+      // added by app/plugins/cloudflare-analytics.ts. Left empty on Cloudflare
+      // Pages, where the project's Web Analytics setting injects the beacon
+      // itself; adding ours too would count every page view twice.
+      cfAnalyticsToken: onCloudflare ? "" : "0467e1d8fabb4e6498f6a79bf1469c66",
     },
   },
 
