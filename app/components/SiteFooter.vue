@@ -16,8 +16,11 @@
     <div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-3">
       <div>
         <p class="font-display text-[1.75rem] leading-none">Forbes Gray</p>
-        <p class="mt-3 text-muted">
-          Freelance web developer.<br />Without the agency price tag.
+        <p class="mt-3 text-muted text-base uppercase">
+          Freelance web developer.<br /><span
+            class="font-display italic text-accent text-lg"
+            >W<span class="lowercase">ithout the agency price tag</span></span
+          >.
         </p>
       </div>
       <nav aria-label="Footer">
@@ -32,10 +35,16 @@
       </nav>
       <div>
         <h2 class="eyebrow mb-4">Find me</h2>
-        <address class="not-italic text-muted">
-          Newhaven, Edinburgh EH6 4JX<br />
-          <a :href="`tel:${PHONE.international}`" class="hover:text-accent">{{ PHONE.display }}</a><br />
-          <a :href="`mailto:${EMAIL}`" class="hover:text-accent">{{ EMAIL }}</a>
+        <address class="not-italic text-muted text-base/6">
+          Newhaven, <br />Edinburgh. <br />EH6 4JX<br />
+          <a
+            :href="`tel:${PHONE.international}`"
+            class="block mt-2 hover:text-accent"
+            >t: {{ PHONE.display }}</a
+          >
+          <a :href="`mailto:${EMAIL}`" class="hover:text-accent"
+            >e: {{ EMAIL }}</a
+          >
         </address>
         <SocialLinks class="mt-4" />
       </div>

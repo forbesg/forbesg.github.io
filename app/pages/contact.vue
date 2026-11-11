@@ -236,11 +236,19 @@
           class="aspect-square w-full max-w-72 border border-line object-cover"
         />
         <p class="mt-4 font-display text-3xl">Forbes Gray</p>
-        <p class="text-muted">Freelance web developer</p>
-        <address class="mt-6 not-italic text-muted">
-          Newhaven<br />Edinburgh EH6 4JX<br />
-          <a :href="`tel:${PHONE.international}`" class="mt-2 inline-block hover:text-accent">{{ PHONE.display }}</a><br />
-          <a :href="`mailto:${EMAIL}`" class="break-all hover:text-accent">{{ EMAIL }}</a>
+        <p class="text-muted uppercase text-xs tracking-widest">
+          Freelance web developer
+        </p>
+        <address class="mt-6 not-italic text-muted text-base">
+          Newhaven,<br />Edinburgh. <br />EH6 4JX<br />
+          <a
+            :href="`tel:${PHONE.international}`"
+            class="mt-2 inline-block hover:text-accent"
+            >t: {{ PHONE.display }}</a
+          ><br />
+          <a :href="`mailto:${EMAIL}`" class="break-all hover:text-accent"
+            >e: {{ EMAIL }}</a
+          >
         </address>
         <SocialLinks class="mt-6" />
       </aside>
