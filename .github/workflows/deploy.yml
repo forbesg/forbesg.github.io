@@ -1,7 +1,10 @@
-# Build the static site and publish it to GitHub Pages on every push to main.
-# Follows https://nuxt.com/deploy/github-pages (user site, so no NUXT_APP_BASE_URL).
-# One-off setup: repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
-name: Deploy to GitHub Pages
+# The site now lives at forbesgray.co.uk (Cloudflare Pages). GitHub Pages keeps
+# serving the old forbesg.github.io address as a forwarding site: on every push
+# to main this builds the site, then swaps each page for one that forwards to
+# the same path on the new domain (scripts/github-forwarding.mjs).
+# Don't set a custom domain on this repo's Pages settings: the wallchart project
+# sites under forbesg.github.io must stay where they are.
+name: Deploy forwarding site to GitHub Pages
 
 on:
   push:
@@ -38,14 +41,16 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # github_pages preset: the static preset plus a 404.html and .nojekyll
+      # Built only to list every page that needs forwarding
       - run: pnpm generate --preset github_pages
+
+      - run: node scripts/github-forwarding.mjs .output/public .output/forwarding https://forbesgray.co.uk
 
       - uses: actions/configure-pages@v6
 
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: .output/public
+          path: .output/forwarding
 
   deploy:
     needs: build

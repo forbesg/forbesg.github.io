@@ -1,10 +1,9 @@
 import tailwindcss from "@tailwindcss/vite";
 import { PHONE } from "./app/utils/site";
 
-// The live site's address. Set NUXT_SITE_URL in the host's build settings
-// (e.g. https://www.example.co.uk) to move the canonical URLs, sitemap,
-// robots.txt and structured data to a new domain. No trailing slash.
-const siteUrl = (process.env.NUXT_SITE_URL || "https://forbesg.github.io").replace(/\/+$/, "");
+// The live site's address, used for the canonical URLs, sitemap, robots.txt and
+// structured data. NUXT_SITE_URL overrides it (no trailing slash).
+const siteUrl = (process.env.NUXT_SITE_URL || "https://forbesgray.co.uk").replace(/\/+$/, "");
 
 // Cloudflare Pages sets CF_PAGES=1 during its builds, and Nitro then uses its
 // cloudflare_pages_static preset, which writes routeRules redirects and headers
