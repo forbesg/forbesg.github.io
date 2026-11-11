@@ -62,6 +62,9 @@ export default defineContentConfig({
         repo: z.string().optional(),
         features: z.array(z.string()).default([]),
         featured: z.boolean().default(false),
+        // Old side projects kept for the record: still listed, but kept out of
+        // search results (noindex). Every project in an archived category is too.
+        archived: z.boolean().default(false),
         displayOrder: z.number().default(99),
         fullImage: imageRef.optional(),
         carousel: z.array(imageRef).optional(),

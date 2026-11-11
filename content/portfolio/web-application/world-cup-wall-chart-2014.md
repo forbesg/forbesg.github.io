@@ -1,4 +1,5 @@
 ---
+archived: true
 title: World Cup Wall Chart 2014
 description: A web application World Cup Wall Chart for the 2014 Brazil World Cup
 subhead: Interactive World Cup Wall Chart

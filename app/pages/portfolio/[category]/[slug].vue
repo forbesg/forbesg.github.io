@@ -18,6 +18,11 @@ usePageSeo({
   image: project.value.image,
   imageAlt: project.value.imageAlt,
 })
+
+// Archived work stays on the site but out of search results; links are still followed
+if (project.value.archived || category.archived) {
+  useRobotsRule('noindex, follow')
+}
 </script>
 
 <template>

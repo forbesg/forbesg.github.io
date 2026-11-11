@@ -101,11 +101,6 @@ export default defineNuxtConfig({
     },
   },
 
-  robots: {
-    // Old app path from a previous version of the site
-    disallow: ["/Euro-2016-WallChart/"],
-  },
-
   content: {
     // Use Node's built-in SQLite (Node 22.5+) instead of better-sqlite3
     experimental: { sqliteConnector: "native" },

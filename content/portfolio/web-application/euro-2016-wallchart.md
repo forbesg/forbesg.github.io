@@ -1,4 +1,5 @@
 ---
+archived: true
 title: Euro 2016 Wallchart
 description: A side web application project - Web Wallchart for the 2016 European Championships
 subhead: Angular JS Wallchart 2016 European Championships

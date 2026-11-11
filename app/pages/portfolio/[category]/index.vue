@@ -20,6 +20,10 @@ usePageSeo({
   title: `${info.title} | Portfolio`,
   description: `${info.single} projects by Forbes Gray, freelance web developer in Edinburgh.`,
 })
+
+if (info.archived) {
+  useRobotsRule('noindex, follow')
+}
 </script>
 
 <template>
