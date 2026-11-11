@@ -50,6 +50,8 @@
           <span class="eyebrow mb-8 block leading-normal"
             >Freelance web design · Edinburgh</span
           >
+          <!-- keeps a space between the two lines in the heading's text -->
+          {{ " " }}
           <span
             class="block max-w-5xl text-[4rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[7.5rem]"
           >
