@@ -30,7 +30,7 @@ groups:
       - WordPress
       - Headless APIs
       - REST & GraphQL
-      - Firebase
+      - Firebase & Firestore
       - MySQL
       - MongoDB
 
@@ -49,9 +49,10 @@ groups:
     tagline: Running it, hosting it, keeping it fast
     icon: rocket
     tools:
-      - Google Cloud
+      - Google Cloud Functions
       - Microservices
-      - Serverless functions
+      - Netlify Functions
+      - Edge Functions
       - Node.js
       - Cloudflare Pages
       - Netlify

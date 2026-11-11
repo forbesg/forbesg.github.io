@@ -9,7 +9,7 @@ extras:
   intro: Bigger projects and design builds. Tell me what you need and I'll give you an honest view of the best way to do it.
   items:
     - title: Web applications & APIs
-      text: Booking systems, trade portals and payment apps, built on headless APIs, microservices and Google Cloud.
+      text: Booking systems, trade portals and payment apps, with back ends on Google Cloud Functions, Firestore and Netlify Functions.
       icon: cloud
     - title: Development for designers
       text: Got designs in Figma, Sketch or Adobe? I'll build them with clean, maintainable, fast code.

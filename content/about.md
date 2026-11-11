@@ -35,7 +35,7 @@ As these new JavaScript frameworks developed I was introduced to a number of dif
 
 My main focus has become building fast, SEO friendly server-side rendered and static websites using modern JavaScript frameworks such as Vue, React, Gatsby, Gridsome and Nuxt (this website). Pages are built ahead of time and served as fast static files, with content, data and shopping handled by separate "headless" services, so I am able to quickly create performant and secure websites and web applications that search engines love.
 
-Behind the scenes, bigger projects like booking systems and trade portals need more than pages. For those I build microservices and APIs on Google Cloud and serverless platforms, and connect sites to headless services for content, ecommerce and payments, so each part does one job well and can grow on its own.
+Behind the scenes, bigger projects like booking systems and trade portals need more than pages. For those I write the back-end code too: microservices and APIs on Google Cloud Functions with Firestore, and on Netlify Functions and Edge Functions, connected to headless services for content, ecommerce and payments, so each part does one job well and can grow on its own.
 
 I have become increasingly focused on website speed, and since Google introduced [Core Web Vitals](https://web.dev/vitals/) as a metric in their organic search rankings, this way of building websites has moved to the forefront of modern web development.
 
