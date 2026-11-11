@@ -88,6 +88,8 @@ export default defineNuxtConfig({
       email: EMAIL,
       priceRange: "££",
       sameAs: [
+        // Google Business Profile (its Knowledge Graph ID, which doesn't change)
+        "https://www.google.com/search?kgmid=/g/11jk5m8bw8",
         "https://github.com/forbesg",
         "https://uk.linkedin.com/in/forbesgray",
         "https://www.instagram.com/4beeeez",
