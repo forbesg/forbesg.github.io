@@ -10,17 +10,17 @@
     ? "1x00000000000000000000AA"
     : "0x4AAAAAAF88PwaVTFRMDQde";
 
-  // Ad and campaign parameters passed through to Forminit, as its SDK does
-  const TRACKING_PARAMS: Record<string, string> = {
-    utm_source: "utmSource",
-    utm_medium: "utmMedium",
-    utm_campaign: "utmCampaign",
-    utm_term: "utmTerm",
-    utm_content: "utmContent",
-    gclid: "gclid",
-    fbclid: "fbclid",
-    msclkid: "msclkid",
-  };
+  // Ad and campaign parameters passed through to Forminit
+  const TRACKING_PARAMS = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "gclid",
+    "fbclid",
+    "msclkid",
+  ];
 
   usePageSeo({
     title: "Contact | Web Design Edinburgh",
@@ -115,19 +115,20 @@
 
     status.value = "sending";
     try {
-      // Forminit's field names: fi-{block}-{property}
+      // The form's existing field names (from its getform.io days), so new
+      // submissions line up with the old ones in Forminit
       const body = new FormData();
-      body.set("fi-sender-fullName", form.name.trim());
-      body.set("fi-sender-email", form.email.trim());
-      if (form.phone_number.trim())
-        body.set("fi-sender-phone", form.phone_number.trim());
-      body.set("fi-text-message", form.message.trim());
+      body.set("name", form.name.trim());
+      body.set("email", form.email.trim());
+      body.set("phone_number", form.phone_number.trim());
+      body.set("message", form.message.trim());
       body.set("_gotcha", form._gotcha);
 
+      // Campaign parameters, only when the visitor arrived with them
       const params = new URLSearchParams(window.location.search);
-      for (const [param, property] of Object.entries(TRACKING_PARAMS)) {
+      for (const param of TRACKING_PARAMS) {
         const value = params.get(param);
-        if (value) body.set(`fi-tracking-${property}`, value);
+        if (value) body.set(param, value);
       }
 
       body.set("cf-turnstile-response", await getToken());
