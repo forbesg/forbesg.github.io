@@ -34,7 +34,8 @@
         <h2 class="eyebrow mb-4">Find me</h2>
         <address class="not-italic text-muted">
           Newhaven, Edinburgh EH6 4JX<br />
-          <a :href="`tel:${PHONE.international}`" class="hover:text-accent">{{ PHONE.display }}</a>
+          <a :href="`tel:${PHONE.international}`" class="hover:text-accent">{{ PHONE.display }}</a><br />
+          <a :href="`mailto:${EMAIL}`" class="hover:text-accent">{{ EMAIL }}</a>
         </address>
         <SocialLinks class="mt-4" />
       </div>

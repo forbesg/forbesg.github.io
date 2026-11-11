@@ -5,6 +5,9 @@ export const PHONE = {
   international: '+441312026902',
 }
 
+/** Business email address: shown alongside the phone number, and in the structured data */
+export const EMAIL = 'hello@forbesgray.co.uk'
+
 interface PortfolioCategoryInfo {
   title: string
   single: string

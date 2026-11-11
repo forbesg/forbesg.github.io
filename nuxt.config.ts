@@ -1,5 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
-import { PHONE } from "./app/utils/site";
+import { EMAIL, PHONE } from "./app/utils/site";
 
 // The live site's address, used for the canonical URLs, sitemap, robots.txt and
 // structured data. NUXT_SITE_URL overrides it (no trailing slash).
@@ -85,6 +85,7 @@ export default defineNuxtConfig({
       },
       areaServed: ["Edinburgh", "Lothians", "Scotland", "United Kingdom"],
       telephone: PHONE.international,
+      email: EMAIL,
       priceRange: "££",
       sameAs: [
         "https://github.com/forbesg",
