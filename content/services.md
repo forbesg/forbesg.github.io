@@ -5,18 +5,12 @@ description: Website design and development in Edinburgh with fixed prices from 
 image: /images/website-development-services-in-edinburgh.jpg
 imageAlt: Website Development Services in Edinburgh
 extras:
-  title: Already have a website?
-  intro: If your current site isn't quite working, or you have a design that needs building, I can help with that too.
+  title: Also available
+  intro: Bigger projects and design builds. Tell me what you need and I'll give you an honest view of the best way to do it.
   items:
-    - title: Search engine optimisation
-      text: Not getting the traffic you'd like? I'll optimise your site and content to climb higher in Google's results.
-      icon: search
-    - title: Speed boost
-      text: I love making websites fast. I'll find what's slowing your site down and get it up to speed.
-      icon: zap
-    - title: Website face-lift
-      text: A redesign on your current platform, or a move to a faster, easier-to-run new home.
-      icon: brush
+    - title: Web applications & APIs
+      text: Booking systems, trade portals and payment apps, built on headless APIs, microservices and Google Cloud.
+      icon: cloud
     - title: Development for designers
       text: Got designs in Figma, Sketch or Adobe? I'll build them with clean, maintainable, fast code.
       icon: layout

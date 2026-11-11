@@ -33,10 +33,8 @@ const services = computed(() =>
 
 // Line icons for the "also available" tiles (24×24, stroked)
 const icons: Record<string, string> = {
-  search: 'M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM20 20l-4.2-4.2',
-  zap: 'M13 2 4 14h7l-1 8 9-12h-7z',
-  brush: 'M18.4 2.6a2.1 2.1 0 0 1 3 3L12 15l-3-3zM9 12c-2.5 0-4 1.5-4 4 0 1.5-1 2.5-3 3 1 1.5 3 2 5 2 3 0 5-2 5-5',
   layout: 'M3 4h18v16H3zM3 9h18M9 9v11',
+  cloud: 'M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 8.5a4.8 4.8 0 0 1-.5 9.5z',
 }
 
 usePageSeo({
@@ -57,7 +55,7 @@ usePageSeo({
       <ContentRenderer :value="page" class="prose prose-site mt-6 max-w-2xl text-muted [&_p]:text-xl [&_p]:leading-relaxed" />
     </PageHeader>
 
-    <!-- The three main services, each with a real project alongside -->
+    <!-- The main services, each with a real project alongside -->
     <section class="mx-auto max-w-6xl px-6" aria-label="Services and prices">
       <article
         v-for="(service, i) in services"
@@ -124,7 +122,7 @@ usePageSeo({
           <h2 id="extras-heading" class="text-6xl leading-none">{{ page.extras.title }}</h2>
           <p v-if="page.extras.intro" class="max-w-xl text-muted">{{ page.extras.intro }}</p>
         </div>
-        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul class="grid gap-6 sm:grid-cols-2">
           <li v-for="item in page.extras.items" :key="item.title" class="border border-line bg-surface p-6">
             <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path :d="icons[item.icon]" />

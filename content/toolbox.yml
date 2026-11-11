@@ -21,15 +21,16 @@ groups:
       - React
       - Progressive Web Apps
 
-  - name: Content & data
+  - name: Content, data & APIs
     tagline: Where your words, pages and bookings live
     icon: database
     tools:
       - DatoCMS
       - Prismic CMS
       - WordPress
+      - Headless APIs
+      - REST & GraphQL
       - Firebase
-      - GraphQL
       - MySQL
       - MongoDB
 
@@ -44,14 +45,18 @@ groups:
       - Swell JS
       - Stripe
 
-  - name: Build, host & measure
-    tagline: Getting it live and keeping it fast
+  - name: Cloud, build & host
+    tagline: Running it, hosting it, keeping it fast
     icon: rocket
     tools:
+      - Google Cloud
+      - Microservices
+      - Serverless functions
       - Node.js
+      - Cloudflare Pages
       - Netlify
-      - GitHub
       - Firebase Hosting
+      - GitHub
       - Lighthouse
       - Figma
       - Google Analytics

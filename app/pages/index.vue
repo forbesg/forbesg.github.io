@@ -14,23 +14,15 @@
     return { about, services, projects };
   });
 
-  const serviceRows = computed(() => [
-    ...(data.value?.services ?? []).map((s, i) => ({
+  const serviceRows = computed(() =>
+    (data.value?.services ?? []).map((s, i) => ({
       num: String(i + 1).padStart(2, "0"),
       to: withSlash(s.path),
       title: s.shortTitle,
       summary: s.summary,
       price: s.packages ? fromPrice(s.packages) : "N/A",
     })),
-    {
-      num: String((data.value?.services.length ?? 0) + 1).padStart(2, "0"),
-      to: "/contact/",
-      title: "Rescue & speed-ups",
-      summary:
-        "Already have a site that’s slow, dated or hard to find on Google? I can fix it or move it somewhere better.",
-      price: "Ask for a quote",
-    },
-  ]);
+  );
 
   usePageSeo({
     title: "Web Design Edinburgh | Freelance Website Developer",

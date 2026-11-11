@@ -32,13 +32,16 @@ useSchemaOrg([
     description: service.value.description,
     serviceType: service.value.shortTitle,
     areaServed: ['Edinburgh', 'Scotland', 'United Kingdom'],
-    offers: service.value.packages.map(pkg => ({
-      '@type': 'Offer',
-      'name': pkg.name,
-      'price': amount(pkg.price ?? pkg.priceFrom ?? ''),
-      'priceCurrency': 'GBP',
-      'description': pkg.features.join(', '),
-    })),
+    // Only packages with a price; the rest are quoted individually
+    offers: service.value.packages
+      .filter(pkg => pkg.price ?? pkg.priceFrom)
+      .map(pkg => ({
+        '@type': 'Offer',
+        'name': pkg.name,
+        'price': amount(pkg.price ?? pkg.priceFrom ?? ''),
+        'priceCurrency': 'GBP',
+        'description': pkg.features.join(', '),
+      })),
   }),
 ])
 </script>
@@ -101,6 +104,7 @@ useSchemaOrg([
             <p class="mt-4 font-mono text-3xl text-accent">
               <template v-if="pkg.price">{{ pkg.price }}</template>
               <template v-else-if="pkg.priceFrom"><span class="text-base text-muted">from</span> {{ pkg.priceFrom }}</template>
+              <span v-else class="text-xl">Ask for a quote</span>
             </p>
             <ul class="mt-6 flex-1 space-y-2">
               <li v-for="feature in pkg.features" :key="feature" class="flex gap-3">
