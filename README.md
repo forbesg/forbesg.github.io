@@ -35,6 +35,8 @@ Cloudflare sets `CF_PAGES=1` during builds, so Nitro uses its `cloudflare_pages_
 - `dist/_redirects`: real 301s from the moved pages in `routeRules`
 - `dist/_headers`: security headers, and cache times for images and media
 
+Visitor stats come from Cloudflare Web Analytics, turned on in the Pages project (Metrics → Web Analytics). Cloudflare adds its beacon script to each page itself, so the site has no analytics code of its own.
+
 Preview deployments without `NUXT_SITE_URL` still use `https://forbesgray.co.uk` for their canonical URLs, so they don't compete with the live site.
 
 To try a Cloudflare build locally (delete any old `.output` first: a stale one gets copied into `dist`):
