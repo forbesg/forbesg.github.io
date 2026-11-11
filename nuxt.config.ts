@@ -83,6 +83,9 @@ export default defineNuxtConfig({
         postalCode: "EH6 4JX",
         addressCountry: "GB",
       },
+      // Centre of the EH6 4JX postcode (postcodes.io), not a street address
+      geo: { "@type": "GeoCoordinates", latitude: 55.9786, longitude: -3.1927 },
+      hasMap: "https://www.google.com/search?kgmid=/g/11jk5m8bw8",
       areaServed: ["Edinburgh", "Lothians", "Scotland", "United Kingdom"],
       telephone: PHONE.international,
       email: EMAIL,
