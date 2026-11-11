@@ -32,6 +32,9 @@ Unlike the retail site, GSD Trade is not open to the general public. Customers c
 trade account and log in to shop, so the whole experience is built around the needs of
 professional buyers placing bulk orders rather than one-off retail purchases.
 
+Pricing is tiered: each trade account is allocated its own pricing structure, and once
+logged in, customers are shown the prices for their account level.
+
 ## How It's Built
 
 The site is built with [Nuxt JS](https://nuxt.com/), server-side rendering pages for

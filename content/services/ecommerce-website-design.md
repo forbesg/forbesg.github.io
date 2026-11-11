@@ -116,6 +116,6 @@ Headless ecommerce websites are also faster, more flexible and more secure than 
 
 With a headless shop, your products, stock, payments and orders are managed by a dedicated ecommerce platform such as Shopify, while the shop your customers see is a fast, custom website built around your brand. You get a reliable, secure checkout without being boxed into a template.
 
-That approach works for everything from a small shop selling a handful of products to trade-only platforms with customer accounts and bulk ordering, like the [GSD Trade](/portfolio/ecommerce/gsd-trade/) platform I built for a wholesale business.
+That approach works for everything from a small shop selling a handful of products to trade-only platforms where each customer account has its own tiered pricing, like the [GSD Trade](/portfolio/ecommerce/gsd-trade/) platform I built for a wholesale business.
 
 Every shop comes ready for Google Analytics and Google Ads from day one, so you can see where your sales come from and grow what works.
