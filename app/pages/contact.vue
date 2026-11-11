@@ -5,9 +5,9 @@
   const RECAPTCHA_KEY = "6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G";
 
   usePageSeo({
-    title: "Contact | Website Developer Edinburgh",
+    title: "Contact | Web Design Edinburgh",
     description:
-      "If you're looking for a freelance web developer in Scotland please do get in touch.",
+      "Get a fixed-price quote for your website from Forbes Gray, freelance web designer and developer in Edinburgh. Free first chat, prices from £895.",
   });
 
   useHead({

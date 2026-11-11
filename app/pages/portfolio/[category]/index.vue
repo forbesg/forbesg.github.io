@@ -18,7 +18,7 @@ const { data: projects } = await useAsyncData(`portfolio-${category}`, () =>
 
 usePageSeo({
   title: `${info.title} | Portfolio`,
-  description: `${info.single} projects by Forbes Gray, freelance web developer in Edinburgh.`,
+  description: `${info.single} projects by Forbes Gray, freelance web designer and developer in Edinburgh.`,
 })
 
 if (info.archived) {

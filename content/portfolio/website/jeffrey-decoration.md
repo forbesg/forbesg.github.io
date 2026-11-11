@@ -1,6 +1,6 @@
 ---
 title: Jeffrey Decoration
-description: A statically generated business website developed for Jeffrey Decoration, using Nuxt JS, DatoCMS as a headless CMS and hosted on Netlify.
+description: A statically generated business website for Jeffrey Decoration, a painter and decorator in East Lothian, using Nuxt JS, DatoCMS as a headless CMS and hosted on Netlify.
 subhead: A Fast Static Business Website
 image: /images/projects/web/jeffrey-decoration-desktop.jpg
 mockup: /images/projects/web/jeffrey-decoration-mockup.png

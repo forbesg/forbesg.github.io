@@ -1,5 +1,5 @@
 ---
-title: Content Management Systems
+title: CMS Website Design
 shortTitle: Websites you can edit
 summary: Update your own pages, news and menus through an easy content editor, without the WordPress bloat.
 highlights:
@@ -7,7 +7,7 @@ highlights:
   - "A headless CMS: no plugins or WordPress updates"
   - Free static hosting and regular website health reports
 example: /portfolio/website/fnbg-ltd
-description: Fast, responsive and SEO friendly headless content management system websites. Create, manage and grow your business website content.
+description: CMS website design in Edinburgh from £1,395. Fast websites you can update yourself, with no WordPress plugins to maintain and free hosting.
 subtitle: Content Management Websites Without The Bloat
 icon:
   src: /icons/line/Development.svg

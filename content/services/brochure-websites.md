@@ -7,7 +7,7 @@ highlights:
   - Free domain name, hosting and SSL certificate
   - Built to load fast and rank well on Google
 example: /portfolio/website/sg-autoshade
-description: Fast, responsive and SEO friendly static websites. A low cost option to get your business website online quickly.
+description: Brochure website design in Edinburgh from £895. Fast, mobile-friendly, SEO-ready sites with a free domain and hosting, at a fixed price.
 subtitle: Simple, Fast, Beautiful Websites
 icon:
   src: /icons/line/Website.svg

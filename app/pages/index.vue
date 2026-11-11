@@ -33,7 +33,7 @@
   ]);
 
   usePageSeo({
-    title: "Freelance Web Developer Edinburgh",
+    title: "Web Design Edinburgh | Freelance Website Developer",
     description: data.value?.about?.description,
   });
 </script>
@@ -44,11 +44,17 @@
     <section class="relative isolate overflow-hidden">
       <div class="dot-grid absolute inset-0 -z-10" aria-hidden="true" />
       <div class="mx-auto max-w-6xl px-6 pt-24 pb-24 md:pt-32 md:pb-28">
-        <p class="eyebrow mb-8">Freelance web developer · Edinburgh</p>
-        <h1
-          class="max-w-5xl text-[4rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[7.5rem]"
-        >
-          Websites that work as hard as <em class="text-accent">you do.</em>
+        <!-- The small keyword line is part of the H1, so the heading says what
+             and where, while the big strapline still does the selling -->
+        <h1>
+          <span class="eyebrow mb-8 block leading-normal"
+            >Freelance web design · Edinburgh</span
+          >
+          <span
+            class="block max-w-5xl text-[4rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[7.5rem]"
+          >
+            Websites that work as hard as <em class="text-accent">you do.</em>
+          </span>
         </h1>
         <p class="mt-10 max-w-2xl text-[1.375rem] leading-normal">
           Fast, good-looking websites for Scottish businesses,

@@ -19,8 +19,8 @@ const categories = computed(() =>
 )
 
 usePageSeo({
-  title: 'Web Developer Portfolio | Freelance Web Developer Edinburgh',
-  description: 'A selection of recent projects, from simple static brochure websites to online shops, booking systems and web applications.',
+  title: 'Web Design Portfolio | Edinburgh',
+  description: 'Websites, online shops and web apps built for businesses in Edinburgh, the Lothians and beyond, from simple brochure sites to booking systems.',
 })
 </script>
 

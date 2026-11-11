@@ -1,5 +1,5 @@
 ---
-title: E-Commerce Website Design
+title: Ecommerce Website Design
 shortTitle: Online shops
 summary: Sell your products online with Shopify or a custom checkout, built to load fast on phones.
 highlights:
@@ -7,14 +7,14 @@ highlights:
   - Fast on phones, where most of your customers shop
   - Google Analytics and Ads ready from day one
 example: /portfolio/ecommerce/granite-setts-direct
-description: Fast, responsive and SEO friendly ecommerce websites. I design and develop custom ecommerce websites for businesses of all sizes.
+description: Ecommerce website design in Edinburgh from £1,995. Fast online shops with Shopify or a custom checkout, built to rank and to sell on phones.
 subtitle: Whatever your product, sell it online, fast
 icon:
   src: /icons/line/Ecommerce.svg
   alt: Ecommerce Website
 bannerImage:
   src: /images/services/ecommerce-website-development-in-edinburgh.jpeg
-  alt: Static Business Website Development In Edinburgh
+  alt: Ecommerce Website Development In Edinburgh
   width: 1200
   height: 800
 intro:
@@ -25,18 +25,18 @@ intro:
   image: null
 pricing:
   title: Ecommerce Website Prices
-  introText: Every e-commerce website it different so I try to cater for all online shops of all sizes.
+  introText: Every ecommerce website is different, so I cater for online shops of all sizes.
 featureColumns:
 - image:
     src: /icons/EcommerceBackend.svg
     alt: Ecommerce Frameworks
   title: Choose Your Framework
-  content: Whether you are familiar with WooCommerce, Shopify, we can hook into any ecommerce backend service you like.
+  content: Whether you're used to WooCommerce or Shopify, I can hook into whichever ecommerce backend you like.
 - image:
     src: /icons/Startup.svg
     alt: Fast Ecommerce Websites
   title: Get A Speed Boost
-  content: Without an ecommerce framework creating your site, acheive a speed boost which will delight your customers.
+  content: Without a heavy ecommerce framework building every page, your shop gets a speed boost that will delight your customers.
 - image:
     src: /icons/EcommerceGrowth.svg
     alt: Website Growth
@@ -93,7 +93,7 @@ featureWide:
 ## Ecommerce Website Development in Edinburgh
 ### Fast online shopping websites without constraints
 
-**Join some of the biggest global brands and move away from a monolithic ecommerce stack and free your website from it's database.**
+**Join some of the biggest global brands and move away from a monolithic ecommerce stack and free your website from its database.**
 
 Give your customers an enjoyable shopping experience which will keep them coming back. A headless approach to an online store allows you to create a unique shopping experience that suits your products and customers.
 

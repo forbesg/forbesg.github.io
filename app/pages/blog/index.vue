@@ -7,7 +7,7 @@ const { data: articles } = await useAsyncData('blog', () =>
 )
 
 usePageSeo({
-  title: 'Blog | Freelance Web Developer',
+  title: 'Blog | Web Design Edinburgh',
   description: 'Articles on fast websites, static sites and ecommerce from Forbes Gray, freelance web developer in Edinburgh.',
 })
 </script>

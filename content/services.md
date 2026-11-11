@@ -1,7 +1,7 @@
 ---
 title: Website Design & Development Services
 subhead: Design | Development | SEO
-description: Website design and development services in Edinburgh. Brochure websites, headless CMS websites, ecommerce, website maintenance and development for designers.
+description: Website design and development in Edinburgh with fixed prices from £895. Brochure websites, editable CMS websites, online shops, SEO and speed fixes.
 image: /images/website-development-services-in-edinburgh.jpg
 imageAlt: Website Development Services in Edinburgh
 extras:
@@ -22,6 +22,6 @@ extras:
       icon: layout
 ---
 
-As a website developer I love to solve problems. Talking in plain English, I help Edinburgh businesses find the right website for them and their customers. I also regularly work with clients across the UK remotely.
+As a website developer I love to solve problems. Talking in plain English, I help businesses in Edinburgh, Leith and the Lothians find the right website for them and their customers. I've also built sites for clients in the Scottish Borders and across the UK, working remotely.
 
 Every project has a fixed price agreed up front, and static and headless sites come with **free hosting**.
