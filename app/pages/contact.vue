@@ -100,6 +100,22 @@
     }).finally(() => (pending = undefined));
   }
 
+  // After sending, bring the thank-you message to the middle of the screen
+  // (the form it replaces is much taller, so it can end up out of view) and
+  // move focus to it for keyboard and screen reader users
+  const thanksEl = ref<HTMLElement>();
+  async function showThanks() {
+    await nextTick();
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    thanksEl.value?.scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "center",
+    });
+    thanksEl.value?.focus({ preventScroll: true });
+  }
+
   async function submit() {
     touched.value = true;
     error.value = "";
@@ -152,6 +168,7 @@
         );
       }
       status.value = "sent";
+      showThanks();
     } catch (e) {
       console.error(e);
       status.value = "idle";
@@ -180,10 +197,16 @@
       <div>
         <div
           v-if="status === 'sent'"
+          ref="thanksEl"
           role="status"
-          class="border border-line bg-surface p-10"
+          tabindex="-1"
+          class="border border-line bg-surface p-10 focus:outline-none"
         >
-          <p class="font-display text-5xl leading-none">Thank you.</p>
+          <p class="font-display text-5xl leading-none">
+            Thank you<span class="inline-block pl-1 text-accent font-bold"
+              >.</span
+            >
+          </p>
           <p class="mt-4 text-lg">Your message has been sent.</p>
           <p class="mt-2 text-muted">
             I'll be in touch shortly about your enquiry.
