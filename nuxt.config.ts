@@ -86,6 +86,15 @@ export default defineNuxtConfig({
       // Centre of the EH6 4JX postcode (postcodes.io), not a street address
       geo: { "@type": "GeoCoordinates", latitude: 55.9786, longitude: -3.1927 },
       hasMap: "https://www.google.com/search?kgmid=/g/11jk5m8bw8",
+      // Keep in step with the Google Business Profile hours
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "08:30",
+          closes: "18:00",
+        },
+      ],
       areaServed: ["Edinburgh", "Lothians", "Scotland", "United Kingdom"],
       telephone: PHONE.international,
       email: EMAIL,
