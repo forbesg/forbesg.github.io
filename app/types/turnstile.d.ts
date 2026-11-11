@@ -21,6 +21,5 @@ declare global {
       reset: (widgetId: string) => void
       remove: (widgetId: string) => void
     }
-    onTurnstileLoad?: () => void
   }
 }

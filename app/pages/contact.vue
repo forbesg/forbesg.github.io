@@ -28,15 +28,36 @@
       "Get a fixed-price quote for your website from Forbes Gray, freelance web designer and developer in Edinburgh. Free first chat, prices from £895.",
   });
 
+  // Turnstile's script is added once the page is interactive, and the widget
+  // rendered when it has loaded. (Its ?onload= callback option can fire
+  // before the page has hydrated and set the callback.)
+  const TURNSTILE_SRC =
+    "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
   useHead({
-    script: [
-      {
-        src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad",
-        async: true,
-        defer: true,
-      },
-    ],
+    link: [{ rel: "preconnect", href: "https://challenges.cloudflare.com" }],
   });
+
+  function loadTurnstile() {
+    if (window.turnstile) return Promise.resolve();
+    return new Promise<void>((resolve, reject) => {
+      let script = document.querySelector<HTMLScriptElement>(
+        `script[src="${TURNSTILE_SRC}"]`,
+      );
+      if (!script) {
+        script = document.createElement("script");
+        script.src = TURNSTILE_SRC;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+      script.addEventListener("load", () => resolve(), { once: true });
+      script.addEventListener(
+        "error",
+        () => reject(new Error("Turnstile failed to load")),
+        { once: true },
+      );
+    });
+  }
 
   const form = reactive({
     name: "",
@@ -80,15 +101,12 @@
   }
 
   onMounted(() => {
-    // The script may have loaded before or after the page became interactive
-    if (window.turnstile) renderTurnstile();
-    else window.onTurnstileLoad = renderTurnstile;
+    loadTurnstile().then(renderTurnstile, console.error);
   });
 
   onBeforeUnmount(() => {
     if (widgetId) window.turnstile?.remove(widgetId);
     widgetId = undefined;
-    window.onTurnstileLoad = undefined;
   });
 
   function getToken() {
@@ -167,6 +185,9 @@
           `Forminit responded ${response.status} ${result.error ?? ""}`,
         );
       }
+      // The form (and the widget inside it) is replaced by the thank-you message
+      if (widgetId) window.turnstile?.remove(widgetId);
+      widgetId = undefined;
       status.value = "sent";
       showThanks();
     } catch (e) {
@@ -174,8 +195,9 @@
       status.value = "idle";
       error.value = `There was a problem sending your message. Please try again, or email ${EMAIL}.`;
     } finally {
-      // Tokens can only be used once
-      if (widgetId) window.turnstile?.reset(widgetId);
+      // Tokens can only be used once: get a fresh one ready for another try
+      if (status.value !== "sent" && widgetId)
+        window.turnstile?.reset(widgetId);
     }
   }
 
