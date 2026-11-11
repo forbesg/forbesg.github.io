@@ -17,6 +17,7 @@ features:
   - Cloud Functions
   - Netlify Functions
   - Progressive Web App
+  - Flutter
   - Stripe
   - FreeAgent API
   - ECommerce
@@ -71,6 +72,9 @@ experience, including notifications.
 A Progressive Web App for the beauty professionals. They set their own availability, which
 feeds straight into the booking system, and manage their calendar and earnings. The app
 reads and writes to Firebase, while Netlify Functions handle the connection to Stripe.
+
+Native Android and iOS versions are on the way: a [Flutter](https://flutter.dev/) app
+with the same features as the PWA, working alongside it on the same back end.
 
 ## The Admin Site
 
