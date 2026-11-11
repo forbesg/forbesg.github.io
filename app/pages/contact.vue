@@ -238,7 +238,8 @@
         <p class="mt-4 font-display text-3xl">Forbes Gray</p>
         <p class="text-muted">Freelance web developer</p>
         <address class="mt-6 not-italic text-muted">
-          Newhaven<br />Edinburgh EH6 4JX
+          Newhaven<br />Edinburgh EH6 4JX<br />
+          <a :href="`tel:${PHONE.international}`" class="mt-2 inline-block hover:text-accent">{{ PHONE.display }}</a>
         </address>
         <SocialLinks class="mt-6" />
       </aside>

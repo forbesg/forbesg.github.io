@@ -1,3 +1,10 @@
+/** Business phone number: shown in the footer and on the contact page, and in the structured data */
+export const PHONE = {
+  display: '0131 202 6902',
+  /** For tel: links and schema.org (international format) */
+  international: '+441312026902',
+}
+
 interface PortfolioCategoryInfo {
   title: string
   single: string
