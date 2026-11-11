@@ -135,6 +135,8 @@ usePageSeo({
       </div>
     </section>
 
+    <TestimonialsSection />
+
     <ProcessSteps />
 
     <GetInTouch />

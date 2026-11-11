@@ -64,6 +64,8 @@ if (project.value.archived || category.archived) {
         </div>
       </aside>
     </div>
+    <TestimonialsSection :project="project.path" title="What the client says" />
+
     <GetInTouch title="Want something like this?" />
   </div>
 </template>

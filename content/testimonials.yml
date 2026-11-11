@@ -1,0 +1,11 @@
+# Client testimonials. The section stays hidden until there's at least one.
+# Use the client's own words (with their permission), e.g. from a Google review:
+#
+# items:
+#   - quote: Forbes rebuilt our website and it's so much faster. Enquiries are up.
+#     name: Jane Smith
+#     business: Example Ltd
+#     project: /portfolio/website/example   # optional: also shown on that project's page
+#     source: Google                        # optional: where the review was left
+
+items: []

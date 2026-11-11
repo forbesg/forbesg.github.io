@@ -130,6 +130,8 @@
     </section>
 
     <!-- Process -->
+    <TestimonialsSection />
+
     <ProcessSteps />
 
     <!-- About -->

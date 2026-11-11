@@ -118,6 +118,28 @@ export default defineContentConfig({
       }),
     }),
 
+    // content/testimonials.yml: client quotes, shown on the home and services
+    // pages, and on a portfolio project's page when linked to it
+    testimonials: defineCollection({
+      type: 'data',
+      source: 'testimonials.yml',
+      schema: z.object({
+        items: z
+          .array(
+            z.object({
+              quote: z.string(),
+              name: z.string(),
+              business: z.string().optional(),
+              // Portfolio path, e.g. /portfolio/website/sg-autoshade
+              project: z.string().optional(),
+              // Where the review was left, e.g. Google
+              source: z.string().optional(),
+            }),
+          )
+          .default([]),
+      }),
+    }),
+
     // content/toolbox.yml: the tools list on the About page
     toolbox: defineCollection({
       type: 'data',
