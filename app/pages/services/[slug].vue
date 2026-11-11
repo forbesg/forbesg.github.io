@@ -43,6 +43,14 @@ useSchemaOrg([
         'description': pkg.features.join(', '),
       })),
   }),
+  ...(service.value.faqs.length
+    ? [
+        defineWebPage({ '@type': ['WebPage', 'FAQPage'] }),
+        ...service.value.faqs.map(faq =>
+          defineQuestion({ name: faq.question, acceptedAnswer: faq.answer }),
+        ),
+      ]
+    : []),
 ])
 </script>
 
@@ -114,6 +122,21 @@ useSchemaOrg([
             </ul>
             <NuxtLink to="/contact/" class="btn-outline mt-8">Ask about this</NuxtLink>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section v-if="service.faqs.length" class="border-t border-line" aria-labelledby="faq-heading">
+      <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+        <h2 id="faq-heading" class="text-6xl leading-none">Questions</h2>
+        <div class="border-t border-line">
+          <details v-for="faq in service.faqs" :key="faq.question" class="group border-b border-line">
+            <summary class="flex cursor-pointer list-none items-baseline justify-between gap-6 py-6 font-display text-[1.75rem] leading-tight hover:text-accent [&::-webkit-details-marker]:hidden">
+              {{ faq.question }}
+              <span class="shrink-0 font-mono text-xl text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="max-w-2xl pb-6 text-muted">{{ faq.answer }}</p>
+          </details>
         </div>
       </div>
     </section>

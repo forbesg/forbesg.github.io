@@ -57,7 +57,7 @@
           >
         </p>
         <p class="mt-4 max-w-xl text-lg text-muted">
-          Fixed prices from £895, free hosting, and no plugins to keep updating.
+          Fixed prices from £895, a year's free hosting, and no plugins to keep updating.
         </p>
         <div class="mt-10 flex flex-wrap gap-4">
           <NuxtLink to="/contact/" class="btn-primary"

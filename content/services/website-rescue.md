@@ -59,7 +59,16 @@ packages:
   - Or a move to a fast static or headless site
   - Your pages and content carried over
   - Old addresses redirected, so you keep your rankings
-  - Free hosting if you move to a static site
+  - A year's free hosting if you move to a static site
+faqs:
+- question: "Do I need a whole new website?"
+  answer: "Not always. I'll look at your current site first and tell you honestly whether fixing it will do the job, or whether a move to a new platform would save you money and hassle."
+- question: "Will I lose my Google rankings if I move?"
+  answer: "Not if it's done properly. I map every old page address to its new one and set up permanent redirects, so visitors and Google are sent to the right place and the rankings you've built up carry over."
+- question: "Which platforms can you work with?"
+  answer: "Most, including WordPress, Shopify and hand-built sites. If you're not sure what your site runs on, send me the address and I'll find out."
+- question: "How much will it cost?"
+  answer: "It depends on what your site needs. I'll look at it first and agree a fixed price with you before any work starts."
 featureWide:
   image:
     src: /images/services/responsive-web-design.jpg

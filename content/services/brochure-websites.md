@@ -1,13 +1,13 @@
 ---
 title: Brochure Website Design
 shortTitle: Brochure websites
-summary: A fast, simple site to put your business on the map. 5 to 15 pages, free domain and hosting.
+summary: A fast, simple site to put your business on the map. 5 to 15 pages, with a year's free domain and hosting.
 highlights:
   - Up to 15 pages, designed around your business
-  - Free domain name, hosting and SSL certificate
+  - Domain name and hosting free for the first year
   - Built to load fast and rank well on Google
 example: /portfolio/website/sg-autoshade
-description: Brochure website design in Edinburgh from £895. Fast, mobile-friendly, SEO-ready sites with a free domain and hosting, at a fixed price.
+description: Brochure website design in Edinburgh from £895. Fast, mobile-friendly, SEO-ready sites with a year's free domain and hosting, at a fixed price.
 subtitle: Simple, Fast, Beautiful Websites
 icon:
   src: /icons/line/Website.svg
@@ -47,8 +47,8 @@ packages:
   features:
   - Fast Static Website
   - Up to 5 pages
-  - Free Domain Name
-  - Free Hosting
+  - Free Domain Name (first year)
+  - Free Hosting (first year)
   - Free SSL Certificate
   - Fully SEO Optimised
   - Search Engine Submission
@@ -57,8 +57,8 @@ packages:
   features:
   - Fast Static Website
   - Up to 15 pages
-  - Free Domain Name
-  - Free Hosting
+  - Free Domain Name (first year)
+  - Free Hosting (first year)
   - Free SSL Certificate
   - Fully SEO Optimised
   - Search Engine Submission
@@ -69,10 +69,23 @@ packages:
   - Up to 15 pages & 5 layouts
   - Headless CMS Integration
   - Free SSL Certificate
-  - Free Domain Name & Hosting
+  - Free Domain & Hosting (first year)
   - Fully SEO Optimised
   - Search Engine Submission
   price: £1,795
+faqs:
+- question: "How long does a brochure website take?"
+  answer: "Usually 2 to 3 weeks from go-ahead to launch. The biggest factor is having your text and photos ready, so we'll go through what each page needs in our first chat."
+- question: "Are the domain name and hosting really free?"
+  answer: "Yes, for the first year: your domain name and hosting are included, along with the SSL certificate that keeps the site secure. After that there's a yearly charge for the domain and hosting, which I'll set out in your quote."
+- question: "Can I update the website myself?"
+  answer: "With the Starter and Business websites, just send me your changes. If you'd like to edit pages yourself, the CMS Business Website package adds an easy content editor."
+- question: "Will my website show up on Google?"
+  answer: "Every site is built to load fast, with the search engine basics set up and submitted to Google. Ranking well for competitive searches takes time and depends on your content and reviews too, and I'm always happy to advise."
+- question: "What happens after launch?"
+  answer: "Small changes are free for the first 30 days after your site goes live. After that, any changes are quoted up front, so you always know the cost before I start."
+- question: "How do I pay?"
+  answer: "Half to get started and the rest when your site goes live. The price is fixed when we agree the quote, so there are no surprises at the end."
 featureWide:
   image:
     src: /images/services/responsive-web-design.jpg
@@ -94,4 +107,10 @@ A brochure website is the face of your business' brand, and is a fantastic way t
 
 Unlike an [e-commerce website](/services/ecommerce-website-design/), a brochure site does not directly sell products to the customer, but introduces your products or services, and draws contact and engagement from the customer.
 
-Although I am an Edinburgh based Website Developer, I am happy to work remotely with customers further afield.
+It suits most local businesses: trades, salons, consultants, cafés and anyone whose customers want to see what you do, how to reach you and why they should choose you. A typical site has a home page, an about page, your services, some recent work or a gallery, and a contact page.
+
+Every brochure website I build is a fast static site. The pages are built ahead of time and served from a global network, so they load quickly on phones, and there's no database or plugins to keep updating or to be hacked. That speed matters to your customers, and to Google.
+
+Each site comes with the search engine basics done properly: page titles and descriptions written for the searches your customers make, a sitemap, and submission to Google.
+
+I'm based in Edinburgh and build sites for businesses across Edinburgh, Leith and the Lothians, and I'm happy to work remotely with customers further afield.

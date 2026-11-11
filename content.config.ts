@@ -103,6 +103,8 @@ export default defineContentConfig({
             }),
           )
           .default([]),
+        // Shown as an FAQ section and as FAQPage structured data
+        faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
         featureWide: z
           .object({
             image: imageRef,

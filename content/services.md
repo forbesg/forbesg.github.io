@@ -18,4 +18,4 @@ extras:
 
 As a website developer I love to solve problems. Talking in plain English, I help businesses in Edinburgh, Leith and the Lothians find the right website for them and their customers. I've also built sites for clients in the Scottish Borders and across the UK, working remotely.
 
-Every project has a fixed price agreed up front, and static and headless sites come with **free hosting**.
+Every project has a fixed price agreed up front, and static and headless sites come with a year's **free hosting**.
