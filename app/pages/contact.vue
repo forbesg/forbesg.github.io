@@ -1,8 +1,26 @@
 <script setup lang="ts">
-  // Same getform.io endpoint and reCAPTCHA v3 key as the Gridsome site
-  const GETFORM_URL =
-    "https://getform.io/f/ce537464-4e11-4163-b480-35d3fd2b7305";
-  const RECAPTCHA_KEY = "6LfAtbQZAAAAALIFif4qLLmJc-Khmg4iKxMm6F6G";
+  // Forminit (forminit.com) receives the form; it's the same form ID the site
+  // used on getform.io. Its Turnstile secret key goes in the form's settings
+  // (CAPTCHA → Cloudflare Turnstile), so it checks each token; a missing or
+  // invalid one sends the submission to the spam folder.
+  const FORMINIT_FORM_ID = "ce537464-4e11-4163-b480-35d3fd2b7305";
+  // Cloudflare Turnstile widget (Cloudflare dashboard → Turnstile). Locally,
+  // Cloudflare's test key always passes, so the form works on localhost.
+  const TURNSTILE_SITE_KEY = import.meta.dev
+    ? "1x00000000000000000000AA"
+    : "0x4AAAAAAF88PwaVTFRMDQde";
+
+  // Ad and campaign parameters passed through to Forminit, as its SDK does
+  const TRACKING_PARAMS: Record<string, string> = {
+    utm_source: "utmSource",
+    utm_medium: "utmMedium",
+    utm_campaign: "utmCampaign",
+    utm_term: "utmTerm",
+    utm_content: "utmContent",
+    gclid: "gclid",
+    fbclid: "fbclid",
+    msclkid: "msclkid",
+  };
 
   usePageSeo({
     title: "Contact | Web Design Edinburgh",
@@ -13,7 +31,8 @@
   useHead({
     script: [
       {
-        src: `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}`,
+        src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad",
+        async: true,
         defer: true,
       },
     ],
@@ -36,16 +55,49 @@
     message: !form.message.trim(),
   }));
 
+  // Turnstile runs its check when the form is sent (execution: "execute"), so
+  // the token is fresh, and only shows itself if the visitor needs to click.
+  const turnstileEl = ref<HTMLElement>();
+  let widgetId: string | undefined;
+  let pending:
+    | { resolve: (token: string) => void; reject: (e: Error) => void }
+    | undefined;
+
+  function renderTurnstile() {
+    if (!window.turnstile || !turnstileEl.value || widgetId) return;
+    widgetId = window.turnstile.render(turnstileEl.value, {
+      sitekey: TURNSTILE_SITE_KEY,
+      action: "contact",
+      appearance: "interaction-only",
+      execution: "execute",
+      theme: "auto",
+      callback: (token) => pending?.resolve(token),
+      "error-callback": (code) =>
+        pending?.reject(new Error(`Turnstile error ${code}`)),
+      "timeout-callback": () =>
+        pending?.reject(new Error("Turnstile timed out")),
+    });
+  }
+
+  onMounted(() => {
+    // The script may have loaded before or after the page became interactive
+    if (window.turnstile) renderTurnstile();
+    else window.onTurnstileLoad = renderTurnstile;
+  });
+
+  onBeforeUnmount(() => {
+    if (widgetId) window.turnstile?.remove(widgetId);
+    widgetId = undefined;
+    window.onTurnstileLoad = undefined;
+  });
+
   function getToken() {
     return new Promise<string>((resolve, reject) => {
-      const grecaptcha = window.grecaptcha;
-      if (!grecaptcha) return reject(new Error("reCAPTCHA not loaded"));
-      grecaptcha.ready(() =>
-        grecaptcha
-          .execute(RECAPTCHA_KEY, { action: "contact" })
-          .then(resolve, reject),
-      );
-    });
+      if (!window.turnstile || !widgetId)
+        return reject(new Error("Turnstile not loaded"));
+      pending = { resolve, reject };
+      window.turnstile.execute(widgetId);
+    }).finally(() => (pending = undefined));
   }
 
   async function submit() {
@@ -63,21 +115,49 @@
 
     status.value = "sending";
     try {
+      // Forminit's field names: fi-{block}-{property}
       const body = new FormData();
-      for (const [key, value] of Object.entries(form)) body.append(key, value);
-      body.append("g-recaptcha-response", await getToken());
+      body.set("fi-sender-fullName", form.name.trim());
+      body.set("fi-sender-email", form.email.trim());
+      if (form.phone_number.trim())
+        body.set("fi-sender-phone", form.phone_number.trim());
+      body.set("fi-text-message", form.message.trim());
+      body.set("_gotcha", form._gotcha);
 
-      const response = await fetch(GETFORM_URL, {
-        method: "POST",
-        body,
-        headers: { Accept: "application/json" },
-      });
-      if (!response.ok) throw new Error(`getform responded ${response.status}`);
+      const params = new URLSearchParams(window.location.search);
+      for (const [param, property] of Object.entries(TRACKING_PARAMS)) {
+        const value = params.get(param);
+        if (value) body.set(`fi-tracking-${property}`, value);
+      }
+
+      body.set("cf-turnstile-response", await getToken());
+
+      const response = await fetch(
+        `https://forminit.com/f/${FORMINIT_FORM_ID}`,
+        { method: "POST", body, headers: { Accept: "application/json" } },
+      );
+      // Forminit can report errors with a 200 status, so check `success`
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.success) {
+        // Forminit allows one submission every 5 seconds from each visitor
+        if (response.status === 429 || result.code === 429) {
+          status.value = "idle";
+          error.value =
+            "Please wait a few seconds before sending another message.";
+          return;
+        }
+        throw new Error(
+          `Forminit responded ${response.status} ${result.error ?? ""}`,
+        );
+      }
       status.value = "sent";
-    } catch {
+    } catch (e) {
+      console.error(e);
       status.value = "idle";
-      error.value =
-        "There was a problem sending your message. Please try again.";
+      error.value = `There was a problem sending your message. Please try again, or email ${EMAIL}.`;
+    } finally {
+      // Tokens can only be used once
+      if (widgetId) window.turnstile?.reset(widgetId);
     }
   }
 
@@ -192,6 +272,9 @@
             />
           </div>
 
+          <!-- Turnstile: empty unless Cloudflare needs the visitor to click -->
+          <div ref="turnstileEl" />
+
           <p
             v-if="error"
             role="alert"
@@ -207,21 +290,6 @@
           >
             {{ status === "sending" ? "Sending…" : "Send message" }}
           </button>
-          <p class="text-sm text-muted">
-            This site is protected by reCAPTCHA and the Google
-            <a
-              href="https://policies.google.com/privacy"
-              class="underline hover:text-accent"
-              >Privacy Policy</a
-            >
-            and
-            <a
-              href="https://policies.google.com/terms"
-              class="underline hover:text-accent"
-              >Terms of Service</a
-            >
-            apply.
-          </p>
         </form>
       </div>
 
