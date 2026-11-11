@@ -13,9 +13,10 @@ const DEFAULT_IMAGE = '/forbes-gray-web-developer.jpg'
 /** Title, description, Open Graph tags and canonical URL for a page. */
 export function usePageSeo(seo: MaybeRefOrGetter<PageSeo>) {
   const route = useRoute()
+  const siteUrl = useSiteUrl()
   const value = computed(() => toValue(seo))
-  const canonical = computed(() => SITE_URL + withSlash(route.path))
-  const image = computed(() => SITE_URL + (value.value.image ?? DEFAULT_IMAGE))
+  const canonical = computed(() => siteUrl + withSlash(route.path))
+  const image = computed(() => siteUrl + (value.value.image ?? DEFAULT_IMAGE))
 
   useSeoMeta({
     title: () => value.value.title,
@@ -34,4 +35,9 @@ export function usePageSeo(seo: MaybeRefOrGetter<PageSeo>) {
   useHead({
     link: computed(() => [{ rel: 'canonical', href: canonical.value }]),
   })
+}
+
+/** The site's address with no trailing slash, from `site.url` in nuxt.config (NUXT_SITE_URL) */
+export function useSiteUrl() {
+  return useSiteConfig().url.replace(/\/+$/, '')
 }

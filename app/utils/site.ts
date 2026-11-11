@@ -1,5 +1,3 @@
-export const SITE_URL = 'https://forbesg.github.io'
-
 interface PortfolioCategoryInfo {
   title: string
   single: string

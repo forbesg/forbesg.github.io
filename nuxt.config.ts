@@ -1,5 +1,17 @@
 import tailwindcss from "@tailwindcss/vite";
 
+// The live site's address. Set NUXT_SITE_URL in the host's build settings
+// (e.g. https://www.example.co.uk) to move the canonical URLs, sitemap,
+// robots.txt and structured data to a new domain. No trailing slash.
+const siteUrl = (process.env.NUXT_SITE_URL || "https://forbesg.github.io").replace(/\/+$/, "");
+
+// Cloudflare Pages sets CF_PAGES=1 during its builds, and Nitro then uses its
+// cloudflare_pages_static preset, which writes routeRules redirects and headers
+// to real _redirects and _headers files.
+const onCloudflare = !!process.env.CF_PAGES || process.env.NITRO_PRESET?.startsWith("cloudflare");
+
+const week = 60 * 60 * 24 * 7;
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2026-11-09",
@@ -49,7 +61,7 @@ export default defineNuxtConfig({
 
   // Shared by the sitemap, robots and schema.org modules, and canonical URLs
   site: {
-    url: "https://forbesg.github.io",
+    url: siteUrl,
     name: "Forbes Gray | Website Developer Edinburgh",
     description:
       "Freelance website developer in Edinburgh building fast, SEO friendly websites, online shops and web applications.",
@@ -69,7 +81,7 @@ export default defineNuxtConfig({
       alternateName: "Forbes Gray, Freelance Web Developer",
       description:
         "Freelance website developer in Edinburgh building fast, SEO friendly websites, online shops and web applications.",
-      url: "https://forbesg.github.io",
+      url: siteUrl,
       logo: "/logo.png",
       image: "/forbes-gray-web-developer.jpg",
       address: {
@@ -174,16 +186,40 @@ export default defineNuxtConfig({
     },
   },
 
-  // Moved pages. GitHub Pages can't send real redirects, so each of these is
-  // prerendered (see nitro.prerender.routes) as a tiny page that forwards
-  // instantly with a meta refresh. Add new moves to both lists.
+  // Moved pages. On Cloudflare Pages these become real 301s in _redirects
+  // (which win over any file at the same path). GitHub Pages can't send
+  // redirects, so each one is also prerendered (see nitro.prerender.routes) as
+  // a tiny page that forwards with a meta refresh. Add new moves to both lists.
   routeRules: {
-    "/portfolio/web-application/granite-setts-direct/": {
-      redirect: {
-        to: "/portfolio/ecommerce/granite-setts-direct/",
-        statusCode: 301,
+    ...movedPages({
+      "/portfolio/web-application/granite-setts-direct/":
+        "/portfolio/ecommerce/granite-setts-direct/",
+    }),
+
+    // Response headers, written to _headers on Cloudflare Pages (ignored by
+    // GitHub Pages, which can't set headers).
+    "/**": {
+      headers: {
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "X-Frame-Options": "DENY",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
       },
     },
+    // (Nuxt itself adds a year-long immutable cache for the hashed JS, CSS
+    // and fonts under /_forbes/.)
+    // Resized images and media: names don't change with content, so cache
+    // for a week and refresh in the background after that
+    ...Object.fromEntries(
+      ["/_ipx/**", "/images/**", "/icons/**", "/videos/**"].map((path) => [
+        path,
+        {
+          headers: {
+            "Cache-Control": `public, max-age=${week}, stale-while-revalidate=${week}`,
+          },
+        },
+      ]),
+    ),
   },
 
   nitro: {
@@ -199,3 +235,20 @@ export default defineNuxtConfig({
     },
   },
 });
+
+/**
+ * routeRules for moved pages: a 301 from each old path. Cloudflare matches
+ * _redirects paths exactly, so there the path without its trailing slash is
+ * added too.
+ */
+function movedPages(moves: Record<string, string>) {
+  return Object.fromEntries(
+    Object.entries(moves).flatMap(([from, to]) => {
+      const rule = { redirect: { to, statusCode: 301 as const } };
+      const bare = from.replace(/\/+$/, "");
+      // Without a trailing slash GitHub Pages would make the prerendered stub a
+      // file rather than a folder, so only add the bare path on Cloudflare
+      return onCloudflare ? [[from, rule], [bare, rule]] : [[from, rule]];
+    }),
+  );
+}

@@ -17,6 +17,8 @@ if (!article.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })
 }
 
+const siteUrl = useSiteUrl()
+
 usePageSeo({
   title: article.value.title,
   description: article.value.description,
@@ -34,7 +36,7 @@ useSchemaOrg([
     'datePublished': new Date(article.value.date).toISOString(),
     'author': author.value
       ? definePerson({
-          '@id': `${SITE_URL}${withSlash(author.value.path)}#person`,
+          '@id': `${siteUrl}${withSlash(author.value.path)}#person`,
           'name': author.value.name,
           'url': withSlash(author.value.path),
           'sameAs': author.value.links,
