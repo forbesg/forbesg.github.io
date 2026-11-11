@@ -67,6 +67,7 @@ useSchemaOrg([
           <NuxtLink :to="`/blog/tags/${tag}/`" class="text-accent hover:underline">#{{ BLOG_TAGS[tag] ?? tag }}</NuxtLink>
         </li>
       </ul>
+      <RelatedService :tags="article.tags" />
     </article>
     <GetInTouch />
   </div>
