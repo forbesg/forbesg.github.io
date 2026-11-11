@@ -89,7 +89,7 @@ faqs:
 - question: "Can I keep using WordPress?"
   answer: "Yes. WordPress can be the editor behind a fast headless website, so you keep the dashboard you know without the plugins and updates slowing your site down."
 - question: "Are the domain name and hosting really free?"
-  answer: "Yes, for the first year: your domain name and static hosting are included, along with the SSL certificate. After that there's a yearly charge for the domain and hosting, which I'll set out in your quote."
+  answer: "Yes, for the first year: your domain name and static hosting are included, along with the SSL certificate. After that there's a yearly charge for the domain and hosting, which I'll set out in your quote. Already own your domain? You keep it: I just need access to its DNS settings to point it at your new site, and there's no domain charge."
 - question: "What happens after launch?"
   answer: "Small changes are free for the first 30 days after your site goes live. After that, any changes are quoted up front, so you always know the cost before I start."
 - question: "How do I pay?"

@@ -82,7 +82,7 @@ faqs:
 - question: "Shopify or a custom checkout?"
   answer: "Shopify is a great choice for most shops, and I can build a fast, custom storefront on top of it. If you need something Shopify doesn't do well, like trade pricing or a bespoke ordering process, a headless platform such as ElasticPath or Swell gives you more freedom."
 - question: "Are there ongoing costs?"
-  answer: "Yes, beyond the build: your ecommerce platform's monthly plan and the card fees charged by payment providers like Stripe or Shopify Payments are paid directly to them. Your domain and hosting are free for the first year."
+  answer: "Yes, beyond the build: your ecommerce platform's monthly plan and the card fees charged by payment providers like Stripe or Shopify Payments are paid directly to them. Your domain and hosting are free for the first year, and if you already own your domain there's no domain charge at all: I just need access to its DNS settings."
 - question: "Can I manage products and orders myself?"
   answer: "Yes. Products, stock, prices and orders are all managed in your ecommerce platform's own dashboard, so you won't need me for day-to-day changes."
 - question: "Will my shop work well on phones?"

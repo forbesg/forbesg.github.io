@@ -77,7 +77,7 @@ faqs:
 - question: "How long does a brochure website take?"
   answer: "Usually 2 to 3 weeks from go-ahead to launch. The biggest factor is having your text and photos ready, so we'll go through what each page needs in our first chat."
 - question: "Are the domain name and hosting really free?"
-  answer: "Yes, for the first year: your domain name and hosting are included, along with the SSL certificate that keeps the site secure. After that there's a yearly charge for the domain and hosting, which I'll set out in your quote."
+  answer: "Yes, for the first year: your domain name and hosting are included, along with the SSL certificate that keeps the site secure. After that there's a yearly charge for the domain and hosting, which I'll set out in your quote. Already own your domain? You keep it: I just need access to its DNS settings to point it at your new site, and there's no domain charge."
 - question: "Can I update the website myself?"
   answer: "With the Starter and Business websites, just send me your changes. If you'd like to edit pages yourself, the CMS Business Website package adds an easy content editor."
 - question: "Will my website show up on Google?"
