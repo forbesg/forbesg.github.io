@@ -15,6 +15,7 @@ features:
   - Firebase
   - Firestore
   - Cloud Functions
+  - Firebase Cloud Messaging
   - Netlify Functions
   - Progressive Web App
   - Flutter
@@ -39,7 +40,8 @@ shoehorned into a site. Building it bespoke meant every part could fit the busin
 
 Everything runs on a shared [Firebase](https://firebase.google.com/) back end: the data
 lives in Firestore, and the business logic in Cloud Functions, so each app sees the same
-bookings, professionals and availability in real time.
+bookings, professionals and availability in real time. Notifications go to everyone
+involved, customers, professionals and the team, through Firebase Cloud Messaging.
 
 ## The Marketing Site
 
@@ -63,7 +65,7 @@ Payment is authorised when the customer books, but only captured on the night of
 appointment, by a scheduled Cloud Function triggered through Pub/Sub. Payment goes
 directly to the professional through Stripe, with an application fee taken for the
 booking. As a Progressive Web App, the booking system gives customers a native app
-experience, including notifications.
+experience, including push notifications.
 
 ## The Pro App
 
@@ -111,9 +113,10 @@ Each booking also has its own chat, for simple messaging between the client and 
 ## Built to Grow
 
 Each part is a fast, lightweight front end, with the business logic in serverless
-functions rather than on a server to maintain. That has kept running costs low, and made
-it straightforward to add new apps, like advance bookings, onto the same back end as the
-business has grown.
+functions rather than on a server to maintain. That keeps running costs remarkably low:
+the whole stack costs less than £1.50 a month to run, payment processing fees aside. It
+has also made it straightforward to add new apps, like advance bookings, onto the same
+back end as the business has grown.
 
 Little City Treat launched in Edinburgh at the start of 2020 and has since expanded to
 Newcastle.
