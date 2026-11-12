@@ -4,6 +4,8 @@
 const props = defineProps<{ tags: string[] }>()
 
 const servicePath = computed(() => {
+  if (props.tags.includes('local-seo')) return '/services/website-rescue'
+  if (props.tags.includes('wordpress')) return '/services/cms-websites'
   if (props.tags.includes('ecommerce-sites')) return '/services/ecommerce-website-design'
   if (props.tags.some(t => ['static-sites', 'jam-stack', 'website-costs'].includes(t))) return '/services/brochure-websites'
   return '/services/cms-websites'

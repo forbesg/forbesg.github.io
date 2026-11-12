@@ -44,6 +44,8 @@ export const BLOG_TAGS: Record<string, string> = {
   'nuxt': 'Nuxt',
   'netlify': 'Netlify',
   'website-costs': 'Website Costs',
+  'local-seo': 'Local SEO',
+  'wordpress': 'WordPress',
 }
 
 /** CSS aspect-ratio from an image's intrinsic size, so its space is reserved before it loads */

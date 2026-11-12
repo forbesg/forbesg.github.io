@@ -34,6 +34,7 @@ useSchemaOrg([
     'description': article.value.description,
     'image': article.value.image,
     'datePublished': new Date(article.value.date).toISOString(),
+    'dateModified': article.value.updated ? new Date(article.value.updated).toISOString() : undefined,
     'author': author.value
       ? definePerson({
           '@id': `${siteUrl}${withSlash(author.value.path)}#person`,
@@ -57,6 +58,9 @@ useSchemaOrg([
         <NuxtLink v-if="author" :to="withSlash(author.path)" class="text-ink hover:text-accent">{{ author.name }}</NuxtLink>
         <span v-if="author"> &middot; </span>
         <time :datetime="new Date(article.date).toISOString()">{{ formatDate(article.date) }}</time>
+        <template v-if="article.updated">
+          &middot; Updated <time :datetime="new Date(article.updated).toISOString()">{{ formatDate(article.updated) }}</time>
+        </template>
       </p>
     </PageHeader>
     <article class="mx-auto max-w-3xl px-6 py-16">

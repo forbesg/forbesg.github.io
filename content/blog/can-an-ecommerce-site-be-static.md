@@ -1,86 +1,93 @@
 ---
-title: Can An Ecommerce Site Be Static?
-subhead: Running a Static Ecommerce Website
-description: Getting an e-commerce website up and running traditionally required a monolithic e-commerce framework, but there are other options available.
+title: Can an Ecommerce Website Be Static?
+subhead: Fast online shops without the weight of a traditional platform
+description: "Can an online shop be a fast static website? How headless ecommerce works, when it suits a small business, and the simpler options for smaller shops in Scotland."
 tags:
 - static-sites
 - ecommerce-sites
 image: /images/articles/ecommerce-payment.jpg
-imageAlt: Static Website Online Shop
+imageAlt: Paying for an order on a fast online shop
 imageWidth: 1600
 imageHeight: 1066
 date: 2022-02-01T14:30:00
+updated: 2026-11-12T14:00:00
 author: forbes-gray
 ---
 
-## Ecommerce Options Available
+Yes, and for many businesses it makes for a faster, more flexible shop than a
+traditional ecommerce platform. Here's how it works, when it's worth it, and the simpler
+options if you only have a handful of products to sell.
 
-Traditionally e-commerce websites have been created using well-established frameworks
-like Shopify, Magento & WooCommerce. More recently these have been joined by the likes of
-BigCommerce, Squarespace & Wix, all of which provide a quick and easy way of starting
-to sell online.
+## How most online shops work
 
-What all of the aforementioned e-commerce platforms have in common is that they are
-tightly coupled with the storefront that the customer sees. Both website and admin
-backend are running together on the same server and it is that server which creates
-the e-commerce website. In addition to this, there are limitations in terms of
-developing the site exactly as you want it. The design of the site is constrained
-by the platform itself, and the more flexible a platform is in the design options,
-the more expensive it becomes to develop.
+Platforms like Shopify, WooCommerce, Wix and Squarespace give you everything in one
+package: the shop your customers see, and the back office where you manage products and
+orders. That's a quick way to start selling, but the two are tied together. Your shop
+looks and works the way the platform allows, and the more you want it to stand out, the
+more theme and app costs tend to pile up.
 
-## Headless Ecommerce
+## What "headless" ecommerce means
 
-A more recent addition to the e-commerce space has been the headless e-commerce
-framework. Headless simply refers to the fact that the framework itself doesn't
-have a storefront, it simply implements the e-commerce backend functionality whilst
-leaving you free to create, design and customise your online shop using any
-technology you like. The website (or App...or both) then makes API calls to the e-commerce backend
-to display to the user and facilitate the sales.
+A headless ecommerce platform takes care of the back office only: products, prices,
+stock, customer accounts, carts and orders. It doesn't come with a shop front. Instead,
+your website asks it for what it needs, and the shop front is designed and built
+exactly how you want it.
 
-The headless e-commerce space has become very busy very quickly with frameworks
-like ElasticPath, Vendure and Open Source Sylius whilst the likes of Magento, BigCommerce
-and Shopify have created Headless versions of their frameworks.
+That separation brings a few real advantages:
 
-### Omnichannel Sales
+- **Speed.** Your shop front only loads what it needs, so pages are quick, including on a
+  patchy phone signal.
+- **Freedom in the design and the buying process.** You're not working around a
+  theme, so the checkout can follow the way your customers actually buy.
+- **Room to grow.** The same back office can power your website, a trade portal or an
+  app, and you can redesign the shop later without touching your products and orders.
 
-Using a headless e-commerce architecture opens up a wide variety of additional
-sales channels and routes to market. A headless e-commerce solution can not only
-allow sales through a website but also provides e-commerce functionality to
-Mobile Apps, IoT devices and in-person Point of Sale devices.
+## Where "static" comes in
 
-### Design Flexibility
+A static website is built in advance: every page is created once, when the site is
+published, then served as a ready-made file. With headless ecommerce, product and
+category pages can be built this way, pulling your product details from the platform
+when the site is published.
 
-With this level of decoupling of the front and backend of an e-commerce framework,
-you achieve total freedom to create a unique and fast shopping experience for the user and
-a faster time to market. It also allows you to easily change your storefront website
-in the future, whether that be design or underlying technology, without touching
-any of the e-commerce backend code.
+The parts that have to be live, like stock levels, the basket, customer logins and the
+checkout, talk to the ecommerce platform directly as your customer shops. So you get
+the speed of a static site with everything a real shop needs.
 
-Many large multi-national businesses' have embraced this new architecture
-to improve their customer's shopping experience, including Nike, Under Armour,
-Target & Debenhams.
+You can read about one way of doing this in my post on
+[building a static ecommerce website with Shopify](/blog/a-static-ecommerce-website-with-shopify/).
 
-## Taking Headless Ecommerce Static
+## A real example
 
-Due to the nature of modern static site generators and website build tools,
-headless e-commerce can fit perfectly into this architecture. Communication is
-made to the headless API during the build process and creates a static website
-that can be hosted on any server at a minimal cost.
+[Granite Setts Direct](/portfolio/ecommerce/granite-setts-direct/) sells granite setts
+and paving online. The shop is built on a headless ecommerce platform, with its pages
+and blog managed in a separate content editor, which keeps the site light and gave us
+full control over how the buying process works.
 
-Realtime interactions with the backend, such as authentication, inventory
-queries and sales, can be handled using API requests whilst the user interacts
-with the site.
+Their trade site, [GSD Trade](/portfolio/ecommerce/gsd-trade/), uses the same back
+office for something an off-the-shelf theme would struggle with: trade customers log
+in, and each account sees its own tiered pricing.
 
-For those on an ultra-low budget, products like Snipcart enable e-commerce functionality
-to be added to any static website with little more than adding a snippet of code to
-the site.
+## Smaller shops: simpler options
 
-### Conclusion
+If you only sell a few products, you don't need a full ecommerce platform. Tools like
+Snipcart or Shopify's Buy Button can add a basket and checkout to a fast static website
+with very little code, and keep your running costs down.
 
-There are many e-commerce solutions available and the ideal solution will depend on a business' requirements
-and budget.
+## Is it right for you?
 
-We continue to promote a headless approach to [developing e-commerce websites](/services/ecommerce-website-design/) and
-would welcome a no-obligation chat about what solution would be the best fit.
+A headless or static shop is a good fit if:
 
-If you would like to discuss your e-commerce project please do [get in touch](/contact/).
+- **Speed matters to your sales**, especially on phones.
+- **You want a shop that looks like your brand**, not a theme.
+- **You have something specific** that standard platforms make awkward, such as trade
+  pricing, made-to-order products or selling through more than one channel.
+
+A hosted platform like Shopify on its own may suit you better if you need to be selling
+next week on the smallest possible budget and you're happy with a standard theme.
+
+## Talk to me about your shop
+
+I build [ecommerce websites](/services/ecommerce-website-design/) for businesses in
+Edinburgh and across Scotland, from small shops to trade platforms. Tell me what you
+sell and how, and I'll recommend the simplest setup that does the job.
+[Get in touch](/contact/) for a chat.

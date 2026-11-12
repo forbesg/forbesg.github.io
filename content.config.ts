@@ -45,6 +45,7 @@ export default defineContentConfig({
         tags: z.array(z.string()).default([]),
         author: z.string(),
         date: z.date(),
+        updated: z.date().optional(),
       }),
     }),
 
