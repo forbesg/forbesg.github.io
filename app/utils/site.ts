@@ -49,6 +49,7 @@ export const BLOG_TAGS: Record<string, string> = {
   'website-speed': 'Website Speed',
   'web-applications': 'Web Applications',
   'planning': 'Planning a Website',
+  'ai-websites': 'AI and Websites',
 }
 
 /** CSS aspect-ratio from an image's intrinsic size, so its space is reserved before it loads */
