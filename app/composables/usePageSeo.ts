@@ -8,7 +8,7 @@ interface PageSeo {
 
 const DEFAULT_DESCRIPTION
   = 'Forbes Gray is a freelance website developer in Edinburgh, specialising in fast, responsive, SEO friendly websites and web applications.'
-const DEFAULT_IMAGE = '/forbes-gray-web-developer.jpg'
+const DEFAULT_IMAGE = '/forbes-gray-web-design-edinburgh.jpg'
 
 /** Title, description, Open Graph tags and canonical URL for a page. */
 export function usePageSeo(seo: MaybeRefOrGetter<PageSeo>) {

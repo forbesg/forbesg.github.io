@@ -76,7 +76,7 @@ export default defineNuxtConfig({
         "Freelance website developer in Edinburgh building fast, SEO friendly websites, online shops and web applications.",
       url: siteUrl,
       logo: "/logo.png",
-      image: "/forbes-gray-web-developer.jpg",
+      image: "/forbes-gray-web-design-edinburgh.jpg",
       address: {
         addressLocality: "Edinburgh",
         addressRegion: "Scotland",
