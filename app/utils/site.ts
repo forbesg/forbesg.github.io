@@ -46,6 +46,9 @@ export const BLOG_TAGS: Record<string, string> = {
   'website-costs': 'Website Costs',
   'local-seo': 'Local SEO',
   'wordpress': 'WordPress',
+  'website-speed': 'Website Speed',
+  'web-applications': 'Web Applications',
+  'planning': 'Planning a Website',
 }
 
 /** CSS aspect-ratio from an image's intrinsic size, so its space is reserved before it loads */
@@ -61,6 +64,15 @@ export function withSlash(path: string) {
 /** Nuxt Content stores paths without a trailing slash. */
 export function contentPath(path: string) {
   return path.length > 1 ? path.replace(/\/+$/, '') : path
+}
+
+/**
+ * Posts dated in the future stay hidden until a build on or after their date
+ * (a daily GitHub Action rebuilds the site when a post is due). Dev shows them
+ * all, so drafts can be previewed.
+ */
+export function isPublished(date: string | Date) {
+  return import.meta.dev || new Date(date).getTime() <= Date.now()
 }
 
 export function formatDate(value: string | Date) {

@@ -3,7 +3,8 @@ const { data: articles } = await useAsyncData('blog', () =>
   queryCollection('blog')
     .select('path', 'title', 'description', 'date', 'tags')
     .order('date', 'DESC')
-    .all(),
+    .all()
+    .then(all => all.filter(a => isPublished(a.date))),
 )
 
 usePageSeo({

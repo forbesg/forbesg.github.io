@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { data: articles } = await useAsyncData('blog-tags', () =>
-  queryCollection('blog').select('tags').all(),
+  queryCollection('blog').select('tags', 'date').all()
+    .then(all => all.filter(a => isPublished(a.date))),
 )
 
 const tags = computed(() => {

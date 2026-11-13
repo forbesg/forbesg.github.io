@@ -10,7 +10,7 @@ const { data: all } = await useAsyncData(`blog-tag-${tag}`, () =>
 )
 
 // Tags are a JSON array column, so filter here rather than in SQL
-const articles = computed(() => (all.value ?? []).filter(a => a.tags.includes(tag)))
+const articles = computed(() => (all.value ?? []).filter(a => a.tags.includes(tag) && isPublished(a.date)))
 
 if (!articles.value.length) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })

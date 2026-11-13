@@ -1,0 +1,40 @@
+# Blog posts dated in the future are left out of the build until their date
+# (isPublished in app/utils/site.ts). Each morning this checks whether a post is
+# dated today and, if so, asks Cloudflare Pages to rebuild the live site.
+#
+# Needs a repository secret CF_DEPLOY_HOOK: the URL of a deploy hook for the
+# main branch (Cloudflare Pages > Settings > Builds > Deploy hooks).
+name: Publish scheduled blog posts
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC every day
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Rebuild the site if a post is due today
+        env:
+          CF_DEPLOY_HOOK: ${{ secrets.CF_DEPLOY_HOOK }}
+        run: |
+          today=$(date -u +%F)
+          if ! grep -lq "^date: ${today}" content/blog/*.md; then
+            echo "No posts dated ${today}"
+            exit 0
+          fi
+          grep -l "^date: ${today}" content/blog/*.md
+          if [ -z "$CF_DEPLOY_HOOK" ]; then
+            echo "::error::A post is due but the CF_DEPLOY_HOOK secret isn't set"
+            exit 1
+          fi
+          curl -fsS -X POST "$CF_DEPLOY_HOOK" > /dev/null
+          echo "Cloudflare Pages rebuild triggered"

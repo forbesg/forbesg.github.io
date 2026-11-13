@@ -3,20 +3,24 @@
 // picked from the post's tags
 const props = defineProps<{ tags: string[] }>()
 
+// null: no matching service page (web applications are quoted per project)
 const servicePath = computed(() => {
-  if (props.tags.includes('local-seo')) return '/services/website-rescue'
+  if (props.tags.includes('web-applications')) return null
+  if (props.tags.some(t => ['local-seo', 'website-speed'].includes(t))) return '/services/website-rescue'
   if (props.tags.includes('wordpress')) return '/services/cms-websites'
   if (props.tags.includes('ecommerce-sites')) return '/services/ecommerce-website-design'
-  if (props.tags.some(t => ['static-sites', 'jam-stack', 'website-costs'].includes(t))) return '/services/brochure-websites'
+  if (props.tags.some(t => ['static-sites', 'jam-stack', 'website-costs', 'planning'].includes(t))) return '/services/brochure-websites'
   return '/services/cms-websites'
 })
 
 const { data: service } = await useAsyncData(
   () => `related-service-${servicePath.value}`,
-  () => queryCollection('services')
-    .path(servicePath.value)
-    .select('path', 'shortTitle', 'summary', 'packages')
-    .first(),
+  () => servicePath.value
+    ? queryCollection('services')
+        .path(servicePath.value)
+        .select('path', 'shortTitle', 'summary', 'packages')
+        .first()
+    : Promise.resolve(null),
 )
 </script>
 

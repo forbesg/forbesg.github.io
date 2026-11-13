@@ -13,7 +13,7 @@ const { data } = await useAsyncData(`article-${path}`, async () => {
 const article = computed(() => data.value?.article)
 const author = computed(() => data.value?.author)
 
-if (!article.value) {
+if (!article.value || !isPublished(article.value.date)) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })
 }
 
